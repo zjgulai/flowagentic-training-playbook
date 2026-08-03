@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://flowagentic.example/schemas/source.schema.json",
+  "title": "FlowAgentic research source",
+  "type": "object",
+  "required": [
+    "source_id",
+    "title",
+    "source_type",
+    "publisher",
+    "locator",
+    "version",
+    "accessed",
+    "credibility",
+    "public_safe",
+    "notes"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "pattern": "^SRC-[0-9]{3,}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3
+    },
+    "source_type": {
+      "enum": [
+        "target-source",
+        "target-test",
+        "target-runtime",
+        "official-doc",
+        "official-source",
+        "official-release",
+        "official-pr",
+        "maintainer-discussion",
+        "developer-case",
+        "discovery-only"
+      ]
+    },
+    "publisher": {
+      "type": "string",
+      "minLength": 2
+    },
+    "author": {
+      "type": ["string", "null"]
+    },
+    "locator": {
+      "type": "string",
+      "minLength": 4
+    },
+    "version": {
+      "type": "string"
+    },
+    "published": {
+      "type": ["string", "null"]
+    },
+    "accessed": {
+      "type": "string",
+      "format": "date"
+    },
+    "credibility": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "public_safe": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

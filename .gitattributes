@@ -1,0 +1,3 @@
+# Preserve the exact, hash-pinned vendor payload while excluding its upstream
+# trailing spaces from repository whitespace policy.
+docs/assets/vendor/mermaid.min.js whitespace=-trailing-space,-blank-at-eof

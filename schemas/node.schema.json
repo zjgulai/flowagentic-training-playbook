@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://flowagentic.example/schemas/node.schema.json",
+  "title": "FlowAgentic generated node catalog item",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "label",
+    "category",
+    "version",
+    "description",
+    "inputs",
+    "outputs",
+    "credential_names",
+    "risk",
+    "production_status",
+    "source_anchor",
+    "official_docs",
+    "example",
+    "common_errors",
+    "extraction"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "label": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": ["number", "string", "null"]
+    },
+    "description": {
+      "type": "string"
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "label", "type", "optional"],
+        "properties": {
+          "name": {"type": "string"},
+          "label": {"type": "string"},
+          "type": {"type": "string"},
+          "optional": {"type": "boolean"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "outputs": {
+      "type": "array"
+    },
+    "credential_names": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string"}
+    },
+    "risk": {
+      "type": "object",
+      "required": ["external_call", "may_cost", "may_write", "rationale"],
+      "properties": {
+        "external_call": {"enum": ["yes", "no", "review-required"]},
+        "may_cost": {"enum": ["yes", "no", "review-required"]},
+        "may_write": {"enum": ["yes", "no", "review-required"]},
+        "rationale": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "production_status": {
+      "enum": [
+        "production-enabled",
+        "feature-gated",
+        "deprecated",
+        "experimental",
+        "upstream-only"
+      ]
+    },
+    "source_anchor": {
+      "type": "string"
+    },
+    "official_docs": {
+      "type": ["string", "null"]
+    },
+    "example": {
+      "type": "string"
+    },
+    "common_errors": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "extraction": {
+      "type": "object",
+      "required": ["release_sha", "parser", "warnings"],
+      "properties": {
+        "release_sha": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "parser": {"type": "string"},
+        "warnings": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

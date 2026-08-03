@@ -1,0 +1,6 @@
+schema_version: 1
+environment_id: null
+release_sha: null
+status: blocked-awaiting-isolated-environment
+objects: []
+cleanup_receipts: []

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  {% if page and page.meta and page.meta.mermaid %}
+    <script src="{{ 'assets/vendor/mermaid.min.js' | url }}"></script>
+  {% endif %}
+{% endblock %}

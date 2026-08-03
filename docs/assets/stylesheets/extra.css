@@ -1,0 +1,123 @@
+:root {
+  --md-text-font: "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC",
+    "PingFang SC", "Microsoft YaHei", sans-serif;
+  --md-code-font: "SFMono-Regular", "Cascadia Code", "Noto Sans Mono CJK SC",
+    Consolas, monospace;
+  --playbook-risk-high: #b42318;
+  --playbook-risk-medium: #b54708;
+  --playbook-safe: #067647;
+  --playbook-muted: #667085;
+  --playbook-focus: #ffbf47;
+}
+
+.md-grid {
+  max-width: 90rem;
+}
+
+.md-typeset {
+  line-height: 1.78;
+}
+
+.md-typeset h1 {
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h2 {
+  border-bottom: 1px solid color-mix(in srgb, var(--md-default-fg-color) 14%, transparent);
+  padding-bottom: 0.35rem;
+}
+
+.md-typeset img {
+  border: 1px solid color-mix(in srgb, var(--md-default-fg-color) 16%, transparent);
+  border-radius: 0.5rem;
+}
+
+.md-typeset figure {
+  margin-inline: 0;
+  max-width: 100%;
+}
+
+.md-typeset figcaption {
+  color: var(--playbook-muted);
+  font-size: 0.76rem;
+  max-width: 62rem;
+}
+
+.playbook-meta {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 7%, transparent);
+  border-left: 0.2rem solid var(--md-primary-fg-color);
+  border-radius: 0.25rem;
+  display: grid;
+  gap: 0.35rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  margin: 1rem 0 1.5rem;
+  padding: 0.85rem 1rem;
+}
+
+.playbook-status {
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.28rem 0.55rem;
+}
+
+.playbook-status--enabled {
+  color: var(--playbook-safe);
+}
+
+.playbook-status--gated,
+.playbook-status--experimental {
+  color: var(--playbook-risk-medium);
+}
+
+.playbook-risk {
+  color: var(--playbook-risk-high);
+  font-weight: 700;
+}
+
+.mermaid {
+  background: var(--md-default-bg-color);
+  overflow-x: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+:where(
+    a,
+    button,
+    input,
+    select,
+    textarea,
+    summary,
+    [tabindex]:not([tabindex="-1"])
+  ):focus-visible {
+  border-radius: 0.15rem;
+  box-shadow: 0 0 0 0.12rem #101828;
+  outline: 0.18rem solid var(--playbook-focus);
+  outline-offset: 0.16rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    width: 13.5rem;
+  }
+}

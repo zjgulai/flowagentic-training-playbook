@@ -1,0 +1,63 @@
+schema_version: 1
+description: 每篇公开页面必须引用与其主题匹配的 Claim；Claim 再追溯到来源库。
+rules:
+  - path_prefix: docs/index.md
+    claim_ids: [CLM-001, CLM-002, CLM-024]
+  - path_prefix: docs/00-home/
+    claim_ids: [CLM-001, CLM-002, CLM-024]
+  - path_prefix: docs/01-system/
+    claim_ids: [CLM-001, CLM-002, CLM-003, CLM-005, CLM-011, CLM-014, CLM-024]
+  - path_prefix: docs/02-account/
+    claim_ids: [CLM-004, CLM-015]
+  - path_prefix: docs/03-credentials/credentials.md
+    claim_ids: [CLM-008, CLM-015, CLM-023, CLM-025]
+  - path_prefix: docs/03-credentials/
+    claim_ids: [CLM-008, CLM-015, CLM-023]
+  - path_prefix: docs/04-chatflow/
+    claim_ids: [CLM-009, CLM-016, CLM-020, CLM-023]
+  - path_prefix: docs/05-agentflow-v2/
+    claim_ids: [CLM-005, CLM-006, CLM-018, CLM-023]
+  - path_prefix: docs/06-executions/
+    claim_ids: [CLM-009, CLM-020, CLM-021]
+  - path_prefix: docs/07-assistant/
+    claim_ids: [CLM-007, CLM-019, CLM-023]
+  - path_prefix: docs/08-marketplace/
+    claim_ids: [CLM-016, CLM-023]
+  - path_prefix: docs/09-tools-mcp/index.md
+    claim_ids: [CLM-011, CLM-012, CLM-023, CLM-025]
+  - path_prefix: docs/09-tools-mcp/
+    claim_ids: [CLM-011, CLM-012, CLM-023]
+  - path_prefix: docs/10-rag/
+    claim_ids: [CLM-007, CLM-019, CLM-023]
+  - path_prefix: docs/11-api-sdk/
+    claim_ids: [CLM-009, CLM-010, CLM-020]
+  - path_prefix: docs/12-lab/
+    claim_ids: [CLM-013, CLM-018, CLM-023, CLM-024]
+  - path_prefix: docs/13-optimization/
+    claim_ids: [CLM-006, CLM-007, CLM-008, CLM-009, CLM-010, CLM-020, CLM-021, CLM-022, CLM-023]
+  - path_prefix: docs/14-troubleshooting/
+    claim_ids: [CLM-009, CLM-012, CLM-015, CLM-020, CLM-021, CLM-022]
+  - path_prefix: docs/15-developer/
+    claim_ids: [CLM-014, CLM-017, CLM-023]
+  - path_prefix: docs/16-admin-ops/index.md
+    claim_ids: [CLM-015, CLM-021, CLM-024, CLM-025]
+  - path_prefix: docs/16-admin-ops/
+    claim_ids: [CLM-015, CLM-021, CLM-024]
+  - path_prefix: docs/17-restricted/
+    claim_ids: [CLM-003, CLM-005, CLM-011]
+  - path_prefix: docs/18-training/instructor-guide.md
+    claim_ids: [CLM-002, CLM-015, CLM-023, CLM-024]
+  - path_prefix: docs/18-training/labs.md
+    claim_ids: [CLM-006, CLM-007, CLM-013, CLM-018, CLM-023]
+  - path_prefix: docs/18-training/answer-key.md
+    claim_ids: [CLM-007, CLM-015, CLM-020, CLM-023]
+  - path_prefix: docs/18-training/quick-reference.md
+    claim_ids: [CLM-002, CLM-015, CLM-023, CLM-024]
+  - path_prefix: docs/18-training/
+    claim_ids: [CLM-002, CLM-024]
+  - path_prefix: docs/19-reference/node-catalog/
+    claim_ids: [CLM-014]
+  - path_prefix: docs/19-reference/version-diff.md
+    claim_ids: [CLM-001, CLM-003, CLM-014, CLM-017, CLM-024, CLM-025]
+  - path_prefix: docs/19-reference/
+    claim_ids: [CLM-001, CLM-003, CLM-014, CLM-017, CLM-024]

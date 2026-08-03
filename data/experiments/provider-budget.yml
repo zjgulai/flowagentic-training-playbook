@@ -1,0 +1,33 @@
+schema_version: 2
+currency: CNY
+hard_limit: 300.00
+warning_threshold: 240.00
+spent: 0.00
+remaining: 300.00
+reserved: 0.00
+available_to_reserve: 300.00
+status: blocked-awaiting-secure-credentials
+allowed_providers:
+  - DeepSeek
+  - Kimi
+enforcement:
+  stop_when_spent_gte_hard_limit: true
+  allow_override: false
+  ci_provider_calls: false
+  synthetic_data_only: true
+  secrets_in_repository: false
+  network_call_requires_pending_reservation: true
+  reservation_created_under_exclusive_lock: true
+  settlement_requires_matching_reservation: true
+  over_reservation_marks_budget_breached: true
+  release_requires_network_call_not_started: true
+  one_reservation_authorizes_one_call: true
+  all_ledger_transitions_use_one_exclusive_lock: true
+  reservation_override: false
+  start_requires_pending_reservation: true
+  in_flight_reservations_count_against_limit: true
+  uncertain_failure_charged_at_reserved_maximum: true
+  provider_transport_must_use_budget_wrapper: true
+  provider_account_hard_limit_receipt_required: true
+reservations: []
+calls: []

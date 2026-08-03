@@ -1,0 +1,648 @@
+---
+schema_version: 1
+research_mode: ultradeep
+topic: FlowAgentic 培训 Playbook 的系统事实、使用方法、失败模式与优化建议
+target_release:
+  product: Flowise
+  version: 3.1.3
+  sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+accessed: '2026-08-04'
+credibility_scale: 0-100；目标提交源码与官方一手资料优先，开发者问题报告只证明案例存在
+sources:
+- source_id: SRC-001
+  title: FlowAgentic 固定提交的根包清单
+  source_type: target-source
+  publisher: FlowAgentic 目标源码仓
+  author: FlowAgentic 维护团队
+  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:package.json
+  version: 3.1.3@6a5bb28b
+  published: '2026-08-04'
+  accessed: '2026-08-04'
+  credibility: 98
+  public_safe: true
+  notes: 直接确认产品版本、工作区和构建入口；不包含运行环境秘密。
+- source_id: SRC-002
+  title: 中文侧栏、十个主模块与功能门禁定义
+  source_type: target-source
+  publisher: FlowAgentic 目标源码仓
+  author: FlowAgentic 维护团队
+  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/ui/src/menu-items/dashboard.js
+  version: 3.1.3@6a5bb28b
+  published: '2026-08-04'
+  accessed: '2026-08-04'
+  credibility: 98
+  public_safe: true
+  notes: 直接列出对话流程、智能体流程、执行记录、助手、模板市场、工具、凭据、变量、API 密钥、文档库，并给出评估、用户、角色、工作空间、SSO 等 display
+    gate。
+- source_id: SRC-003
+  title: 主应用路由与权限守卫
+  source_type: target-source
+  publisher: FlowAgentic 目标源码仓
+  author: FlowAgentic 维护团队
+  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/ui/src/routes/MainRoutes.jsx
+  version: 3.1.3@6a5bb28b
+  published: '2026-08-04'
+  accessed: '2026-08-04'
+  credibility: 96
+  public_safe: true
+  notes: 用于把页面名称映射到真实路由、permission 与 display 条件；是否可用仍需运行态复现。
+- source_id: SRC-004
+  title: 登录、注册重定向与受限状态路由
+  source_type: target-source
+  publisher: FlowAgentic 目标源码仓
+  author: FlowAgentic 维护团队
+  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/ui/src/routes/AuthRoutes.jsx
+  version: 3.1.3@6a5bb28b
+  published: '2026-08-04'
+  accessed: '2026-08-04'
+  credibility: 98
+  public_safe: true
+  notes: 源码把 /register 重定向到 /signin，并声明未授权、限流、访问受限、密码重置等路由。
+- source_id: SRC-005
+  title: 生产 UI 路由契约测试
+  source_type: target-test
+  publisher: FlowAgentic 目标源码仓
+  author: FlowAgentic 维护团队
+  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/ui/src/routes/productionUiContracts.test.js
+  version: 3.1.3@6a5bb28b
+  published: '2026-08-04'
+  accessed: '2026-08-04'
+  credibility: 94
+  public_safe: true
+  notes: 测试是静态契约证据，不替代目标浏览器、角色和真实数据验收。
+- source_id: SRC-006
+  title: Agentflow 可嵌入包状态与十三个节点类型
+  source_type: target-source
+  publisher: FlowAgentic 目标源码仓
+  author: Flowise Agentflow 维护者
+  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/agentflow/README.md
+  version: 0.0.0-dev.13 in 3.1.3@6a5bb28b
+  published: '2026-08-04'
+  accessed: '2026-08-04'
+  credibility: 96
+  public_safe: true
+  notes: 同一来源既列出 13 个编辑节点，也明确包仍为 Dev、公共 API 可能变化；培训必须同时呈现能力和状态。
+- source_id: SRC-007
+  title: 固定提交节点实现清单
+  source_type: target-source
+  publisher: FlowAgentic 目标源码仓
+  author: Flowise 节点维护者
+  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/components/nodes/**/*.ts
+  version: 3.1.3@6a5bb28b
+  published: '2026-08-04'
+  accessed: '2026-08-04'
+  credibility: 97
+  public_safe: true
+  notes: 只读命令 git grep -l 'implements INode' 返回 311 个实现文件；这是代码实现计数，不等同于 UI 中可见节点数。
+- source_id: SRC-008
+  title: DeepSeek 聊天模型节点
+  source_type: target-source
+  publisher: FlowAgentic 目标源码仓
+  author: Flowise 节点维护者
+  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/components/nodes/chatmodels/Deepseek/Deepseek.ts
+  version: 3.1.3@6a5bb28b
+  published: '2026-08-04'
+  accessed: '2026-08-04'
+  credibility: 96
+  public_safe: true
+  notes: 证明目标源码包含 DeepSeek 节点；不能单独证明培训凭据、网络或真实请求成功。
+- source_id: SRC-009
+  title: Kimi 聊天模型节点与测试
+  source_type: target-source
+  publisher: FlowAgentic 目标源码仓
+  author: Flowise 节点维护者
+  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/components/nodes/chatmodels/ChatKimi/
+  version: 3.1.3@6a5bb28b
+  published: '2026-08-04'
+  accessed: '2026-08-04'
+  credibility: 96
+  public_safe: true
+  notes: 证明目标源码包含 Kimi 节点和单元测试；真实 Provider 主链仍需隔离环境执行。
+- source_id: SRC-010
+  title: Prediction API 路由、控制器与服务
+  source_type: target-source
+  publisher: FlowAgentic 目标源码仓
+  author: Flowise 服务端维护者
+  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/server/src/{routes,controllers,services}/predictions/
+  version: 3.1.3@6a5bb28b
+  published: '2026-08-04'
+  accessed: '2026-08-04'
+  credibility: 95
+  public_safe: true
+  notes: 用于确认 UI 外的预测调用入口和服务边界；公开文档不写入真实主机或 API Key。
+- source_id: SRC-011
+  title: 文档库服务与状态码测试
+  source_type: target-source
+  publisher: FlowAgentic 目标源码仓
+  author: Flowise 服务端维护者
+  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/server/src/services/documentstore/
+  version: 3.1.3@6a5bb28b
+  published: '2026-08-04'
+  accessed: '2026-08-04'
+  credibility: 95
+  public_safe: true
+  notes: 为 Process、Upsert、状态与失败恢复 SOP 提供目标代码锚点；最终状态图需培训环境复现。
+- source_id: SRC-012
+  title: 变量服务与端到端测试
+  source_type: target-source
+  publisher: FlowAgentic 目标源码仓
+  author: Flowise 维护者
+  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/server/{src/services/variables/index.ts,cypress/e2e/2-variables/variables.cy.js}
+  version: 3.1.3@6a5bb28b
+  published: '2026-08-04'
+  accessed: '2026-08-04'
+  credibility: 94
+  public_safe: true
+  notes: 支持变量创建、更新和使用路径的事实建模；请求级覆盖需结合 Prediction API 复现。
+- source_id: SRC-013
+  title: 自定义工具节点与执行核心
+  source_type: target-source
+  publisher: FlowAgentic 目标源码仓
+  author: Flowise 节点维护者
+  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/components/nodes/tools/CustomTool/
+  version: 3.1.3@6a5bb28b
+  published: '2026-08-04'
+  accessed: '2026-08-04'
+  credibility: 95
+  public_safe: true
+  notes: 用于确认 Schema、输入变量与 JavaScript 执行边界；不公开任何真实连接信息。
+- source_id: SRC-014
+  title: Custom MCP 节点、执行核心与安全测试
+  source_type: target-source
+  publisher: FlowAgentic 目标源码仓
+  author: Flowise 节点维护者
+  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/components/nodes/tools/MCP/
+  version: 3.1.3@6a5bb28b
+  published: '2026-08-04'
+  accessed: '2026-08-04'
+  credibility: 95
+  public_safe: true
+  notes: 目录包含 CustomMCP、CustomMcpServerTool 和 core.test.ts；网络授权及 SSRF 行为仍以版本和配置为准。
+- source_id: SRC-015
+  title: Flowise 官方能力概览
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI 文档团队
+  locator: https://docs.flowiseai.com/
+  version: rolling
+  published: '2026-02-06'
+  accessed: '2026-07-31'
+  credibility: 92
+  public_safe: true
+  notes: 官方高层能力语义；滚动文档可能晚于目标 3.1.3，不能直接证明本部署已启用。
+- source_id: SRC-016
+  title: Getting Started
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI 文档团队
+  locator: https://docs.flowiseai.com/getting-started
+  version: rolling
+  published: '2025-07-01'
+  accessed: '2026-07-31'
+  credibility: 90
+  public_safe: true
+  notes: 用于安装与首个流程的官方入口。
+- source_id: SRC-017
+  title: Agentflow V2
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: toi500 与 FlowiseAI 文档团队
+  locator: https://docs.flowiseai.com/using-flowise/agentflowv2
+  version: rolling
+  published: '2025-06-22'
+  accessed: '2026-07-31'
+  credibility: 93
+  public_safe: true
+  notes: 官方描述 V2 心智模型、节点、Flow State、HITL、流式传输和 MCP；页面自身提示参数会随版本变化。
+- source_id: SRC-018
+  title: Variables
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI 文档团队
+  locator: https://docs.flowiseai.com/using-flowise/variables
+  version: rolling
+  published: '2025-06-18'
+  accessed: '2026-07-31'
+  credibility: 92
+  public_safe: true
+  notes: 官方变量语法与适用范围。
+- source_id: SRC-019
+  title: Document Stores
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI 文档团队
+  locator: https://docs.flowiseai.com/using-flowise/document-stores
+  version: rolling
+  published: '2025-07-28'
+  accessed: '2026-07-31'
+  credibility: 93
+  public_safe: true
+  notes: 官方 Loader、Splitter、Embedding、Vector Store、Record Manager 与处理流程语义。
+- source_id: SRC-020
+  title: Upsertion
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI 文档团队
+  locator: https://docs.flowiseai.com/using-flowise/upsertion
+  version: rolling
+  published: '2025-06-18'
+  accessed: '2026-07-31'
+  credibility: 91
+  public_safe: true
+  notes: 用于区分流程预测与向量写入，并定义文档更新动作。
+- source_id: SRC-021
+  title: Prediction
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI 文档团队
+  locator: https://docs.flowiseai.com/using-flowise/prediction
+  version: rolling
+  published: '2026-04-13'
+  accessed: '2026-07-31'
+  credibility: 90
+  public_safe: true
+  notes: 滚动页面晚于目标版本；只用作 API 语义锚点，参数必须回查固定源码。
+- source_id: SRC-022
+  title: Streaming
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI 文档团队
+  locator: https://docs.flowiseai.com/using-flowise/streaming
+  version: rolling
+  published: '2025-06-18'
+  accessed: '2026-07-31'
+  credibility: 91
+  public_safe: true
+  notes: 官方说明支持流式事件的节点和客户端处理方向。
+- source_id: SRC-023
+  title: Embed
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI 文档团队
+  locator: https://docs.flowiseai.com/using-flowise/embed
+  version: rolling
+  published: '2025-09-16'
+  accessed: '2026-07-31'
+  credibility: 89
+  public_safe: true
+  notes: 用于 Web Component、React Embed 和客户端配置；晚于目标版本的差异需复核。
+- source_id: SRC-024
+  title: Uploads
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI 文档团队
+  locator: https://docs.flowiseai.com/using-flowise/uploads
+  version: rolling
+  published: '2025-02-28'
+  accessed: '2026-07-31'
+  credibility: 91
+  public_safe: true
+  notes: 文件上传能力、输入形态与边界的官方语义。
+- source_id: SRC-025
+  title: Prediction API Reference
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI API 文档团队
+  locator: https://docs.flowiseai.com/api-reference/prediction
+  version: rolling
+  published: '2025-06-22'
+  accessed: '2026-07-31'
+  credibility: 94
+  public_safe: true
+  notes: Prediction 请求与响应的官方 API 锚点。
+- source_id: SRC-026
+  title: Document Store API Reference
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI API 文档团队
+  locator: https://docs.flowiseai.com/api-reference/document-store
+  version: rolling
+  published: '2025-07-17'
+  accessed: '2026-07-31'
+  credibility: 94
+  public_safe: true
+  notes: 文档库创建、处理、更新与历史相关接口锚点。
+- source_id: SRC-027
+  title: Variables API Reference
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI API 文档团队
+  locator: https://docs.flowiseai.com/api-reference/variables
+  version: rolling
+  published: '2025-07-17'
+  accessed: '2026-07-31'
+  credibility: 94
+  public_safe: true
+  notes: 变量管理 API 的官方锚点。
+- source_id: SRC-028
+  title: Tools API Reference
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI API 文档团队
+  locator: https://docs.flowiseai.com/api-reference/tools
+  version: rolling
+  published: '2025-07-17'
+  accessed: '2026-07-31'
+  credibility: 94
+  public_safe: true
+  notes: 自定义工具管理接口锚点。
+- source_id: SRC-029
+  title: Authorization
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI 文档团队
+  locator: https://docs.flowiseai.com/configuration/authorization
+  version: rolling
+  published: '2025-05-15'
+  accessed: '2026-07-31'
+  credibility: 93
+  public_safe: true
+  notes: 实例和流程访问控制的官方起点；不等同于目标部署的许可证或功能开关状态。
+- source_id: SRC-030
+  title: App-level Authorization
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI 文档团队
+  locator: https://docs.flowiseai.com/configuration/authorization/app-level
+  version: rolling
+  published: '2026-01-13'
+  accessed: '2026-07-31'
+  credibility: 90
+  public_safe: true
+  notes: 晚于目标版本，作为上游能力参考，必须标注 upstream-only 或 feature-gated。
+- source_id: SRC-031
+  title: Rate Limit
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI 文档团队
+  locator: https://docs.flowiseai.com/configuration/rate-limit
+  version: rolling
+  published: '2025-01-24'
+  accessed: '2026-07-31'
+  credibility: 91
+  public_safe: true
+  notes: 限流配置与 429 故障排查的官方锚点。
+- source_id: SRC-032
+  title: Running Flowise in Production
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI 文档团队
+  locator: https://docs.flowiseai.com/configuration/running-in-production
+  version: rolling
+  published: '2025-12-10'
+  accessed: '2026-07-31'
+  credibility: 91
+  public_safe: true
+  notes: 用于公开安全运维原则；真实拓扑、备份和恢复命令不进入公开站。
+- source_id: SRC-033
+  title: Environment Variables
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI 文档团队
+  locator: https://docs.flowiseai.com/configuration/environment-variables
+  version: rolling
+  published: '2026-03-16'
+  accessed: '2026-07-31'
+  credibility: 91
+  public_safe: true
+  notes: 滚动环境变量表；只能公开变量名称和原则，不能公开目标环境取值。
+- source_id: SRC-034
+  title: Workspaces
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI 文档团队
+  locator: https://docs.flowiseai.com/using-flowise/workspaces
+  version: rolling
+  published: '2026-02-06'
+  accessed: '2026-07-31'
+  credibility: 90
+  public_safe: true
+  notes: 工作空间和管理员初始化的上游说明；目标部署是否启用须由 feature gate 与运行态共同确认。
+- source_id: SRC-035
+  title: Evaluations
+  source_type: official-doc
+  publisher: FlowiseAI
+  author: FlowiseAI 文档团队
+  locator: https://docs.flowiseai.com/using-flowise/evaluations
+  version: rolling
+  published: '2025-01-24'
+  accessed: '2026-07-31'
+  credibility: 91
+  public_safe: true
+  notes: 数据集、评估器和评估任务的上游语义；在目标站点列为 feature-gated。
+- source_id: SRC-036
+  title: flowise@3.1.3 Release
+  source_type: official-release
+  publisher: FlowiseAI GitHub
+  author: HenryHengZJ 与版本贡献者
+  locator: https://github.com/FlowiseAI/Flowise/releases/tag/flowise%403.1.3
+  version: flowise@3.1.3
+  published: '2026-06-25'
+  accessed: '2026-07-31'
+  credibility: 94
+  public_safe: true
+  notes: 目标上游版本的发布清单，含 Agentflow、MCP、流程配置和安全修复；目标仓仍需逐项对照。
+- source_id: SRC-037
+  title: flowise@3.1.4 Release
+  source_type: official-release
+  publisher: FlowiseAI GitHub
+  author: HenryHengZJ 与版本贡献者
+  locator: https://github.com/FlowiseAI/Flowise/releases/tag/flowise%403.1.4
+  version: flowise@3.1.4
+  published: '2026-07-29'
+  accessed: '2026-07-31'
+  credibility: 94
+  public_safe: true
+  notes: 目标版本之后的上游差异证据，包含 MCP allowlist、租户校验、跨工作空间授权、导出变量值等修复。
+- source_id: SRC-038
+  title: 'PR #6185: Fix clickjacking'
+  source_type: official-pr
+  publisher: FlowiseAI GitHub
+  author: yau-wd
+  locator: https://github.com/FlowiseAI/Flowise/pull/6185
+  version: merged before flowise@3.1.3
+  published: '2026-04-14'
+  accessed: '2026-07-31'
+  credibility: 89
+  public_safe: true
+  notes: 维护者修复记录；用于说明 Embed 与公开页面需要安全头验证。
+- source_id: SRC-039
+  title: 'PR #6211: Agentflow 删除与复制操作的 onFlowChange 通知'
+  source_type: official-pr
+  publisher: FlowiseAI GitHub
+  author: jocelynlin-wd
+  locator: https://github.com/FlowiseAI/Flowise/pull/6211
+  version: merged before flowise@3.1.3
+  published: '2026-04-14'
+  accessed: '2026-07-31'
+  credibility: 89
+  public_safe: true
+  notes: 说明画布变更跟踪是版本敏感行为，培训中的未保存提醒和集成回调需实测。
+- source_id: SRC-040
+  title: 'PR #6212: Start 表单选项的客户端过滤'
+  source_type: official-pr
+  publisher: FlowiseAI GitHub
+  author: jocelynlin-wd
+  locator: https://github.com/FlowiseAI/Flowise/pull/6212
+  version: merged before flowise@3.1.3
+  published: '2026-04-14'
+  accessed: '2026-07-31'
+  credibility: 88
+  public_safe: true
+  notes: 为 Start/Form 输入筛选行为提供维护者锚点。
+- source_id: SRC-041
+  title: 'PR #5930: 将 Chatflow 暴露为 MCP Server'
+  source_type: official-pr
+  publisher: FlowiseAI GitHub
+  author: prd-hoang-doan
+  locator: https://github.com/FlowiseAI/Flowise/pull/5930
+  version: merged before flowise@3.1.3
+  published: '2026-04-15'
+  accessed: '2026-07-31'
+  credibility: 90
+  public_safe: true
+  notes: 证明该能力进入上游 3.1.3 发布范围；目标部署启用和鉴权仍需隔离环境验证。
+- source_id: SRC-042
+  title: 'PR #6229: FlowConfigDialog UI Redesign'
+  source_type: official-pr
+  publisher: FlowiseAI GitHub
+  author: HenryHengZJ
+  locator: https://github.com/FlowiseAI/Flowise/pull/6229
+  version: merged before flowise@3.1.3
+  published: '2026-04-16'
+  accessed: '2026-07-31'
+  credibility: 88
+  public_safe: true
+  notes: 说明流程配置界面在目标版本附近发生结构变化，旧截图不可直接复用。
+- source_id: SRC-043
+  title: 'PR #6226: Agent 节点的客户端知识字段'
+  source_type: official-pr
+  publisher: FlowiseAI GitHub
+  author: jocelynlin-wd
+  locator: https://github.com/FlowiseAI/Flowise/pull/6226
+  version: merged before flowise@3.1.3
+  published: '2026-04-16'
+  accessed: '2026-07-31'
+  credibility: 88
+  public_safe: true
+  notes: 表明 Agent 节点知识配置具有客户端差异，SOP 不能只按通用上游截图编写。
+- source_id: SRC-044
+  title: 'PR #6578: Custom MCP stdio 命令 allowlist 由运维方控制'
+  source_type: official-pr
+  publisher: FlowiseAI GitHub
+  author: yau-wd
+  locator: https://github.com/FlowiseAI/Flowise/pull/6578
+  version: merged for flowise@3.1.4
+  published: '2026-06-30'
+  accessed: '2026-07-31'
+  credibility: 90
+  public_safe: true
+  notes: 目标 3.1.3 之后的安全修复，必须进入升级差异与 MCP 风险说明。
+- source_id: SRC-045
+  title: 'Issue #5097: API 创建 Loader 后预览与处理页面空白'
+  source_type: developer-case
+  publisher: FlowiseAI GitHub Issues
+  author: fmancardi
+  locator: https://github.com/FlowiseAI/Flowise/issues/5097
+  version: reported upstream; target applicability unverified
+  published: '2025-08-18'
+  accessed: '2026-07-31'
+  credibility: 68
+  public_safe: true
+  notes: 开发者给出复现步骤；只证明该用户路径曾出现问题，不代表 3.1.3 必然复现。
+- source_id: SRC-046
+  title: 'Issue #5592: Prediction SSE 偶发无内容'
+  source_type: developer-case
+  publisher: FlowiseAI GitHub Issues
+  author: EanMcDonaldWojciechowski
+  locator: https://github.com/FlowiseAI/Flowise/issues/5592
+  version: reported upstream; target applicability unverified
+  published: '2025-12-16'
+  accessed: '2026-07-31'
+  credibility: 68
+  public_safe: true
+  notes: 包含事件序列与完成信号描述；培训实验应分别验证 token、end、错误和中断。
+- source_id: SRC-047
+  title: 'Issue #4877: SSE 可能向 Embed 客户端暴露 Agentflow 内部事件'
+  source_type: developer-case
+  publisher: FlowiseAI GitHub Issues
+  author: Stono
+  locator: https://github.com/FlowiseAI/Flowise/issues/4877
+  version: reported upstream; target applicability unverified
+  published: '2025-07-15'
+  accessed: '2026-07-31'
+  credibility: 70
+  public_safe: true
+  notes: 一手网络观察；公开结论必须写成风险案例并在目标版本抓包验证。
+- source_id: SRC-048
+  title: 'Issue #6013: Start 使用 Form Input 时 Embed 请求缺少 question'
+  source_type: developer-case
+  publisher: FlowiseAI GitHub Issues
+  author: joaquinmbm
+  locator: https://github.com/FlowiseAI/Flowise/issues/6013
+  version: reported upstream; target applicability unverified
+  published: '2026-03-18'
+  accessed: '2026-07-31'
+  credibility: 69
+  public_safe: true
+  notes: 给出请求体样例；培训需将 Chat、Form、Webhook、Schedule 分开测试。
+- source_id: SRC-049
+  title: 'Issue #6602: Custom MCP SSRF 策略阻止 Docker 内部主机名'
+  source_type: developer-case
+  publisher: FlowiseAI GitHub Issues
+  author: wggrre
+  locator: https://github.com/FlowiseAI/Flowise/issues/6602
+  version: reporter traced on 3.1.2; target applicability unverified
+  published: '2026-07-07'
+  accessed: '2026-07-31'
+  credibility: 72
+  public_safe: true
+  notes: 开发者同时给出部署拓扑和源码追踪；可用于设计 fail-closed 网络白名单实验，不能据此建议关闭安全检查。
+- source_id: SRC-050
+  title: 'Issue #3587: Embed 中 sessionId 行为不符合预期'
+  source_type: developer-case
+  publisher: FlowiseAI GitHub Issues
+  author: Kvkthecreator
+  locator: https://github.com/FlowiseAI/Flowise/issues/3587
+  version: reported upstream; target applicability unverified
+  published: '2024-11-27'
+  accessed: '2026-07-31'
+  credibility: 65
+  public_safe: true
+  notes: 较早的一手案例；用于提醒 sessionId 必须以 API 请求和消息隔离结果验证。
+- source_id: SRC-051
+  title: 'Issue #5059: Worker 内存随任务处理持续增长'
+  source_type: developer-case
+  publisher: FlowiseAI GitHub Issues
+  author: arnabk
+  locator: https://github.com/FlowiseAI/Flowise/issues/5059
+  version: reported Kubernetes deployment; target applicability unverified
+  published: '2025-08-13'
+  accessed: '2026-07-31'
+  credibility: 69
+  public_safe: true
+  notes: 生产类一手观察；支持培训中加入长时趋势、队列与 worker 维度的监控，而不是只看单次成功。
+- source_id: SRC-052
+  title: 'Issue #5546: 受限网络下 Condition Agent 等待 tokenizer 资源'
+  source_type: developer-case
+  publisher: FlowiseAI GitHub Issues
+  author: Mordris
+  locator: https://github.com/FlowiseAI/Flowise/issues/5546
+  version: reported upstream; target applicability unverified
+  published: '2025-12-03'
+  accessed: '2026-07-31'
+  credibility: 70
+  public_safe: true
+  notes: 企业网络一手案例；用于设计 DNS、代理、外部依赖和超时的隔离实验。
+- source_id: SRC-053
+  title: G1-K 工作区可移植性、MCP 与 Provider 权限加固源码及测试
+  source_type: target-test
+  publisher: FlowAgentic 目标源码仓
+  author: FlowAgentic 维护团队
+  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/server/src/{services/workspaces,routes/mcp-endpoint,middlewares/mcpRequestObservability.ts,routes/openai-assistants,routes/openai-assistants-vector-store}
+  version: 3.1.3@6a5bb28b
+  published: '2026-08-04'
+  accessed: '2026-08-04'
+  credibility: 98
+  public_safe: true
+  notes: 直接确认工作区导入导出清洗、MCP Token 失效迁移、有界解析和脱敏审计、Provider-backed Assistant 复合权限及畸形分页 fail-closed；源码和测试不能替代隔离运行与生产部署回执。

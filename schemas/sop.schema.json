@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://flowagentic.example/schemas/sop.schema.json",
+  "title": "FlowAgentic SOP frontmatter",
+  "type": "object",
+  "required": [
+    "title",
+    "audience",
+    "difficulty",
+    "duration",
+    "release_version",
+    "release_sha",
+    "feature_status",
+    "permissions",
+    "cost_class",
+    "side_effects",
+    "last_verified",
+    "evidence_ids",
+    "screenshot_ids"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 2
+    },
+    "audience": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": ["beginner", "builder", "developer", "admin"]
+      }
+    },
+    "difficulty": {
+      "enum": ["beginner", "intermediate", "advanced"]
+    },
+    "duration": {
+      "type": "string",
+      "pattern": "^[1-9][0-9]*\\s*(分钟|小时|天)$"
+    },
+    "release_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "release_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "feature_status": {
+      "enum": [
+        "production-enabled",
+        "feature-gated",
+        "deprecated",
+        "experimental",
+        "upstream-only"
+      ]
+    },
+    "permissions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "cost_class": {
+      "enum": ["none", "low", "medium", "high", "budget-controlled"]
+    },
+    "side_effects": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "last_verified": {
+      "type": "string",
+      "format": "date"
+    },
+    "evidence_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z][A-Z0-9_-]+$"
+      }
+    },
+    "screenshot_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z][A-Z0-9_-]+$"
+      }
+    }
+  },
+  "additionalProperties": true
+}

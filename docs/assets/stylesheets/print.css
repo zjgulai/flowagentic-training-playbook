@@ -1,0 +1,41 @@
+@media print {
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-footer,
+  .md-content__button,
+  .md-source,
+  .md-dialog {
+    display: none !important;
+  }
+
+  .md-main__inner,
+  .md-content,
+  .md-content__inner {
+    margin: 0 !important;
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  .md-typeset {
+    color: #111 !important;
+    font-size: 10.5pt;
+  }
+
+  .md-typeset a {
+    color: #111 !important;
+    text-decoration: underline;
+  }
+
+  .md-typeset pre,
+  .md-typeset table,
+  .md-typeset figure,
+  .admonition {
+    break-inside: avoid;
+  }
+
+  .md-typeset h1,
+  .md-typeset h2 {
+    break-after: avoid;
+  }
+}

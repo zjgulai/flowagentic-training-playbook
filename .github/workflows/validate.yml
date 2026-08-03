@@ -1,0 +1,118 @@
+name: 验证 Playbook
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * 1"
+
+permissions:
+  contents: read
+
+env:
+  DISABLE_MKDOCS_2_WARNING: "true"
+
+concurrency:
+  group: playbook-validation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: 站点、PDF 与内容门禁
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+
+    steps:
+      - name: 检出独立仓库
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: 安装固定版本 uv
+        uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          version: "0.12.0"
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+
+      - name: 安装 Python 3.12
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: 安装 PDF、Noto CJK 与截图 OCR 依赖
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends \
+            fonts-noto-cjk \
+            libharfbuzz-subset0 \
+            libpango-1.0-0 \
+            libpangoft2-1.0-0 \
+            poppler-utils \
+            tesseract-ocr \
+            tesseract-ocr-chi-sim \
+            tesseract-ocr-eng
+
+      - name: 同步精确锁定的 Python 依赖
+        run: uv sync --frozen --all-groups
+
+      - name: 验证自托管浏览器资源
+        run: uv run python scripts/vendor_assets.py --check
+
+      - name: 验证仓库独立性
+        run: uv run python scripts/check_independence.py
+
+      - name: 执行测试
+        run: |
+          uv run pyright
+          uv run pytest -q
+
+      - name: 执行内容、证据、截图与安全验证
+        run: uv run python scripts/validate_all.py
+
+      - name: 验证外部链接
+        if: github.event_name != 'pull_request'
+        run: uv run python scripts/check_external_links.py
+
+      - name: 严格构建站点
+        run: uv run mkdocs build --strict
+
+      - name: 验证构建后无障碍基线
+        run: uv run python scripts/validate_accessibility.py
+
+      - name: 生成中文 PDF
+        run: |
+          uv run python scripts/build_pdf.py \
+            --site-dir site \
+            --output output/pdf/flowagentic-playbook.pdf \
+            --tmp-dir tmp/pdfs \
+            --require-noto
+
+      - name: 验证 PDF
+        run: uv run python scripts/validate_pdf.py output/pdf/flowagentic-playbook.pdf
+
+      - name: 验证最终站点包
+        run: |
+          uv run python scripts/validate_built_site.py
+          uv run python scripts/validate_public_artifacts.py \
+            --site-dir site \
+            --pdf output/pdf/flowagentic-playbook.pdf \
+            --receipt tmp/artifact-safety.json
+
+      - name: 上传 PR／main 预览制品
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: flowagentic-playbook-preview-${{ github.run_id }}
+          path: |
+            site
+            output/pdf/flowagentic-playbook.pdf
+            tmp/artifact-safety.json
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 6

@@ -1,0 +1,18 @@
+FlowAgentic 培训与操作 Playbook — 内容许可
+
+除非页面另有明确说明，本仓库原创的正文、图表说明和培训材料采用
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+（CC BY-NC-SA 4.0）许可：
+
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.zh-hans
+
+您可以在署名、非商业使用及相同方式共享的条件下复制、传播和改编这些内容。
+
+本许可不覆盖：
+
+1. examples/、代码块及明确标注为示例代码的内容；这些内容采用 MIT 许可。
+2. Flowise、FlowAgentic 或其他第三方的商标、产品界面和上游材料。
+3. 研究来源中链接或引用的第三方内容；其权利仍归各自权利人所有。
+4. 私有 Runbook、凭据、生产拓扑、内部回执以及任何未公开材料。
+
+发布者不通过本许可授予对第三方商标、专利或隐私权的任何许可。

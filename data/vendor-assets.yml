@@ -1,0 +1,10 @@
+schema_version: 1
+assets:
+  - path: docs/assets/vendor/mermaid.min.js
+    name: Mermaid
+    version: 11.16.0
+    source: https://cdn.jsdelivr.net/npm/mermaid@11.16.0/dist/mermaid.min.js
+    license: MIT
+    license_file: docs/assets/vendor/mermaid.LICENSE.txt
+    sha256: 74d7c46dabca328c2294733910a8aa1ed0c37451776e8d5295da38a2b758fb9b
+    network_at_runtime: false

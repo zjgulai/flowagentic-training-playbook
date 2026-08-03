@@ -1,0 +1,104 @@
+schema_version: 1
+release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+last_verified: "2026-08-04"
+features:
+  - id: chatflows
+    label: 对话流程
+    route: /chatflows
+    status: production-enabled
+    training_scope: complete-sop
+  - id: agentflows
+    label: 智能体流程
+    route: /agentflows
+    status: production-enabled
+    training_scope: complete-sop
+  - id: executions
+    label: 执行记录
+    route: /executions
+    status: production-enabled
+    training_scope: complete-sop
+  - id: assistants
+    label: 助手
+    route: /assistants
+    status: production-enabled
+    training_scope: complete-sop
+  - id: marketplaces
+    label: 模板市场
+    route: /marketplaces
+    status: production-enabled
+    training_scope: complete-sop
+  - id: tools
+    label: 工具与 MCP
+    route: /tools
+    status: production-enabled
+    training_scope: complete-sop
+  - id: credentials
+    label: 凭据
+    route: /credentials
+    status: production-enabled
+    training_scope: complete-sop
+  - id: variables
+    label: 变量
+    route: /variables
+    status: production-enabled
+    training_scope: complete-sop
+  - id: api-keys
+    label: API 密钥
+    route: /apikey
+    status: production-enabled
+    training_scope: complete-sop
+  - id: document-stores
+    label: 文档库
+    route: /document-stores
+    status: production-enabled
+    training_scope: complete-sop
+  - id: agentflow-v1
+    label: Agentflow V1
+    route: /agentflows
+    status: deprecated
+    training_scope: migration-appendix
+  - id: openai-assistant
+    label: OpenAI Assistant
+    route: /assistants
+    status: deprecated
+    training_scope: migration-appendix
+  - id: datasets
+    label: 数据集
+    route: /datasets
+    status: feature-gated
+    training_scope: extension-appendix
+  - id: evaluators
+    label: 评估器
+    route: /evaluators
+    status: feature-gated
+    training_scope: extension-appendix
+  - id: evaluations
+    label: 评估任务
+    route: /evaluations
+    status: feature-gated
+    training_scope: extension-appendix
+  - id: rbac
+    label: 用户、角色与工作空间
+    route: /users
+    status: feature-gated
+    training_scope: extension-appendix
+  - id: sso
+    label: 单点登录
+    route: /sso-config
+    status: feature-gated
+    training_scope: extension-appendix
+  - id: login-activity
+    label: 登录活动
+    route: /login-activity
+    status: feature-gated
+    training_scope: extension-appendix
+  - id: agentflow-sdk
+    label: Agentflow SDK
+    route: null
+    status: experimental
+    training_scope: developer-lab
+  - id: observe-sdk
+    label: Observe SDK
+    route: null
+    status: experimental
+    training_scope: developer-lab

@@ -1,0 +1,38 @@
+schema_version: 1
+screenshot_id: null
+release_sha: null
+validator:
+  name: flowagentic-screenshot-validator
+  version: "3.0"
+source:
+  file: null
+  sha256: null
+  ocr:
+    engine: tesseract
+    engine_version: null
+    languages:
+      - chi_sim
+      - eng
+    psm: "11"
+    text_sha256: null
+    character_count: null
+    ruleset_sha256: null
+annotated:
+  file: null
+  sha256: null
+  ocr:
+    engine: tesseract
+    engine_version: null
+    languages:
+      - chi_sim
+      - eng
+    psm: "11"
+    text_sha256: null
+    character_count: null
+    ruleset_sha256: null
+secret_scan:
+  ruleset_sha256: null
+  source_findings: null
+  annotated_findings: null
+status: pending
+scanned_at: null

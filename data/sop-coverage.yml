@@ -1,0 +1,37 @@
+schema_version: 1
+required_sections:
+  - 目标
+  - 适用角色
+  - 适用版本与功能状态
+  - 前置条件与风险
+  - 初始状态
+  - 操作步骤
+  - 逐步检查点
+  - 成功结果
+  - 常见错误与诊断
+  - 回退与清理
+  - 安全提示
+  - 练习任务
+  - 验收清单
+  - 来源与验证
+sops:
+  - feature_id: chatflows
+    page: docs/04-chatflow/index.md
+  - feature_id: agentflows
+    page: docs/05-agentflow-v2/index.md
+  - feature_id: executions
+    page: docs/06-executions/index.md
+  - feature_id: assistants
+    page: docs/07-assistant/index.md
+  - feature_id: marketplaces
+    page: docs/08-marketplace/index.md
+  - feature_id: tools
+    page: docs/09-tools-mcp/index.md
+  - feature_id: credentials
+    page: docs/03-credentials/credentials.md
+  - feature_id: variables
+    page: docs/03-credentials/variables.md
+  - feature_id: api-keys
+    page: docs/03-credentials/api-keys.md
+  - feature_id: document-stores
+    page: docs/10-rag/index.md

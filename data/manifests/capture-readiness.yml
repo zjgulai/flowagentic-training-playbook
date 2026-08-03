@@ -1,0 +1,29 @@
+schema_version: 1
+checked_at: "2026-08-04"
+status: blocked
+checks:
+  npx:
+    status: passed
+    observed_version: 10.9.4
+  playwright_cli:
+    status: passed
+    observed_version: 0.1.17
+  chrome_session:
+    status: blocked
+    error_class: TargetClosedError
+    scope: local capture probe only
+    secrets_recorded: false
+  target_chinese_release:
+    status: blocked
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    source_candidate_review: passed
+    deployment_receipt: blocked
+    pc_acceptance_receipt: blocked
+  isolated_training_environment:
+    status: blocked
+next_actions:
+  - 在同版本隔离培训环境可用后重试固定版本的 Chromium 与 Firefox
+  - 精确候选部署与隔离环境就绪后，再建立带脱敏 fixture 的认证状态
+  - 每次关键交互前 snapshot，页面变化后重新 snapshot
+  - 原始截图写入隔离输出目录后再执行 OCR、EXIF 与秘密扫描
+evidence_boundary: 此文件只证明工具探针结果，不证明生产页面或培训 SOP 已通过浏览器验收

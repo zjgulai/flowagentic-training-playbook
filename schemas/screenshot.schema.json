@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://flowagentic.example/schemas/screenshot.schema.json",
+  "title": "FlowAgentic screenshot manifest item",
+  "type": "object",
+  "required": [
+    "id",
+    "sop_id",
+    "doc_path",
+    "step",
+    "route",
+    "state",
+    "role",
+    "viewport",
+    "locale",
+    "theme",
+    "release_sha",
+    "fixture",
+    "provider",
+    "feature_status",
+    "redaction_status",
+    "alt_text",
+    "source_file",
+    "source_sha256",
+    "annotated_file",
+    "annotated_sha256",
+    "scan_receipt",
+    "scan_receipt_sha256",
+    "captured_at",
+    "quality_checks"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9_-]+$"
+    },
+    "sop_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "doc_path": {
+      "type": "string",
+      "pattern": "^docs/[A-Za-z0-9][A-Za-z0-9._/-]*\\.md$"
+    },
+    "step": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "route": {
+      "type": "string",
+      "minLength": 1
+    },
+    "state": {
+      "enum": [
+        "before",
+        "during",
+        "success",
+        "empty",
+        "error",
+        "permission-denied",
+        "rate-limited",
+        "recovery"
+      ]
+    },
+    "role": {
+      "enum": ["beginner", "builder", "developer", "admin", "trainer"]
+    },
+    "viewport": {
+      "type": "string",
+      "pattern": "^[0-9]{3,4}x[0-9]{3,4}@100%$"
+    },
+    "locale": {
+      "const": "zh-CN"
+    },
+    "theme": {
+      "enum": ["light", "dark"]
+    },
+    "release_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "fixture": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provider": {
+      "enum": ["none", "DeepSeek", "Kimi"]
+    },
+    "feature_status": {
+      "enum": [
+        "production-enabled",
+        "feature-gated",
+        "deprecated",
+        "experimental",
+        "upstream-only"
+      ]
+    },
+    "risk_case": {
+      "type": "string",
+      "minLength": 1
+    },
+    "redaction_status": {
+      "enum": ["pending", "passed", "rejected", "not-required"]
+    },
+    "alt_text": {
+      "type": "string",
+      "minLength": 8
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "source_file": {
+      "type": "string",
+      "pattern": "^data/screenshots/source/[A-Za-z0-9][A-Za-z0-9._/-]*\\.png$"
+    },
+    "annotated_file": {
+      "type": "string",
+      "pattern": "^docs/assets/screenshots/[A-Za-z0-9][A-Za-z0-9._/-]*\\.webp$"
+    },
+    "annotated_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "scan_receipt": {
+      "type": "string",
+      "pattern": "^data/screenshots/receipts/[A-Za-z0-9][A-Za-z0-9._/-]*\\.ya?ml$"
+    },
+    "scan_receipt_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "captured_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "quality_checks": {
+      "type": "object",
+      "required": ["ocr", "exif", "metadata", "secrets", "dimensions", "file_size"],
+      "properties": {
+        "ocr": {"enum": ["pending", "passed", "failed"]},
+        "exif": {"enum": ["pending", "passed", "failed"]},
+        "metadata": {"enum": ["pending", "passed", "failed"]},
+        "secrets": {"enum": ["pending", "passed", "failed"]},
+        "dimensions": {"enum": ["pending", "passed", "failed"]},
+        "file_size": {"enum": ["pending", "passed", "failed"]}
+      },
+      "additionalProperties": false
+    },
+    "hash_reuse_approval": {
+      "type": "object",
+      "required": [
+        "approval_id",
+        "status",
+        "approved_by",
+        "approved_at",
+        "reason",
+        "hash_types",
+        "approved_hashes",
+        "screenshot_ids"
+      ],
+      "properties": {
+        "approval_id": {
+          "type": "string",
+          "pattern": "^SHR-[A-Z0-9][A-Z0-9_-]{5,63}$"
+        },
+        "status": {"const": "approved"},
+        "approved_by": {"type": "string", "minLength": 3},
+        "approved_at": {"type": "string", "format": "date-time"},
+        "reason": {"type": "string", "minLength": 20},
+        "hash_types": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"enum": ["source_sha256", "annotated_sha256"]}
+        },
+        "approved_hashes": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {
+            "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+            "annotated_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+          },
+          "additionalProperties": false
+        },
+        "screenshot_ids": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^[A-Z][A-Z0-9_-]+$"}
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

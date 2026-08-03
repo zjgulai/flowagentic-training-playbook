@@ -1,0 +1,130 @@
+#!/usr/bin/env python3
+"""Static accessibility checks for Markdown sources and built HTML.
+
+This complements, but does not replace, the required Chrome/Firefox keyboard
+and screen-reader-oriented review after the browser gate is available.
+"""
+
+from __future__ import annotations
+
+import argparse
+import re
+import sys
+from pathlib import Path
+
+from bs4 import BeautifulSoup, Tag
+
+
+ROOT = Path(__file__).resolve().parents[1]
+DOCS = ROOT / "docs"
+SITE = ROOT / "site"
+IMAGE_RE = re.compile(r"!\[(?P<alt>[^\]]*)]\([^)]*\)")
+LINK_RE = re.compile(r"(?<!!)\[(?P<label>[^\]]*)]\([^)]*\)")
+HEADING_RE = re.compile(r"^(?P<marks>#{1,6})\s+(?P<title>.+?)\s*$")
+
+
+def validate_markdown() -> list[str]:
+    errors: list[str] = []
+    for path in sorted(DOCS.rglob("*.md")):
+        if "assets/vendor" in path.as_posix():
+            continue
+        relative = path.relative_to(ROOT)
+        headings: list[tuple[int, str, int]] = []
+        for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+            match = HEADING_RE.match(line)
+            if match:
+                headings.append((len(match.group("marks")), match.group("title"), line_number))
+            for image in IMAGE_RE.finditer(line):
+                alt = image.group("alt").strip()
+                if len(alt) < 4 or alt.lower() in {"image", "screenshot", "图片", "截图"}:
+                    errors.append(f"{relative}:{line_number}: image alt text is missing or generic")
+            for link in LINK_RE.finditer(line):
+                if not link.group("label").strip():
+                    errors.append(f"{relative}:{line_number}: link has no accessible label")
+        h1_count = sum(level == 1 for level, _, _ in headings)
+        if h1_count != 1:
+            errors.append(f"{relative}: expected one H1, found {h1_count}")
+        for previous, current in zip(headings, headings[1:]):
+            if current[0] > previous[0] + 1:
+                errors.append(
+                    f"{relative}:{current[2]}: heading jumps from H{previous[0]} to H{current[0]}"
+                )
+    return errors
+
+
+def _attribute_text(value: object) -> str:
+    if isinstance(value, str):
+        return value
+    if isinstance(value, (list, tuple)):
+        return " ".join(str(item) for item in value)
+    return ""
+
+
+def accessible_name(element: Tag) -> str:
+    value = " ".join(element.stripped_strings)
+    image = element.find("img")
+    return (
+        value
+        or _attribute_text(element.get("aria-label"))
+        or _attribute_text(element.get("title"))
+        or (_attribute_text(image.get("alt")) if isinstance(image, Tag) else "")
+    ).strip()
+
+
+def validate_html() -> list[str]:
+    if not SITE.exists():
+        return ["site/: built HTML is missing"]
+    errors: list[str] = []
+    for path in sorted(SITE.rglob("*.html")):
+        relative = path.relative_to(ROOT)
+        soup = BeautifulSoup(path.read_text(encoding="utf-8", errors="replace"), "html.parser")
+        html = soup.find("html")
+        if not html or not str(html.get("lang", "")).startswith("zh"):
+            errors.append(f"{relative}: html lang must identify Chinese")
+        main = soup.find("main")
+        if main:
+            h1 = main.find_all("h1")
+            if len(h1) != 1:
+                errors.append(f"{relative}: main content must have exactly one H1")
+            for image in main.find_all("img"):
+                if not _attribute_text(image.get("alt")).strip():
+                    errors.append(f"{relative}: content image is missing alt text")
+            for link in main.find_all("a", href=True):
+                if not accessible_name(link):
+                    errors.append(f"{relative}: content link has no accessible name")
+        if not soup.find("meta", attrs={"name": "viewport"}):
+            errors.append(f"{relative}: viewport metadata is missing")
+    return errors
+
+
+def validate_css() -> list[str]:
+    text = (DOCS / "assets" / "stylesheets" / "extra.css").read_text(encoding="utf-8")
+    errors: list[str] = []
+    if ":focus-visible" not in text:
+        errors.append("extra.css: explicit focus-visible style is missing")
+    if "prefers-reduced-motion" not in text:
+        errors.append("extra.css: reduced-motion override is missing")
+    return errors
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--source-only",
+        action="store_true",
+        help="Skip built HTML checks; useful before mkdocs build.",
+    )
+    args = parser.parse_args()
+    errors = validate_markdown()
+    errors.extend(validate_css())
+    if not args.source_only:
+        errors.extend(validate_html())
+    for error in errors:
+        print(f"ERROR: {error}", file=sys.stderr)
+    scope = "source" if args.source_only else "source+html"
+    print(f"accessibility static validation ({scope}): {len(errors)} error(s)")
+    return 1 if errors else 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

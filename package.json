@@ -1,0 +1,16 @@
+{
+  "name": "flowagentic-playbook-tooling",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=22 <25"
+  },
+  "scripts": {
+    "browser:cli": "playwright-cli",
+    "site:serve": "python3 -m http.server 8000 --directory site"
+  },
+  "devDependencies": {
+    "@playwright/cli": "0.1.17"
+  }
+}

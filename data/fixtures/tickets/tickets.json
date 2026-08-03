@@ -1,0 +1,32 @@
+[
+  {
+    "ticket_id": "TKT-1001",
+    "customer": "星桥科技·知识产品部（虚构）",
+    "subject": "知识库检索结果为空",
+    "category": "知识库",
+    "priority": "高",
+    "status": "待处理",
+    "description": "上传培训版产品手册后，检索测试没有返回片段。",
+    "contains_personal_data": false
+  },
+  {
+    "ticket_id": "TKT-1002",
+    "customer": "星桥科技·平台工程部（虚构）",
+    "subject": "API 调用返回 429",
+    "category": "限流",
+    "priority": "中",
+    "status": "处理中",
+    "description": "合成压测数据超过培训环境的请求频率限制。",
+    "contains_personal_data": false
+  },
+  {
+    "ticket_id": "TKT-1003",
+    "customer": "星桥科技·客户成功部（虚构）",
+    "subject": "需要人工确认退款规则",
+    "category": "人工审批",
+    "priority": "中",
+    "status": "等待审批",
+    "description": "智能体需要根据虚构规则提交人工审批，不执行真实退款。",
+    "contains_personal_data": false
+  }
+]

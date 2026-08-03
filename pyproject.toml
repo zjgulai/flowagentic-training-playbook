@@ -1,0 +1,47 @@
+[project]
+name = "flowagentic-training-playbook"
+version = "0.1.0"
+description = "FlowAgentic 培训与操作 Playbook 的独立站点工程"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "MIT AND CC-BY-NC-SA-4.0"
+license-files = ["LICENSE-CODE", "LICENSE-CONTENT"]
+dependencies = [
+  "beautifulsoup4==4.15.0",
+  "cryptography==49.0.0",
+  "jsonschema==4.26.0",
+  "mike==2.2.0",
+  "mkdocs==1.6.1",
+  "mkdocs-glightbox==0.5.2",
+  "mkdocs-macros-plugin==1.5.0",
+  "mkdocs-material==9.7.7",
+  "mkdocs-minify-plugin==0.8.0",
+  "mkdocs-redirects==1.2.3",
+  "pdfplumber==0.11.10",
+  "pillow==12.3.0",
+  "pypdf==6.14.2",
+  "pymdown-extensions==11.0.1",
+  "pyyaml==6.0.3",
+  "weasyprint==69.0",
+]
+
+[dependency-groups]
+dev = [
+  "pyright==1.1.411",
+  "pytest==9.1.1",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers"
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.pyright]
+pythonVersion = "3.12"
+typeCheckingMode = "standard"
+include = ["scripts", "labs", "tests"]
+exclude = ["**/__pycache__", ".venv", "site", "output", "tmp"]
+extraPaths = ["scripts", "labs/mock-ticket-api"]

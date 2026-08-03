@@ -1,0 +1,545 @@
+---
+schema_version: 1
+target_release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+last_reviewed: '2026-08-04'
+claims:
+- claim_id: CLM-001
+  statement: Playbook 当前事实基线是 Flowise 3.1.3 与目标提交 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64。
+  source_ids:
+  - SRC-001
+  - SRC-036
+  credibility: 98
+  local_verification:
+    status: passed
+    method: 已用 git cat-file、git show、package.json、精确提交复核和远端分支回执交叉确认；运行部署与正式截图仍是独立门禁。
+    evidence:
+    - 固定提交只读检查已完成
+    - 来源记录已登记并可追溯
+  evidence_status: verified
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: system-fact
+- claim_id: CLM-002
+  statement: 目标提交的主侧栏声明十个生产主模块：对话流程、智能体流程、执行记录、助手、模板市场、工具、凭据、变量、API 密钥和文档库。
+  source_ids:
+  - SRC-002
+  - SRC-003
+  - SRC-005
+  credibility: 97
+  local_verification:
+    status: passed
+    method: 固定提交的菜单、路由和路由契约测试已交叉检查；最终中文版本仍需 PC 浏览器复核。
+    evidence:
+    - 固定提交只读检查已完成
+    - 来源记录已登记并可追溯
+  evidence_status: verified
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: system-fact
+- claim_id: CLM-003
+  statement: 数据集、评估器、评估任务、用户、角色、工作空间、SSO 和登录活动在目标 UI 中带有 display 或 permission 门禁，不能按默认已启用能力讲授。
+  source_ids:
+  - SRC-002
+  - SRC-003
+  - SRC-034
+  - SRC-035
+  credibility: 95
+  local_verification:
+    status: blocked
+    method: 目标源码已确认门禁表达式；尚未在隔离环境逐角色复现许可证与功能开关组合。
+    evidence:
+    - 固定提交或官方语义已核对
+    - 缺少同版本隔离培训环境或外部门禁输入
+  evidence_status: partial
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: system-fact
+- claim_id: CLM-004
+  statement: 目标提交不提供开放注册入口，访问 /register 会重定向到 /signin。
+  source_ids:
+  - SRC-004
+  credibility: 98
+  local_verification:
+    status: passed
+    method: 固定提交路由源码直接确认；正式截图等待该精确提交进入同版本隔离培训环境。
+    evidence:
+    - 固定提交只读检查已完成
+    - 来源记录已登记并可追溯
+  evidence_status: verified
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: system-fact
+- claim_id: CLM-005
+  statement: 目标提交的可嵌入 Agentflow 包列出 13 个节点类型，同时明确该包处于 Dev 状态，因此节点教学与 SDK 稳定性必须分开表述。
+  source_ids:
+  - SRC-006
+  - SRC-017
+  - SRC-039
+  - SRC-040
+  credibility: 96
+  local_verification:
+    status: blocked
+    method: README 的节点表和状态声明已核对；13 个节点的最终参数与截图需按新 SHA 复验。
+    evidence:
+    - 固定提交或官方语义已核对
+    - 缺少同版本隔离培训环境或外部门禁输入
+  evidence_status: partial
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: system-fact
+- claim_id: CLM-006
+  statement: Agentflow V2 的 Flow State 用于一次执行内的跨节点数据交换；官方滚动文档说明它不会自动跨不同执行持久化。
+  source_ids:
+  - SRC-017
+  - SRC-006
+  credibility: 91
+  local_verification:
+    status: blocked
+    method: 目标源码存在变量选择和状态编辑能力；生命周期尚未在同版本隔离环境以两个 session 对照复现。
+    evidence:
+    - 固定提交或官方语义已核对
+    - 缺少同版本隔离培训环境或外部门禁输入
+  evidence_status: partial
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: official-semantics
+- claim_id: CLM-007
+  statement: 文档库教学必须拆分数据加载、切分预览、Embedding、Vector Store、Record Manager、Process/Upsert
+    与检索验证，不能把一次保存等同于可用 RAG。
+  source_ids:
+  - SRC-011
+  - SRC-019
+  - SRC-020
+  - SRC-026
+  - SRC-045
+  credibility: 91
+  local_verification:
+    status: blocked
+    method: 目标服务和状态码测试支持阶段划分；成功、失败、Stale 与恢复 fixture 尚待隔离环境执行。
+    evidence:
+    - 固定提交或官方语义已核对
+    - 缺少同版本隔离培训环境或外部门禁输入
+  evidence_status: partial
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: inference
+- claim_id: CLM-008
+  statement: 静态变量、运行时变量和请求级覆盖应分别教学，并在执行记录中核对最终取值来源。
+  source_ids:
+  - SRC-012
+  - SRC-010
+  - SRC-018
+  - SRC-027
+  - SRC-025
+  credibility: 90
+  local_verification:
+    status: not-started
+    method: 变量服务、端到端测试和 Prediction 边界已定位；覆盖优先级仍需构造同名变量实验。
+    evidence:
+    - 来源已登记
+    - 目标版本控制实验尚未执行
+  evidence_status: proposed
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: inference
+- claim_id: CLM-009
+  statement: 流式 Prediction 验收不应只看首个 token，还应检查 metadata、token、end、错误、中断和无内容路径。
+  source_ids:
+  - SRC-010
+  - SRC-021
+  - SRC-022
+  - SRC-025
+  - SRC-046
+  credibility: 87
+  local_verification:
+    status: not-started
+    method: 服务入口与官方流式语义已确认；开发者报告的偶发无内容尚未在目标版本复现。
+    evidence:
+    - 来源已登记
+    - 目标版本控制实验尚未执行
+  evidence_status: proposed
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: experience-advice
+- claim_id: CLM-010
+  statement: Embed 场景必须对浏览器网络流中的 SSE 事件做数据最小化审计，不能假设 UI 未展示的数据对终端用户不可见。
+  source_ids:
+  - SRC-010
+  - SRC-022
+  - SRC-023
+  - SRC-047
+  credibility: 86
+  local_verification:
+    status: not-started
+    method: 风险由一手网络观察提出；目标版本需要使用合成数据抓包验证事件字段。
+    evidence:
+    - 来源已登记
+    - 目标版本控制实验尚未执行
+  evidence_status: proposed
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: experience-advice
+- claim_id: CLM-011
+  statement: 上游 3.1.3 发布范围包含将 Chatflow 暴露为 MCP Server 的能力，但目标部署的开关、鉴权和工具发现仍需运行态确认。
+  source_ids:
+  - SRC-036
+  - SRC-041
+  - SRC-014
+  - SRC-017
+  credibility: 92
+  local_verification:
+    status: blocked
+    method: 目标源码包含 MCP 实现目录；尚未在培训环境执行授权、发现、调用和撤销。
+    evidence:
+    - 固定提交或官方语义已核对
+    - 缺少同版本隔离培训环境或外部门禁输入
+  evidence_status: partial
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: system-fact
+- claim_id: CLM-012
+  statement: Custom MCP 的 stdio 命令与网络目标属于运维策略边界；3.1.4 的 operator-controlled allowlist
+    修复构成 3.1.3 之后的重要安全差异。
+  source_ids:
+  - SRC-014
+  - SRC-037
+  - SRC-044
+  - SRC-049
+  credibility: 91
+  local_verification:
+    status: blocked
+    method: 已确认目标目录和上游修复记录；目标 3.1.3 的具体配置与补丁回移状态尚待安全复核。
+    evidence:
+    - 固定提交或官方语义已核对
+    - 缺少同版本隔离培训环境或外部门禁输入
+  evidence_status: partial
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: system-fact
+- claim_id: CLM-013
+  statement: 目标源码包含 DeepSeek 和 Kimi 聊天模型节点，但源码存在不能证明凭据、网络、限流、计费和真实响应链路成功。
+  source_ids:
+  - SRC-008
+  - SRC-009
+  credibility: 98
+  local_verification:
+    status: blocked
+    method: 节点与测试文件已核对；安全凭据和隔离环境未提供，因此真实 Provider 实验保持关闭。
+    evidence:
+    - 固定提交或官方语义已核对
+    - 缺少同版本隔离培训环境或外部门禁输入
+  evidence_status: blocked
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 节点源码存在，但 Provider 可用性属于部署与凭据状态。
+  experience_label: system-fact
+- claim_id: CLM-014
+  statement: 固定提交中有 311 个包含 implements INode 的 TypeScript 节点实现文件；该数字是代码实现计数，不是当前角色在节点面板中必然可见的数量。
+  source_ids:
+  - SRC-007
+  credibility: 97
+  local_verification:
+    status: passed
+    method: git grep -l 'implements INode' 在固定提交上返回 311；后续生成器需记录隐藏、弃用、凭据和功能门禁。
+    evidence:
+    - 固定提交只读检查已完成
+    - 来源记录已登记并可追溯
+  evidence_status: verified
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: system-fact
+- claim_id: CLM-015
+  statement: 登录、路由可达、菜单可见和操作有权限是四个不同检查层级，任何一个单独通过都不能证明完整授权链路。
+  source_ids:
+  - SRC-002
+  - SRC-003
+  - SRC-004
+  - SRC-005
+  - SRC-029
+  - SRC-030
+  credibility: 93
+  local_verification:
+    status: not-started
+    method: 源码中同时存在公开登录守卫、permission 与 display 条件；多角色矩阵尚待隔离环境复现。
+    evidence:
+    - 来源已登记
+    - 目标版本控制实验尚未执行
+  evidence_status: proposed
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: inference
+- claim_id: CLM-016
+  statement: 流程配置界面在 3.1.3 发布周期附近有结构性重设计，因此旧版教程截图不可作为目标版本的步骤证据。
+  source_ids:
+  - SRC-036
+  - SRC-042
+  - SRC-003
+  credibility: 88
+  local_verification:
+    status: blocked
+    method: 维护者 PR 和目标路由已确认；最终截图将在该精确提交的同版本隔离培训环境重新采集。
+    evidence:
+    - 固定提交或官方语义已核对
+    - 缺少同版本隔离培训环境或外部门禁输入
+  evidence_status: partial
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: inference
+- claim_id: CLM-017
+  statement: 3.1.4 相比 3.1.3 包含 MCP allowlist、跨工作空间授权、租户校验、导出变量值和 Web Scraper deny-list
+    等修复，Playbook 必须保留上游差异矩阵。
+  source_ids:
+  - SRC-036
+  - SRC-037
+  - SRC-044
+  credibility: 94
+  local_verification:
+    status: passed
+    method: 发布说明已核对；尚未判断这些修复是否已被目标仓单独回移。
+    evidence:
+    - 固定提交只读检查已完成
+    - 来源记录已登记并可追溯
+  evidence_status: verified
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 上游 3.1.4 晚于目标 3.1.3；是否回移修复尚未核对。
+  experience_label: system-fact
+- claim_id: CLM-018
+  statement: Start 节点的 Chat、Form、Webhook 和 Schedule 触发器必须分别验收请求形态，不能用 Chat 成功替代 Form
+    或 Webhook 成功。
+  source_ids:
+  - SRC-017
+  - SRC-040
+  - SRC-048
+  credibility: 84
+  local_verification:
+    status: not-started
+    method: 官方节点语义和维护者改动支持分类；Form 请求缺失 question 是上游报告，目标版本尚未复现。
+    evidence:
+    - 来源已登记
+    - 目标版本控制实验尚未执行
+  evidence_status: proposed
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: experience-advice
+- claim_id: CLM-019
+  statement: 经 API 创建的文档 Loader 还需要进入 UI 执行预览、编辑、处理和结果检查，API 返回成功不能替代画布路径验收。
+  source_ids:
+  - SRC-019
+  - SRC-026
+  - SRC-045
+  - SRC-011
+  credibility: 85
+  local_verification:
+    status: not-started
+    method: 一手案例显示 API 与 UI 可能分叉；目标版本需通过合成文档做双路径对照。
+    evidence:
+    - 来源已登记
+    - 目标版本控制实验尚未执行
+  evidence_status: proposed
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: experience-advice
+- claim_id: CLM-020
+  statement: Session 隔离必须同时检查请求体、返回 chatId/sessionId、历史消息查询和交叉用户不可见性。
+  source_ids:
+  - SRC-010
+  - SRC-021
+  - SRC-023
+  - SRC-050
+  credibility: 83
+  local_verification:
+    status: not-started
+    method: 较早的一手问题报告仅提供风险假设；目标版本尚无双用户合成 fixture 结果。
+    evidence:
+    - 来源已登记
+    - 目标版本控制实验尚未执行
+  evidence_status: proposed
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: experience-advice
+- claim_id: CLM-021
+  statement: 队列或 Worker 的生产验收应观察一段时间内的内存、任务量、失败率和回收，而不是把单次任务完成当作稳定性证明。
+  source_ids:
+  - SRC-032
+  - SRC-033
+  - SRC-051
+  credibility: 82
+  local_verification:
+    status: not-started
+    method: 开发者给出 Kubernetes 内存增长案例；目标拓扑属于私有 Runbook 范围，公开站只保留方法和指标。
+    evidence:
+    - 来源已登记
+    - 目标版本控制实验尚未执行
+  evidence_status: proposed
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: experience-advice
+- claim_id: CLM-022
+  statement: 企业网络下的 DNS、代理和外部 tokenizer 资源可能表现为节点长时间等待，因此超时诊断要区分 Provider、工具、DNS 与第三方静态资源。
+  source_ids:
+  - SRC-033
+  - SRC-052
+  credibility: 79
+  local_verification:
+    status: not-started
+    method: 一手案例提供具体外部依赖；目标环境尚未做受控 DNS 失败实验。
+    evidence:
+    - 来源已登记
+    - 目标版本控制实验尚未执行
+  evidence_status: proposed
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: experience-advice
+- claim_id: CLM-023
+  statement: Tools、HTTP、MCP、Upsert 和工单更新等具有外部副作用的节点，应在训练中显式标注只读、写入、费用和清理责任。
+  source_ids:
+  - SRC-013
+  - SRC-014
+  - SRC-017
+  - SRC-020
+  - SRC-028
+  - SRC-044
+  credibility: 90
+  local_verification:
+    status: not-started
+    method: 源码和官方语义支持副作用分类；逐节点 side_effects 目录尚待生成器与隔离实验联合确认。
+    evidence:
+    - 来源已登记
+    - 目标版本控制实验尚未执行
+  evidence_status: proposed
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: inference
+- claim_id: CLM-024
+  statement: 公开 Playbook 应只给出安全原则、合成标识符和受控参考编号；真实拓扑、恢复命令、密钥与部署回执应保留在私有 Runbook。
+  source_ids:
+  - SRC-029
+  - SRC-032
+  - SRC-033
+  - SRC-037
+  credibility: 94
+  local_verification:
+    status: passed
+    method: 已作为发布治理规则锁定；内容安全扫描和人工脱敏仍需在发布门禁执行。
+    evidence:
+    - 固定提交只读检查已完成
+    - 来源记录已登记并可追溯
+  evidence_status: verified
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
+  experience_label: system-fact
+- claim_id: CLM-025
+  statement: 目标源码候选对工作区导入导出、MCP 旧 Token 迁移与公共请求边界、Provider-backed Assistant 权限和畸形分页采用 fail-closed 合同；这些源码合同尚不等于隔离运行或生产部署已验收。
+  source_ids:
+  - SRC-014
+  - SRC-053
+  credibility: 98
+  local_verification:
+    status: passed
+    method: 精确提交源码、聚焦测试、全量服务端测试、静态安全扫描和独立提交级复核均已通过；同名远端分支 SHA 已核对一致。
+    evidence:
+    - 精确提交 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64 已完成代码门禁
+    - 运行部署、迁移演练和正式截图仍由外部门禁阻断
+  evidence_status: verified
+  public_safe: true
+  applies_to:
+    product_version: 3.1.3
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  last_verified: '2026-08-04'
+  upstream_difference: 目标定制可能与上游 3.1.4 的同类修复实现不同；不能仅凭行为相似宣称包含相同上游提交。
+  experience_label: system-fact

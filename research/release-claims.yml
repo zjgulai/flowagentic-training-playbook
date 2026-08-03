@@ -1,0 +1,30 @@
+schema_version: 1
+description: 正式发布必须完成目标系统、官方语义与隔离培训环境三角验证的核心 Claim。
+core_claim_ids:
+  - CLM-001
+  - CLM-002
+  - CLM-004
+  - CLM-005
+  - CLM-006
+  - CLM-007
+  - CLM-008
+  - CLM-009
+  - CLM-011
+  - CLM-013
+  - CLM-014
+  - CLM-015
+  - CLM-018
+  - CLM-019
+  - CLM-020
+  - CLM-023
+  - CLM-024
+core_requirements:
+  evidence_status: [triangulated, verified]
+  local_verification_status: passed
+  require_target_system_source: true
+  require_official_semantics_source: true
+experience_requirements:
+  evidence_status: [triangulated, verified]
+  local_verification_status: passed
+  minimum_independent_developer_authors: 2
+  require_official_or_target_anchor: true

@@ -1,0 +1,38 @@
+openapi: 3.1.0
+info:
+  title: 虚构企业工单培训 API
+  version: 1.0.0
+  description: 仅描述隔离培训环境中的合成工单接口。
+servers:
+  - url: https://training.invalid/api
+paths:
+  /tickets/{ticket_id}:
+    get:
+      operationId: getTicket
+      summary: 查询合成工单
+      parameters:
+        - in: path
+          name: ticket_id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: 返回合成工单
+        "404":
+          description: 工单不存在
+  /tickets/{ticket_id}/classification:
+    put:
+      operationId: updateTicketClassification
+      summary: 更新合成工单分类
+      parameters:
+        - in: path
+          name: ticket_id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: 更新成功
+        "409":
+          description: 状态冲突

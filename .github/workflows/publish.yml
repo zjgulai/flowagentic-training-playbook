@@ -1,0 +1,222 @@
+name: 发布版本
+
+on:
+  workflow_dispatch:
+    inputs:
+      product_version:
+        description: 全中文优化版产品版本，例如 3.1.4-cn.1
+        required: true
+        type: string
+      release_sha:
+        description: 已验收产品版本的 40 位小写 Git SHA
+        required: true
+        type: string
+      release_version:
+        description: mike 版本名：flowagentic-<产品版本>-<短 SHA>
+        required: true
+        type: string
+      chinese_gate:
+        description: 10 个主页面、弹窗、术语、控制台和差异清单是否全部验收
+        required: true
+        default: not-passed
+        type: choice
+        options: [not-passed, passed]
+      screenshot_gate:
+        description: 正式截图、脱敏、OCR、元数据和 manifest 是否全部通过
+        required: true
+        default: not-passed
+        type: choice
+        options: [not-passed, passed]
+      confirmation:
+        description: 输入 publish 确认更新公开 gh-pages
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+env:
+  DISABLE_MKDOCS_2_WARNING: "true"
+  FLOWAGENTIC_PRODUCT_VERSION: ${{ inputs.product_version }}
+  PLAYBOOK_RELEASE_SHA: ${{ inputs.release_sha }}
+  PLAYBOOK_RELEASE_VERSION: ${{ inputs.release_version }}
+  PLAYBOOK_CHINESE_GATE: ${{ inputs.chinese_gate }}
+  PLAYBOOK_SCREENSHOT_GATE: ${{ inputs.screenshot_gate }}
+  PLAYBOOK_RELEASE_CONFIRMATION: ${{ inputs.confirmation }}
+  PLAYBOOK_RELEASE_MODE: "1"
+  PLAYBOOK_VERSION_PROVIDER: mike
+
+concurrency:
+  group: flowagentic-playbook-production
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    name: 构建并验证不可变发布树
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    permissions:
+      contents: read
+    steps:
+      - name: 检出 main 独立历史（不持久化令牌）
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: 安装固定版本 uv
+        uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          version: "0.12.0"
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+
+      - name: 安装 Python 3.12
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: 安装 PDF、Noto CJK 与截图 OCR 依赖
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends \
+            fonts-noto-cjk \
+            libharfbuzz-subset0 \
+            libpango-1.0-0 \
+            libpangoft2-1.0-0 \
+            poppler-utils \
+            tesseract-ocr \
+            tesseract-ocr-chi-sim \
+            tesseract-ocr-eng
+
+      - name: 同步精确锁定的 Python 依赖
+        run: uv sync --frozen --all-groups
+
+      - name: 验证人工输入、资源、独立性和发布内容
+        run: |
+          uv run python scripts/release_gate.py
+          uv run python scripts/vendor_assets.py --check
+          uv run python scripts/check_independence.py
+          uv run pyright
+          uv run pytest -q
+          uv run python scripts/validate_all.py
+          uv run python scripts/check_external_links.py
+
+      - name: 构建并验证中文 PDF
+        run: |
+          uv run mkdocs build --strict
+          uv run python scripts/validate_accessibility.py
+          uv run python scripts/build_pdf.py \
+            --site-dir site \
+            --output output/pdf/flowagentic-playbook.pdf \
+            --tmp-dir tmp/pdfs \
+            --require-noto
+          uv run python scripts/validate_pdf.py output/pdf/flowagentic-playbook.pdf
+          uv run python scripts/validate_built_site.py
+
+      - name: 构建最终 mike 版本树并一次性固定 latest
+        run: |
+          mkdir -p docs/assets/downloads
+          cp output/pdf/flowagentic-playbook.pdf \
+            docs/assets/downloads/flowagentic-playbook.pdf
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          uv run mike deploy --update-aliases --alias-type=copy \
+            "$PLAYBOOK_RELEASE_VERSION" latest
+          uv run mike set-default latest
+          mkdir -p "$RUNNER_TEMP/published-site"
+          git archive gh-pages | tar -xf - -C "$RUNNER_TEMP/published-site"
+          test -f "$RUNNER_TEMP/published-site/index.html"
+          test -f "$RUNNER_TEMP/published-site/versions.json"
+          uv run python scripts/validate_built_site.py \
+            --site-dir "$RUNNER_TEMP/published-site/$PLAYBOOK_RELEASE_VERSION"
+          uv run python scripts/validate_public_artifacts.py \
+            --site-dir "$RUNNER_TEMP/published-site/$PLAYBOOK_RELEASE_VERSION" \
+            --pdf output/pdf/flowagentic-playbook.pdf \
+            --receipt "$RUNNER_TEMP/artifact-safety.json"
+          (cd "$RUNNER_TEMP/published-site" && \
+            find . -type f -print0 | sort -z | xargs -0 sha256sum) \
+            > "$RUNNER_TEMP/published-site.sha256"
+
+      - name: 上传已经验证的最终发布树
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: verified-gh-pages-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/published-site
+            ${{ runner.temp }}/published-site.sha256
+            ${{ runner.temp }}/artifact-safety.json
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 6
+
+  publish:
+    name: 单提交发布已验证静态树
+    needs: verify
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    environment: github-pages
+    permissions:
+      contents: write
+    steps:
+      - name: 下载已经验证的发布树
+        uses: actions/download-artifact@70fc10c6e5e1ce46ad2ea6f2b72d43f7d47b13c3 # v8.0.0
+        with:
+          name: verified-gh-pages-${{ github.run_id }}
+          path: ${{ runner.temp }}/verified-release
+
+      - name: 初始化首发或续发的 gh-pages 工作树
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          publish_root="$RUNNER_TEMP/pages-worktree"
+          mkdir -p "$publish_root"
+          git init --initial-branch=gh-pages "$publish_root"
+          cd "$publish_root"
+          git remote add origin "https://github.com/$GITHUB_REPOSITORY.git"
+          gh auth setup-git
+          if git ls-remote --exit-code --heads origin refs/heads/gh-pages >/dev/null; then
+            git fetch --depth=1 origin refs/heads/gh-pages
+            git checkout -B gh-pages FETCH_HEAD
+          fi
+
+      - name: 原子替换 gh-pages 并只推送一次
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          verified_root="$RUNNER_TEMP/verified-release/published-site"
+          publish_root="$RUNNER_TEMP/pages-worktree"
+          test -f "$verified_root/index.html"
+          test -f "$RUNNER_TEMP/verified-release/published-site.sha256"
+          test -f "$RUNNER_TEMP/verified-release/artifact-safety.json"
+          jq -e '.status == "passed" and .findings == 0' \
+            "$RUNNER_TEMP/verified-release/artifact-safety.json" >/dev/null
+          (cd "$verified_root" && sha256sum -c \
+            "$RUNNER_TEMP/verified-release/published-site.sha256")
+          cd "$publish_root"
+          rsync --archive --delete --exclude=.git/ "$verified_root/" ./
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all
+          git diff --cached --quiet && exit 0
+          git commit -m "docs: publish $PLAYBOOK_RELEASE_VERSION"
+          git push origin HEAD:gh-pages
+
+  smoke:
+    name: Pages 发布后只读冒烟
+    needs: publish
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: 检查首页、版本、搜索、404 与 PDF
+        env:
+          SITE_BASE: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+        run: |
+          for path in "/" "/$PLAYBOOK_RELEASE_VERSION/" "/$PLAYBOOK_RELEASE_VERSION/search/search_index.json" "/$PLAYBOOK_RELEASE_VERSION/404.html" "/$PLAYBOOK_RELEASE_VERSION/assets/downloads/flowagentic-playbook.pdf"; do
+            curl --fail --silent --show-error --location \
+              --retry 6 --retry-delay 10 --max-time 30 \
+              "$SITE_BASE$path" >/dev/null
+          done

@@ -1,0 +1,4 @@
+schema_version: 1
+status: blocked
+reason: 等待隔离培训环境配置外部 Ed25519 签名器及经审核的公开验证密钥；仓库不保存私钥
+signers: []

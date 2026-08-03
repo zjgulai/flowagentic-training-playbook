@@ -1,0 +1,53 @@
+schema_version: 3
+release_sha: null
+capture_status: blocked
+capture_contract:
+  environment: 与目标中文版本同镜像、同迁移、同功能开关的隔离培训环境
+  viewport: 1440x1000@100%
+  locale: zh-CN
+  theme: light
+  formats:
+    source: png
+    web: webp
+  roots:
+    source: data/screenshots/source
+    annotated: docs/assets/screenshots
+    scan_receipts: data/screenshots/receipts
+  max_web_bytes: 512000
+  required_states:
+    normal:
+      - before
+      - during
+      - success
+    high_risk:
+      - before
+      - during
+      - success
+      - error
+      - recovery
+  privacy_checks:
+    - OCR
+    - EXIF
+    - image_metadata
+    - email
+    - internal_ip
+    - internal_domain
+    - token
+    - api_key
+    - cookie
+    - uuid
+    - local_path
+  evidence_requirements:
+    - 原图与公开标注图均按实际字节计算 SHA256
+    - 原图与公开标注图均重新执行 chi_sim+eng OCR 和秘密规则扫描
+    - PNG/WebP 非必要 metadata 默认拒绝，允许项仅限不可承载任意文本的渲染标量
+    - 扫描回执绑定截图 ID、发布 SHA、双图路径、双图哈希、OCR 文本摘要与规则集摘要
+    - manifest 中的 passed 字段仅作人工记录，不能替代机器复算
+  validator:
+    name: flowagentic-screenshot-validator
+    version: "3.0"
+    ocr_engine: tesseract
+    required_languages:
+      - chi_sim
+      - eng
+screenshots: []
