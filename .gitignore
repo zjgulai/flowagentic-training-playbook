@@ -9,6 +9,7 @@ htmlcov/
 .mypy_cache/
 node_modules/
 .playwright/
+.playwright-cli/
 
 site/
 artifacts/

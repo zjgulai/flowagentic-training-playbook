@@ -16,7 +16,7 @@ try:
 except ModuleNotFoundError:  # pragma: no cover - package import path
     from scripts.validate_content import validate_release_config
 
-BASELINE_SHA = "6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64"
+LEGACY_BASELINE_SHA = "70d8040e5ead30a7a51e2231a6a156d5632e6e25"
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 FULL_SHA = re.compile(r"^[0-9a-f]{40}$")
 SHORT_SHA = re.compile(r"^[0-9a-f]{7,12}$")
@@ -228,7 +228,7 @@ def main() -> int:
 
     if not FULL_SHA.fullmatch(args.release_sha):
         issues.append("release_sha 必须是 40 位小写十六进制 Git SHA")
-    elif args.release_sha == BASELINE_SHA:
+    elif args.release_sha == LEGACY_BASELINE_SHA:
         issues.append("不得用旧基线 70d8040e 发布正式截图版")
 
     if not PRODUCT_VERSION.fullmatch(args.product_version):

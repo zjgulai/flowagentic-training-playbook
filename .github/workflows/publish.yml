@@ -77,6 +77,12 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: 安装 Node.js 22
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: "22"
+          cache: npm
+
       - name: 安装 PDF、Noto CJK 与截图 OCR 依赖
         run: |
           sudo apt-get update
@@ -93,6 +99,12 @@ jobs:
       - name: 同步精确锁定的 Python 依赖
         run: uv sync --frozen --all-groups
 
+      - name: 安装固定版本的浏览器验收工具
+        run: |
+          npm ci
+          bash scripts/playwright_cli.sh install-browser chrome --with-deps
+          bash scripts/playwright_cli.sh install-browser firefox --with-deps
+
       - name: 验证人工输入、资源、独立性和发布内容
         run: |
           uv run python scripts/release_gate.py
@@ -102,6 +114,9 @@ jobs:
           uv run pytest -q
           uv run python scripts/validate_all.py
           uv run python scripts/check_external_links.py
+          uv run python scripts/release_readiness.py \
+            --output tmp/release-readiness.json \
+            --require-ready
 
       - name: 构建并验证中文 PDF
         run: |
@@ -114,6 +129,7 @@ jobs:
             --require-noto
           uv run python scripts/validate_pdf.py output/pdf/flowagentic-playbook.pdf
           uv run python scripts/validate_built_site.py
+          npm run browser:smoke
 
       - name: 构建最终 mike 版本树并一次性固定 latest
         run: |
@@ -147,6 +163,8 @@ jobs:
             ${{ runner.temp }}/published-site
             ${{ runner.temp }}/published-site.sha256
             ${{ runner.temp }}/artifact-safety.json
+            output/playwright
+            tmp/release-readiness.json
           if-no-files-found: error
           retention-days: 30
           compression-level: 6

@@ -3,6 +3,7 @@ from __future__ import annotations
 import copy
 import datetime as dt
 import hashlib
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -50,6 +51,104 @@ def test_browser_bootstrap_guards_empty_hash_and_scopes_mermaid() -> None:
     )
     assert "assets/vendor/mermaid.min.js" not in mkdocs
     assert "assets/javascripts/mermaid-init.js" not in mkdocs
+
+
+def test_browser_smoke_wrapper_rejects_cli_soft_errors() -> None:
+    wrapper = (ROOT / "scripts/browser_smoke_cli.sh").read_text(encoding="utf-8")
+
+    assert 'grep -Fq "### Error"' in wrapper
+    assert '"status"[[:space:]]*:[[:space:]]*"passed"' in wrapper
+    assert "browser workflow did not produce an explicit pass" in wrapper
+
+
+def _run_release_gate(release_sha: str) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(
+        [
+            sys.executable,
+            str(ROOT / "scripts" / "release_gate.py"),
+            "--release-version",
+            f"flowagentic-3.1.3-{release_sha[:8]}",
+            "--release-sha",
+            release_sha,
+            "--product-version",
+            "3.1.3",
+            "--screenshot-gate",
+            "passed",
+            "--chinese-gate",
+            "passed",
+            "--confirmation",
+            "publish",
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+
+
+def test_release_gate_does_not_reject_current_fact_baseline_as_legacy() -> None:
+    result = _run_release_gate("6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64")
+
+    assert result.returncode == 1
+    assert "不得用旧基线 70d8040e 发布正式截图版" not in result.stderr
+
+
+def test_release_gate_rejects_actual_legacy_baseline() -> None:
+    result = _run_release_gate("70d8040e5ead30a7a51e2231a6a156d5632e6e25")
+
+    assert result.returncode == 1
+    assert "不得用旧基线 70d8040e 发布正式截图版" in result.stderr
+
+
+def test_release_readiness_reports_all_current_external_blockers() -> None:
+    result = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "release_readiness.py")],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+
+    assert result.returncode == 0
+    report = json.loads(result.stdout)
+    assert report["publication_status"] == "working-draft"
+    assert report["fact_baseline"]["release_sha"] == (
+        "6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64"
+    )
+    assert report["decision"]["status"] == "blocked"
+    assert report["external_gates"]["total"] == 9
+    assert report["external_gates"]["passed"] == 0
+    assert report["external_gates"]["blocked"] == 9
+    assert report["external_gates"]["missing"] == []
+    assert report["external_gates"]["unexpected"] == []
+    assert report["screenshots"] == {
+        "baseline_status": "blocked",
+        "manifest_status": "blocked",
+        "planned": 252,
+        "captured": 0,
+    }
+    assert report["evidence_boundary"][
+        "local_browser_smoke_is_production_acceptance"
+    ] is False
+    assert report["evidence_boundary"]["public_deployment_evidenced"] is False
+    assert report["evidence_boundary"]["report_alone_is_release_evidence"] is False
+
+
+def test_release_readiness_require_ready_fails_closed() -> None:
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(ROOT / "scripts" / "release_readiness.py"),
+            "--require-ready",
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+
+    assert result.returncode == 2
+    assert json.loads(result.stdout)["decision"]["status"] == "blocked"
 
 
 def _valid_gate_state(

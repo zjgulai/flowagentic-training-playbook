@@ -8,6 +8,7 @@
   },
   "scripts": {
     "browser:cli": "playwright-cli",
+    "browser:smoke": "bash scripts/browser_smoke_cli.sh",
     "site:serve": "python3 -m http.server 8000 --directory site"
   },
   "devDependencies": {

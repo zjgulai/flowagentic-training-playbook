@@ -6,7 +6,7 @@
 
 ## 本地运行
 
-需要 Python `3.12` 和 [uv](https://docs.astral.sh/uv/)。
+需要 Python `3.12`、Node.js `22`、[uv](https://docs.astral.sh/uv/) 和 Chrome／Firefox。
 
 ```bash
 uv sync --frozen --all-groups
@@ -15,6 +15,12 @@ uv run python scripts/validate_all.py
 uv run pyright
 uv run pytest -q
 uv run mkdocs serve
+```
+
+查看当前机器可读发布状态：
+
+```bash
+uv run python scripts/release_readiness.py
 ```
 
 严格构建站点和 PDF：
@@ -30,6 +36,17 @@ uv run python scripts/validate_public_artifacts.py \
   --site-dir site \
   --pdf output/pdf/flowagentic-playbook.pdf
 ```
+
+完成构建和 PDF 生成后，以固定版本的 Playwright CLI 在 Chrome 与 Firefox 重放静态站主链：
+
+```bash
+npm ci
+bash scripts/playwright_cli.sh install-browser chrome
+bash scripts/playwright_cli.sh install-browser firefox
+npm run browser:smoke
+```
+
+浏览器脚本固定使用 `1440×1000` 视口，验证首页、主题、搜索、MCP 迁移章节、Mermaid、404、PDF、控制台和外联请求。它只证明当前构建制品在本地浏览器可运行，不构成 FlowAgentic 产品生产环境的 PC 验收、正式截图或 GitHub Pages 发布证据。
 
 Linux CI 会安装 `fonts-noto-cjk`。本地生成发布级 PDF 前，也必须安装 Noto Sans CJK，并增加 `--require-noto`。
 
