@@ -132,14 +132,22 @@ def _required_reviewer_count(environment: Any) -> int:
     return count
 
 
-def _classic_protection_checks(protection: Any) -> tuple[int, int, bool]:
+def _classic_protection_checks(
+    protection: Any,
+) -> tuple[int, int, bool, bool, bool]:
     if not isinstance(protection, dict):
-        return 0, 0, False
+        return 0, 0, False, False, False
     reviews = protection.get("required_pull_request_reviews")
+    pull_request_required = isinstance(reviews, dict)
     review_count = (
         reviews.get("required_approving_review_count", 0)
         if isinstance(reviews, dict)
         else 0
+    )
+    last_push_approval = (
+        reviews.get("require_last_push_approval") is True
+        if isinstance(reviews, dict)
+        else False
     )
     statuses = protection.get("required_status_checks")
     status_count = 0
@@ -160,6 +168,8 @@ def _classic_protection_checks(protection: Any) -> tuple[int, int, bool]:
         review_count if isinstance(review_count, int) else 0,
         status_count,
         admin_enabled,
+        pull_request_required,
+        last_push_approval,
     )
 
 
@@ -181,15 +191,17 @@ def _ruleset_targets_main(ruleset: dict[str, Any]) -> bool:
 def _ruleset_protection(
     repository: str,
     api_get: ApiGet,
-) -> tuple[int, int, int]:
+) -> tuple[int, int, int, bool, bool]:
     summaries = optional_get(
         api_get, f"/repos/{repository}/rulesets?includes_parents=true"
     )
     if not isinstance(summaries, list):
-        return 0, 0, 0
+        return 0, 0, 0, False, False
     review_count = 0
     status_count = 0
     active_count = 0
+    pull_request_required = False
+    last_push_approval = False
     for summary in summaries:
         if not isinstance(summary, dict) or not isinstance(summary.get("id"), int):
             continue
@@ -206,14 +218,39 @@ def _ruleset_protection(
             parameters = rule.get("parameters")
             parameters = parameters if isinstance(parameters, dict) else {}
             if rule.get("type") == "pull_request":
+                pull_request_required = True
                 count = parameters.get("required_approving_review_count", 0)
                 if isinstance(count, int):
                     review_count = max(review_count, count)
+                last_push_approval = (
+                    last_push_approval
+                    or parameters.get("require_last_push_approval") is True
+                )
             if rule.get("type") == "required_status_checks":
                 checks = parameters.get("required_status_checks")
                 if isinstance(checks, list):
                     status_count = max(status_count, len(checks))
-    return review_count, status_count, active_count
+    return (
+        review_count,
+        status_count,
+        active_count,
+        pull_request_required,
+        last_push_approval,
+    )
+
+
+def _pull_request_contract_passes(
+    governance_mode: str,
+    *,
+    review_count: int,
+    pull_request_required: bool,
+    last_push_approval: bool,
+) -> bool:
+    if not pull_request_required:
+        return False
+    if governance_mode == "reviewed":
+        return review_count >= 1
+    return review_count == 0 and not last_push_approval
 
 
 def build_report(
@@ -222,6 +259,7 @@ def build_report(
     release_sha: str,
     product_version: str,
     phase: str,
+    governance_mode: str = "reviewed",
     api_get: ApiGet = gh_api_get,
     now: dt.datetime | None = None,
 ) -> dict[str, Any]:
@@ -235,6 +273,8 @@ def build_report(
         raise ValueError("product_version is invalid")
     if phase not in {"intake", "release"}:
         raise ValueError("phase must be intake or release")
+    if governance_mode not in {"reviewed", "solo-maintainer"}:
+        raise ValueError("governance_mode must be reviewed or solo-maintainer")
 
     repo = api_get(f"/repos/{repository}")
     if not isinstance(repo, dict):
@@ -246,6 +286,15 @@ def build_report(
     permissions = permissions if isinstance(permissions, dict) else {}
     size = repo.get("size")
     is_empty = isinstance(size, int) and size == 0
+    main_branch = (
+        optional_get(api_get, f"/repos/{repository}/branches/main")
+        if phase == "release"
+        else None
+    )
+    main_commit = (
+        main_branch.get("commit") if isinstance(main_branch, dict) else None
+    )
+    main_commit = main_commit if isinstance(main_commit, dict) else {}
     repository_checks = [
         _bool_check(
             "exact_repository_identity",
@@ -287,8 +336,11 @@ def build_report(
         repository_checks.append(
             _bool_check(
                 "main_branch_present",
-                repo.get("default_branch") == "main" and not is_empty,
-                "release audit requires the independent main branch",
+                repo.get("default_branch") == "main"
+                and isinstance(main_branch, dict)
+                and main_branch.get("name") == "main"
+                and bool(FULL_SHA.fullmatch(str(main_commit.get("sha", "")))),
+                "release audit requires a directly resolved independent main branch",
             )
         )
 
@@ -347,24 +399,65 @@ def build_report(
         classic = optional_get(
             api_get, f"/repos/{repository}/branches/main/protection"
         )
-        classic_reviews, classic_statuses, classic_admins = (
-            _classic_protection_checks(classic)
+        (
+            classic_reviews,
+            classic_statuses,
+            classic_admins,
+            classic_pull_request,
+            classic_last_push,
+        ) = _classic_protection_checks(classic)
+        classic_pull_request_ready = _pull_request_contract_passes(
+            governance_mode,
+            review_count=classic_reviews,
+            pull_request_required=classic_pull_request,
+            last_push_approval=classic_last_push,
         )
         classic_ready = (
-            classic_reviews >= 1 and classic_statuses >= 1 and classic_admins
+            classic_pull_request_ready
+            and classic_statuses >= 1
+            and classic_admins
         )
         if classic_ready:
-            ruleset_reviews, ruleset_statuses, active_rulesets = 0, 0, 0
+            (
+                ruleset_reviews,
+                ruleset_statuses,
+                active_rulesets,
+                ruleset_pull_request,
+                ruleset_last_push,
+            ) = (0, 0, 0, False, False)
         else:
-            ruleset_reviews, ruleset_statuses, active_rulesets = _ruleset_protection(
-                repository, api_get
-            )
+            (
+                ruleset_reviews,
+                ruleset_statuses,
+                active_rulesets,
+                ruleset_pull_request,
+                ruleset_last_push,
+            ) = _ruleset_protection(repository, api_get)
+        ruleset_pull_request_ready = _pull_request_contract_passes(
+            governance_mode,
+            review_count=ruleset_reviews,
+            pull_request_required=ruleset_pull_request,
+            last_push_approval=ruleset_last_push,
+        )
         ruleset_ready = (
-            ruleset_reviews >= 1
+            ruleset_pull_request_ready
             and ruleset_statuses >= 1
             and active_rulesets >= 1
         )
         protected = classic_ready or ruleset_ready
+        pull_request_ready = (
+            classic_pull_request_ready or ruleset_pull_request_ready
+        )
+        pull_request_check_name = (
+            "pull_request_review_required"
+            if governance_mode == "reviewed"
+            else "pull_request_required_solo_maintainer"
+        )
+        pull_request_detail = (
+            "main changes need at least one approving review"
+            if governance_mode == "reviewed"
+            else "solo maintainer changes must use a pull request with zero impossible self-approvals"
+        )
         protection_checks = [
             _bool_check(
                 "main_protection_active",
@@ -372,9 +465,9 @@ def build_report(
                 "main needs classic protection with admin enforcement or an active ruleset",
             ),
             _bool_check(
-                "pull_request_review_required",
-                max(classic_reviews, ruleset_reviews) >= 1,
-                "main changes need at least one approving review",
+                pull_request_check_name,
+                pull_request_ready,
+                pull_request_detail,
             ),
             _bool_check(
                 "validation_status_required",
@@ -414,6 +507,7 @@ def build_report(
         .replace("+00:00", "Z"),
         "release_sha": release_sha,
         "product_version": product_version,
+        "governance_mode": governance_mode,
         "repository": displayed_repository,
         "public_safe": is_public,
         "decision": {
@@ -446,6 +540,12 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--release-sha", default=default_sha)
     parser.add_argument("--product-version", default=default_version)
+    parser.add_argument(
+        "--governance-mode",
+        choices=("reviewed", "solo-maintainer"),
+        default="reviewed",
+        help="reviewed 要求外部批准；solo-maintainer 保留 PR 但批准数为 0",
+    )
     parser.add_argument("--output", type=Path)
     return parser.parse_args()
 
@@ -458,6 +558,7 @@ def main() -> int:
             release_sha=args.release_sha,
             product_version=args.product_version,
             phase=args.phase,
+            governance_mode=args.governance_mode,
         )
     except (GitHubApiError, OSError, ValueError) as exc:
         print(f"GitHub 仓库只读门禁失败：{exc}", file=sys.stderr)
