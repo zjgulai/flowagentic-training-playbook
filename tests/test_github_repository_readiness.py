@@ -33,7 +33,11 @@ def ready_repository(*, size: int = 42) -> dict[str, Any]:
 
 def classic_ready_api(endpoint: str) -> Any:
     responses: dict[str, Any] = {
-        f"/repos/{REPOSITORY}": ready_repository(),
+        f"/repos/{REPOSITORY}": ready_repository(size=0),
+        f"/repos/{REPOSITORY}/branches/main": {
+            "name": "main",
+            "commit": {"sha": "23b805de49f55034603ed3c99419132cb568f015"},
+        },
         f"/repos/{REPOSITORY}/actions/permissions": {
             "enabled": True,
             "allowed_actions": "all",
@@ -159,6 +163,11 @@ def test_release_fails_closed_when_pages_and_protection_are_missing() -> None:
     def api(endpoint: str) -> Any:
         if endpoint == f"/repos/{REPOSITORY}":
             return ready_repository()
+        if endpoint == f"/repos/{REPOSITORY}/branches/main":
+            return {
+                "name": "main",
+                "commit": {"sha": "23b805de49f55034603ed3c99419132cb568f015"},
+            }
         if endpoint == f"/repos/{REPOSITORY}/actions/permissions":
             return {"enabled": True}
         if endpoint == f"/repos/{REPOSITORY}/actions/permissions/workflow":

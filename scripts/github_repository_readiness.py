@@ -246,6 +246,15 @@ def build_report(
     permissions = permissions if isinstance(permissions, dict) else {}
     size = repo.get("size")
     is_empty = isinstance(size, int) and size == 0
+    main_branch = (
+        optional_get(api_get, f"/repos/{repository}/branches/main")
+        if phase == "release"
+        else None
+    )
+    main_commit = (
+        main_branch.get("commit") if isinstance(main_branch, dict) else None
+    )
+    main_commit = main_commit if isinstance(main_commit, dict) else {}
     repository_checks = [
         _bool_check(
             "exact_repository_identity",
@@ -287,8 +296,11 @@ def build_report(
         repository_checks.append(
             _bool_check(
                 "main_branch_present",
-                repo.get("default_branch") == "main" and not is_empty,
-                "release audit requires the independent main branch",
+                repo.get("default_branch") == "main"
+                and isinstance(main_branch, dict)
+                and main_branch.get("name") == "main"
+                and bool(FULL_SHA.fullmatch(str(main_commit.get("sha", "")))),
+                "release audit requires a directly resolved independent main branch",
             )
         )
 
