@@ -54,12 +54,13 @@ Linux CI 会安装 `fonts-noto-cjk`。本地生成发布级 PDF 前，也必须�
 
 - PR 和 `main` 分支提交只验证并上传预览制品，不会更新公开站。
 - 本地、PR 和 `main` 预览不启用版本切换器，避免在尚未生成 mike 版本树时请求不存在的 `versions.json`。
-- 只有手动触发“发布版本”工作流才会写入独立的 `gh-pages` 分支；构建验证使用只读权限，写权限 Job 不运行仓库代码，只对已验证的 mike 静态树执行一次提交和一次推送。
+- 只有手动触发“发布版本”工作流才会写入独立的 `gh-pages` 分支；构建验证使用只读权限，并把同一份已验证 mike 静态树同时封装为 Pages 制品。受 `github-pages` 环境保护的写权限 Job 先对该树执行一次提交和一次推送，再由 `actions/deploy-pages` 部署完全相同的制品。
 - 发布版本名必须为 `flowagentic-<产品版本>-<7 至 12 位短 SHA>`，并与 40 位发布 SHA 一致。
 - 中文验收门禁和截图门禁都必须显式为 `passed`，确认词必须为 `publish`。
 - 工作流输入还必须与 `data/release.yml`、截图基线、截图计划和截图 manifest 相互一致；只修改手动输入无法绕过仓库内证据绑定。
 - 九道外部门禁使用代码固定的证据 ID；每个回执都必须绑定 `data/evidence/` 中的公开安全制品并由 CI 重算摘要。Provider 成功还必须通过信任清单中的外部 Ed25519 隔离执行器验签，本仓库不保存签名私钥。
-- 发布工作流只使用 GitHub 自动签发的 `GITHUB_TOKEN`；不得配置或复用产品源码仓库的部署密钥。
+- Pages 必须保持 `workflow` 构建模式，并把根目录来源绑定到独立 `gh-pages` 发布留档分支；单独推送分支不构成部署证据，只有 `actions/deploy-pages` 成功、部署记录和公开 URL 冒烟同时通过才可宣称发布。
+- 发布工作流只使用 GitHub 自动签发的 `GITHUB_TOKEN` 与短期 OIDC 身份；不得配置或复用产品源码仓库的部署密钥。
 - 仓库采用单维护者治理：`main` 启用管理员同样受约束的分支保护，所有变更必须经过 PR 和必需状态检查；由于 GitHub 禁止作者批准自己的 PR，批准数固定为 0。`github-pages` 环境仍必须经过人工审批。
 
 独立公开仓库已经接入 [zjgulai/flowagentic-training-playbook](https://github.com/zjgulai/flowagentic-training-playbook)。`main` 必须经过 PR 和“站点、PDF 与内容门禁”检查；单维护者模式不把管理员身份或自动检查伪装成独立人工批准。`github-pages` 环境必须经过人工审批。当前远端只保存独立源码历史和 CI 预览制品，尚未初始化 `gh-pages` 正式发布分支，也没有公开发布工作草案。

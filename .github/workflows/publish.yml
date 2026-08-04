@@ -169,14 +169,25 @@ jobs:
           retention-days: 30
           compression-level: 6
 
+      - name: 上传完全相同的 GitHub Pages 部署制品
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: ${{ runner.temp }}/published-site
+          retention-days: 1
+          include-hidden-files: true
+
   publish:
-    name: 单提交发布已验证静态树
+    name: 单提交留档并部署已验证静态树
     needs: verify
     runs-on: ubuntu-24.04
     timeout-minutes: 10
-    environment: github-pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     permissions:
       contents: write
+      pages: write
+      id-token: write
     steps:
       - name: 下载已经验证的发布树
         uses: actions/download-artifact@70fc10c6e5e1ce46ad2ea6f2b72d43f7d47b13c3 # v8.0.0
@@ -220,6 +231,10 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "docs: publish $PLAYBOOK_RELEASE_VERSION"
           git push origin HEAD:gh-pages
+
+      - name: 部署同一份已验证制品到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
 
   smoke:
     name: Pages 发布后只读冒烟
