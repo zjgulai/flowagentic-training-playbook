@@ -123,7 +123,7 @@ def test_release_gate_rejects_actual_legacy_baseline() -> None:
     assert "不得用旧基线 70d8040e 发布正式截图版" in result.stderr
 
 
-def test_release_readiness_reports_all_current_external_blockers() -> None:
+def test_release_readiness_reports_current_external_blockers() -> None:
     result = subprocess.run(
         [sys.executable, str(ROOT / "scripts" / "release_readiness.py")],
         cwd=ROOT,
@@ -139,11 +139,14 @@ def test_release_readiness_reports_all_current_external_blockers() -> None:
         "6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64"
     )
     assert report["decision"]["status"] == "blocked"
+    assert report["decision"]["blocker_count"] == 11
     assert report["external_gates"]["total"] == 9
-    assert report["external_gates"]["passed"] == 0
-    assert report["external_gates"]["blocked"] == 9
+    assert report["external_gates"]["passed"] == 1
+    assert report["external_gates"]["blocked"] == 8
     assert report["external_gates"]["missing"] == []
     assert report["external_gates"]["unexpected"] == []
+    assert report["external_gates"]["items"][0]["name"] == "github_repository"
+    assert report["external_gates"]["items"][0]["status"] == "passed"
     assert report["screenshots"] == {
         "baseline_status": "blocked",
         "manifest_status": "blocked",
@@ -155,6 +158,20 @@ def test_release_readiness_reports_all_current_external_blockers() -> None:
     ] is False
     assert report["evidence_boundary"]["public_deployment_evidenced"] is False
     assert report["evidence_boundary"]["report_alone_is_release_evidence"] is False
+
+
+def test_current_github_repository_receipt_is_artifact_bound() -> None:
+    release = load("data/release.yml")
+    state = release["external_gates"]["github_repository"]
+
+    assert validate_gate_receipt(
+        "github_repository",
+        state,
+        release_sha=release["fact_baseline"]["release_sha"],
+        product_version=release["fact_baseline"]["product_version"],
+        root=ROOT,
+        now=dt.datetime(2026, 8, 4, 9, 0, tzinfo=dt.timezone.utc),
+    ) == []
 
 
 def test_release_readiness_require_ready_fails_closed() -> None:
@@ -249,7 +266,12 @@ def test_release_lifecycle_is_internally_consistent() -> None:
 
     if status == "working-draft":
         assert all(
-            gate["status"] == "blocked" for gate in release["external_gates"].values()
+            gate["status"] in {"blocked", "passed"}
+            for gate in release["external_gates"].values()
+        )
+        assert any(
+            gate["status"] == "blocked"
+            for gate in release["external_gates"].values()
         )
         assert release["screenshot_baseline"]["status"] == "blocked"
         assert manifest["capture_status"] == "blocked"
