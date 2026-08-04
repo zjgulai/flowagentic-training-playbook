@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "evidence_id": "EVD-TRAINING-FEATURE-FLAGS",
+  "status": "passed",
+  "scope": "isolated-training-candidate",
+  "observed_at": "2026-08-04T12:09:26Z",
+  "release_sha": "96f6ae464f7f4757883a5ba6bec26ca951b4da4d",
+  "product_version": "3.1.3",
+  "checks": {
+    "public_login_enabled": true,
+    "admin_only_mode": true,
+    "secure_cookies": true,
+    "http_security_check": true,
+    "path_traversal_safety": true,
+    "custom_mcp_security_check": true,
+    "oauth2_security_check": true,
+    "telemetry_disabled": true,
+    "community_nodes_enabled": false,
+    "builtin_dependencies_allowed": false,
+    "custom_dependency_allowlists_empty": true
+  },
+  "public_safe": true,
+  "evidence_boundary": "只核验选定非敏感功能开关；未公开或复用任何生产环境变量、凭据或秘密。"
+}

@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -19,7 +19,7 @@ screenshot_ids: []
 
 # 全量节点参数目录
 
-本目录绑定提交 `6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`，收录 311 个实现 `INode` 接口的节点类。
+本目录绑定提交 `96f6ae464f7f4757883a5ba6bec26ca951b4da4d`，收录 311 个实现 `INode` 接口的节点类。
 它是固定提交的静态参数索引，不等于某一运行实例已经启用或配置了全部节点。
 
 ## 分类

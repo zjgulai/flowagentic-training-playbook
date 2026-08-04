@@ -2,7 +2,7 @@
 
 这是一个与 FlowAgentic 产品源码完全独立的公开培训站点工程，面向新手使用者、流程搭建者、二次开发者和管理员／运维人员。站点基于 MkDocs Material，使用 mike 管理版本，并同时生成 GitHub Pages 站点和中文 PDF。
 
-当前状态是“完整工作草案”。基线逻辑来自 Flowise `3.1.3` 和已核验、已推送的源码候选提交 `6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`。正式截图和公开发布仍必须等待这一精确提交进入同版本隔离培训环境，并通过中文 PC 端验收、截图脱敏和其余外部门禁。
+当前状态是“完整工作草案”。基线逻辑来自 Flowise `3.1.3` 和已合并、主分支 CI 通过的源码提交 `96f6ae464f7f4757883a5ba6bec26ca951b4da4d`。正式截图和公开发布仍必须等待这一精确提交完成生产部署与中文 PC 端验收，并通过截图脱敏和其余外部门禁。
 
 ## 本地运行
 
@@ -65,7 +65,7 @@ Linux CI 会安装 `fonts-noto-cjk`。本地生成发布级 PDF 前，也必须�
 
 独立公开仓库已经接入 [zjgulai/flowagentic-training-playbook](https://github.com/zjgulai/flowagentic-training-playbook)。`main` 必须经过 PR 和“站点、PDF 与内容门禁”检查；单维护者模式不把管理员身份或自动检查伪装成独立人工批准。`github-pages` 环境必须经过人工审批。`gh-pages` 已完成不含入口页的基础设施引导，Pages 保持 `workflow` 模式且部署记录仍为 0；该分支当前不是正式站点，公开 URL 返回 404。
 
-在得到同版本隔离培训环境和安全提供的 Provider 凭据前，不执行正式截图、Provider 实验或公开发布。
+同版本隔离培训环境的基础运行验收已经通过；在生产 G1、正式截图门禁和安全提供的 Provider 凭据到位前，仍不执行正式截图、Provider 实验或公开发布。
 
 ### 独立 GitHub 仓库接入门禁
 

@@ -2,11 +2,11 @@
   "schema_version": 1,
   "evidence_id": "EVD-GITHUB-REPOSITORY",
   "evidence_type": "repository",
-  "observed_at": "2026-08-04T08:47:43Z",
+  "observed_at": "2026-08-04T10:43:49Z",
   "result": "passed",
   "public_safe": true,
   "repository": "zjgulai/flowagentic-training-playbook",
-  "product_release_sha": "6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64",
+  "product_release_sha": "96f6ae464f7f4757883a5ba6bec26ca951b4da4d",
   "checks": {
     "visibility": "public",
     "independent_history": true,
@@ -14,7 +14,7 @@
     "active": true,
     "administrator_access": true,
     "default_branch": "main",
-    "main_sha": "42994b0b1ffad77191934acbbfb3dae0335c7c01"
+    "main_sha": "0cfd16026980be655355b4a66d7d104a0d9329b7"
   },
   "claim_boundary": "Repository identity and administration readiness only; this is not public deployment evidence."
 }

@@ -110,7 +110,7 @@ def _run_release_gate(release_sha: str) -> subprocess.CompletedProcess[str]:
 
 
 def test_release_gate_does_not_reject_current_fact_baseline_as_legacy() -> None:
-    result = _run_release_gate("6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64")
+    result = _run_release_gate("96f6ae464f7f4757883a5ba6bec26ca951b4da4d")
 
     assert result.returncode == 1
     assert "不得用旧基线 70d8040e 发布正式截图版" not in result.stderr
@@ -136,13 +136,13 @@ def test_release_readiness_reports_current_external_blockers() -> None:
     report = json.loads(result.stdout)
     assert report["publication_status"] == "working-draft"
     assert report["fact_baseline"]["release_sha"] == (
-        "6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64"
+        "96f6ae464f7f4757883a5ba6bec26ca951b4da4d"
     )
     assert report["decision"]["status"] == "blocked"
-    assert report["decision"]["blocker_count"] == 11
+    assert report["decision"]["blocker_count"] == 10
     assert report["external_gates"]["total"] == 9
-    assert report["external_gates"]["passed"] == 1
-    assert report["external_gates"]["blocked"] == 8
+    assert report["external_gates"]["passed"] == 2
+    assert report["external_gates"]["blocked"] == 7
     assert report["external_gates"]["missing"] == []
     assert report["external_gates"]["unexpected"] == []
     assert report["external_gates"]["items"][0]["name"] == "github_repository"
@@ -170,7 +170,21 @@ def test_current_github_repository_receipt_is_artifact_bound() -> None:
         release_sha=release["fact_baseline"]["release_sha"],
         product_version=release["fact_baseline"]["product_version"],
         root=ROOT,
-        now=dt.datetime(2026, 8, 4, 9, 0, tzinfo=dt.timezone.utc),
+        now=dt.datetime(2026, 8, 4, 13, 0, tzinfo=dt.timezone.utc),
+    ) == []
+
+
+def test_current_isolated_training_receipt_is_artifact_bound() -> None:
+    release = load("data/release.yml")
+    state = release["external_gates"]["isolated_training_environment"]
+
+    assert validate_gate_receipt(
+        "isolated_training_environment",
+        state,
+        release_sha=release["fact_baseline"]["release_sha"],
+        product_version=release["fact_baseline"]["product_version"],
+        root=ROOT,
+        now=dt.datetime(2026, 8, 4, 13, 0, tzinfo=dt.timezone.utc),
     ) == []
 
 

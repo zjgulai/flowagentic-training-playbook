@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "evidence_id": "EVD-TRAINING-IMAGE",
+  "status": "passed",
+  "scope": "isolated-training-candidate",
+  "observed_at": "2026-08-04T12:09:26Z",
+  "release_sha": "96f6ae464f7f4757883a5ba6bec26ca951b4da4d",
+  "product_version": "3.1.3",
+  "checks": {
+    "manual_readiness_run": 30901750754,
+    "artifact_id": 8889786633,
+    "artifact_bytes": 1052241690,
+    "head_sha_exact": true,
+    "independent_config_digest_match": true,
+    "image_config_digest": "sha256:13df12395812447da0feb5b803337783d83b6a1d043ef795529918f0739baf9d",
+    "platform": "linux/amd64",
+    "oci_labels_exact": true,
+    "runtime_user_non_root": true,
+    "read_only_rootfs": true,
+    "cap_drop_all": true
+  },
+  "public_safe": true,
+  "evidence_boundary": "仅证明精确提交的隔离候选镜像身份与基础运行合同，不证明生产部署、PC 浏览器验收、Provider 执行或正式截图。"
+}

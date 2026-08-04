@@ -9,7 +9,7 @@ audience:
 difficulty: beginner
 duration: "25 分钟"
 release_version: "3.1.3"
-release_sha: "6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64"
+release_sha: "96f6ae464f7f4757883a5ba6bec26ca951b4da4d"
 feature_status: production-enabled
 permissions:
   - authenticated-user
@@ -35,7 +35,7 @@ screenshot_ids: []
 FlowAgentic 是基于 Flowise `3.1.3` 的定制部署。理解功能时要同时回答三个问题：
 
 1. 上游 Flowise 在该版本中定义了什么语义；
-2. 固定提交 `6a5bb28b…` 实际包含什么代码和配置；
+2. 固定提交 `96f6ae46…` 实际包含什么代码和配置；
 3. 当前部署是否启用了该能力，并在目标环境完成了验证。
 
 只有三者一致，才能把结论写成“当前可用”。代码存在但未启用的功能必须标为 `feature-gated` 或 `upstream-only`。

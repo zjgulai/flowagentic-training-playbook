@@ -5,7 +5,7 @@ topic: FlowAgentic 培训 Playbook 的系统事实、使用方法、失败模式
 target_release:
   product: Flowise
   version: 3.1.3
-  sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 accessed: '2026-08-04'
 credibility_scale: 0-100；目标提交源码与官方一手资料优先，开发者问题报告只证明案例存在
 sources:
@@ -14,8 +14,8 @@ sources:
   source_type: target-source
   publisher: FlowAgentic 目标源码仓
   author: FlowAgentic 维护团队
-  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:package.json
-  version: 3.1.3@6a5bb28b
+  locator: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d:package.json
+  version: 3.1.3@96f6ae46
   published: '2026-08-04'
   accessed: '2026-08-04'
   credibility: 98
@@ -26,8 +26,8 @@ sources:
   source_type: target-source
   publisher: FlowAgentic 目标源码仓
   author: FlowAgentic 维护团队
-  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/ui/src/menu-items/dashboard.js
-  version: 3.1.3@6a5bb28b
+  locator: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d:packages/ui/src/menu-items/dashboard.js
+  version: 3.1.3@96f6ae46
   published: '2026-08-04'
   accessed: '2026-08-04'
   credibility: 98
@@ -39,8 +39,8 @@ sources:
   source_type: target-source
   publisher: FlowAgentic 目标源码仓
   author: FlowAgentic 维护团队
-  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/ui/src/routes/MainRoutes.jsx
-  version: 3.1.3@6a5bb28b
+  locator: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d:packages/ui/src/routes/MainRoutes.jsx
+  version: 3.1.3@96f6ae46
   published: '2026-08-04'
   accessed: '2026-08-04'
   credibility: 96
@@ -51,8 +51,8 @@ sources:
   source_type: target-source
   publisher: FlowAgentic 目标源码仓
   author: FlowAgentic 维护团队
-  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/ui/src/routes/AuthRoutes.jsx
-  version: 3.1.3@6a5bb28b
+  locator: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d:packages/ui/src/routes/AuthRoutes.jsx
+  version: 3.1.3@96f6ae46
   published: '2026-08-04'
   accessed: '2026-08-04'
   credibility: 98
@@ -63,8 +63,8 @@ sources:
   source_type: target-test
   publisher: FlowAgentic 目标源码仓
   author: FlowAgentic 维护团队
-  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/ui/src/routes/productionUiContracts.test.js
-  version: 3.1.3@6a5bb28b
+  locator: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d:packages/ui/src/routes/productionUiContracts.test.js
+  version: 3.1.3@96f6ae46
   published: '2026-08-04'
   accessed: '2026-08-04'
   credibility: 94
@@ -75,8 +75,8 @@ sources:
   source_type: target-source
   publisher: FlowAgentic 目标源码仓
   author: Flowise Agentflow 维护者
-  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/agentflow/README.md
-  version: 0.0.0-dev.13 in 3.1.3@6a5bb28b
+  locator: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d:packages/agentflow/README.md
+  version: 0.0.0-dev.13 in 3.1.3@96f6ae46
   published: '2026-08-04'
   accessed: '2026-08-04'
   credibility: 96
@@ -87,8 +87,8 @@ sources:
   source_type: target-source
   publisher: FlowAgentic 目标源码仓
   author: Flowise 节点维护者
-  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/components/nodes/**/*.ts
-  version: 3.1.3@6a5bb28b
+  locator: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d:packages/components/nodes/**/*.ts
+  version: 3.1.3@96f6ae46
   published: '2026-08-04'
   accessed: '2026-08-04'
   credibility: 97
@@ -99,8 +99,8 @@ sources:
   source_type: target-source
   publisher: FlowAgentic 目标源码仓
   author: Flowise 节点维护者
-  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/components/nodes/chatmodels/Deepseek/Deepseek.ts
-  version: 3.1.3@6a5bb28b
+  locator: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d:packages/components/nodes/chatmodels/Deepseek/Deepseek.ts
+  version: 3.1.3@96f6ae46
   published: '2026-08-04'
   accessed: '2026-08-04'
   credibility: 96
@@ -111,8 +111,8 @@ sources:
   source_type: target-source
   publisher: FlowAgentic 目标源码仓
   author: Flowise 节点维护者
-  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/components/nodes/chatmodels/ChatKimi/
-  version: 3.1.3@6a5bb28b
+  locator: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d:packages/components/nodes/chatmodels/ChatKimi/
+  version: 3.1.3@96f6ae46
   published: '2026-08-04'
   accessed: '2026-08-04'
   credibility: 96
@@ -123,8 +123,8 @@ sources:
   source_type: target-source
   publisher: FlowAgentic 目标源码仓
   author: Flowise 服务端维护者
-  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/server/src/{routes,controllers,services}/predictions/
-  version: 3.1.3@6a5bb28b
+  locator: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d:packages/server/src/{routes,controllers,services}/predictions/
+  version: 3.1.3@96f6ae46
   published: '2026-08-04'
   accessed: '2026-08-04'
   credibility: 95
@@ -135,8 +135,8 @@ sources:
   source_type: target-source
   publisher: FlowAgentic 目标源码仓
   author: Flowise 服务端维护者
-  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/server/src/services/documentstore/
-  version: 3.1.3@6a5bb28b
+  locator: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d:packages/server/src/services/documentstore/
+  version: 3.1.3@96f6ae46
   published: '2026-08-04'
   accessed: '2026-08-04'
   credibility: 95
@@ -147,8 +147,8 @@ sources:
   source_type: target-source
   publisher: FlowAgentic 目标源码仓
   author: Flowise 维护者
-  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/server/{src/services/variables/index.ts,cypress/e2e/2-variables/variables.cy.js}
-  version: 3.1.3@6a5bb28b
+  locator: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d:packages/server/{src/services/variables/index.ts,cypress/e2e/2-variables/variables.cy.js}
+  version: 3.1.3@96f6ae46
   published: '2026-08-04'
   accessed: '2026-08-04'
   credibility: 94
@@ -159,8 +159,8 @@ sources:
   source_type: target-source
   publisher: FlowAgentic 目标源码仓
   author: Flowise 节点维护者
-  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/components/nodes/tools/CustomTool/
-  version: 3.1.3@6a5bb28b
+  locator: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d:packages/components/nodes/tools/CustomTool/
+  version: 3.1.3@96f6ae46
   published: '2026-08-04'
   accessed: '2026-08-04'
   credibility: 95
@@ -171,8 +171,8 @@ sources:
   source_type: target-source
   publisher: FlowAgentic 目标源码仓
   author: Flowise 节点维护者
-  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/components/nodes/tools/MCP/
-  version: 3.1.3@6a5bb28b
+  locator: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d:packages/components/nodes/tools/MCP/
+  version: 3.1.3@96f6ae46
   published: '2026-08-04'
   accessed: '2026-08-04'
   credibility: 95
@@ -639,8 +639,8 @@ sources:
   source_type: target-test
   publisher: FlowAgentic 目标源码仓
   author: FlowAgentic 维护团队
-  locator: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64:packages/server/src/{services/workspaces,routes/mcp-endpoint,middlewares/mcpRequestObservability.ts,routes/openai-assistants,routes/openai-assistants-vector-store}
-  version: 3.1.3@6a5bb28b
+  locator: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d:packages/server/src/{services/workspaces,routes/mcp-endpoint,middlewares/mcpRequestObservability.ts,routes/openai-assistants,routes/openai-assistants-vector-store}
+  version: 3.1.3@96f6ae46
   published: '2026-08-04'
   accessed: '2026-08-04'
   credibility: 98

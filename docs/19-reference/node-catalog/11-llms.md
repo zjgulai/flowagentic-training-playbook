@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ Wrapper around AWS Bedrock large language models
 - 内部名称：`awsBedrock`
 - 版本：`4`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/llms/AWSBedrock/AWSBedrock.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/llms/AWSBedrock/AWSBedrock.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/llms)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -70,7 +70,7 @@ Wrapper around Azure OpenAI large language models
 - 内部名称：`azureOpenAI`
 - 版本：`4`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/llms/Azure OpenAI/AzureOpenAI.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/llms/Azure OpenAI/AzureOpenAI.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/llms)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -116,7 +116,7 @@ Wrapper around Cohere large language models
 - 内部名称：`cohere`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/llms/Cohere/Cohere.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/llms/Cohere/Cohere.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/llms)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -156,7 +156,7 @@ Wrapper around Fireworks API for large language models
 - 内部名称：`fireworks`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/llms/Fireworks/Fireworks.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/llms/Fireworks/Fireworks.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/llms)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -193,7 +193,7 @@ Wrapper around GoogleVertexAI large language models
 - 内部名称：`googlevertexai`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/llms/GoogleVertexAI/GoogleVertexAI.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/llms/GoogleVertexAI/GoogleVertexAI.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/llms)
 - 风险：外部调用：需按实际配置复核；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -234,7 +234,7 @@ Wrapper around HuggingFace large language models
 - 内部名称：`huggingFaceInference_LLMs`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/llms/HuggingFaceInference/HuggingFaceInference.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/llms/HuggingFaceInference/HuggingFaceInference.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/llms)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -277,7 +277,7 @@ Wrapper around IBM watsonx.ai foundation models
 - 内部名称：`ibmWatsonx`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/llms/IBMWatsonx/IBMWatsonx.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/llms/IBMWatsonx/IBMWatsonx.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/llms)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -326,7 +326,7 @@ Wrapper around open source large language models on Ollama
 - 内部名称：`ollama`
 - 版本：`2.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/llms/Ollama/Ollama.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/llms/Ollama/Ollama.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/llms)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -377,7 +377,7 @@ Wrapper around OpenAI large language models
 - 内部名称：`openAI`
 - 版本：`4`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/llms/OpenAI/OpenAI.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/llms/OpenAI/OpenAI.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/llms)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -425,7 +425,7 @@ Use Replicate to run open source models on cloud
 - 内部名称：`replicate`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/llms/Replicate/Replicate.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/llms/Replicate/Replicate.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/llms)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -467,7 +467,7 @@ Wrapper around Sambanova API for large language models
 - 内部名称：`sambanova`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/llms/SambaNova/Sambanova.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/llms/SambaNova/Sambanova.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/llms)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -504,7 +504,7 @@ Wrapper around TogetherAI large language models
 - 内部名称：`togetherAI`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/llms/TogetherAI/TogetherAI.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/llms/TogetherAI/TogetherAI.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/llms)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`

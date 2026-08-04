@@ -8,7 +8,7 @@ audience:
 difficulty: beginner
 duration: "8 分钟"
 release_version: "3.1.3"
-release_sha: "6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64"
+release_sha: "96f6ae464f7f4757883a5ba6bec26ca951b4da4d"
 feature_status: production-enabled
 permissions:
   - authenticated-user
@@ -32,9 +32,9 @@ screenshot_ids: []
 | 项目 | 当前事实 |
 | --- | --- |
 | 产品基线 | Flowise `3.1.3` |
-| 事实提交 | `6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64` |
+| 事实提交 | `96f6ae464f7f4757883a5ba6bec26ca951b4da4d` |
 | 最后核验 | 2026-08-04 |
-| 正式截图 | 等待精确源码候选通过 G1 运行验收后，在同版本隔离培训环境采集 |
+| 正式截图 | 同版本隔离环境已就绪；等待精确源码候选通过生产 G1 后采集 |
 | 生产环境用途 | 只读交叉核验，不执行写入、Provider 调用或破坏性测试 |
 
 目前正文可用于理解、备课和培训环境预演。凡是需要截图、真实 Provider、写入或发布回执的结论，都必须等待对应门禁，不以文字推断代替证据。

@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ screenshot_ids: []
 - 内部名称：`supervisor`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/multiagents/Supervisor/Supervisor.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/multiagents/Supervisor/Supervisor.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：未提供分类级官方链接，请以源码锚点和版本界面为准
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -70,7 +70,7 @@ screenshot_ids: []
 - 内部名称：`worker`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/multiagents/Worker/Worker.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/multiagents/Worker/Worker.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：未提供分类级官方链接，请以源码锚点和版本界面为准
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`

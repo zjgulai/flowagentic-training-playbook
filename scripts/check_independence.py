@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-SOURCE_BASELINE_SHA = "6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64"
+SOURCE_BASELINE_SHA = "96f6ae464f7f4757883a5ba6bec26ca951b4da4d"
 DEFAULT_FORBIDDEN_REMOTES = (
     "github.com/zjgulai/flowise",
     "github.com/flowiseai/flowise",

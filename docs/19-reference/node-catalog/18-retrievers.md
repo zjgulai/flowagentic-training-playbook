@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ Connect to AWS Bedrock Knowledge Base API and retrieve relevant chunks
 - 内部名称：`awsBedrockKBRetriever`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/retrievers/AWSBedrockKBRetriever/AWSBedrockKBRetriever.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/retrievers/AWSBedrockKBRetriever/AWSBedrockKBRetriever.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/retrievers)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -70,7 +70,7 @@ Azure Rerank indexes the documents from most to least semantically relevant to t
 - 内部名称：`AzureRerankRetriever`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/retrievers/AzureRerankRetriever/AzureRerankRetriever.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/retrievers/AzureRerankRetriever/AzureRerankRetriever.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/retrievers)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -110,7 +110,7 @@ Cohere Rerank indexes the documents from most to least semantically relevant to 
 - 内部名称：`cohereRerankRetriever`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/retrievers/CohereRerankRetriever/CohereRerankRetriever.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/retrievers/CohereRerankRetriever/CohereRerankRetriever.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/retrievers)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -150,7 +150,7 @@ Return results based on predefined format
 - 内部名称：`customRetriever`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/retrievers/CustomRetriever/CustomRetriever.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/retrievers/CustomRetriever/CustomRetriever.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/retrievers)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -188,7 +188,7 @@ A document compressor that uses embeddings to drop documents unrelated to the qu
 - 内部名称：`embeddingsFilterRetriever`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/retrievers/EmbeddingsFilterRetriever/EmbeddingsFilterRetriever.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/retrievers/EmbeddingsFilterRetriever/EmbeddingsFilterRetriever.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/retrievers)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -227,7 +227,7 @@ Extract keywords/metadata from the query and use it to filter documents
 - 内部名称：`extractMetadataRetriever`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/retrievers/ExtractMetadataRetriever/ExtractMetadataRetriever.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/retrievers/ExtractMetadataRetriever/ExtractMetadataRetriever.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/retrievers)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -267,7 +267,7 @@ Use HyDE retriever to retrieve from a vector store
 - 内部名称：`HydeRetriever`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/retrievers/HydeRetriever/HydeRetriever.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/retrievers/HydeRetriever/HydeRetriever.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/retrievers)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -307,7 +307,7 @@ Jina AI Rerank indexes the documents from most to least semantically relevant to
 - 内部名称：`JinaRerankRetriever`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/retrievers/JinaRerankRetriever/JinaRerankRetriever.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/retrievers/JinaRerankRetriever/JinaRerankRetriever.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/retrievers)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -346,7 +346,7 @@ Iterate over the initially returned documents and extract, from each, only the c
 - 内部名称：`llmFilterRetriever`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/retrievers/LLMFilterRetriever/LLMFilterCompressionRetriever.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/retrievers/LLMFilterRetriever/LLMFilterCompressionRetriever.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/retrievers)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -383,7 +383,7 @@ Generate multiple queries from different perspectives for a given user input que
 - 内部名称：`multiQueryRetriever`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/retrievers/MultiQueryRetriever/MultiQueryRetriever.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/retrievers/MultiQueryRetriever/MultiQueryRetriever.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/retrievers)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -421,7 +421,7 @@ Store prompt template with name & description to be later queried by MultiPrompt
 - 内部名称：`promptRetriever`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/retrievers/PromptRetriever/PromptRetriever.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/retrievers/PromptRetriever/PromptRetriever.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/retrievers)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -459,7 +459,7 @@ Reciprocal Rank Fusion to re-rank search results by multiple query generation.
 - 内部名称：`RRFRetriever`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/retrievers/RRFRetriever/RRFRetriever.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/retrievers/RRFRetriever/RRFRetriever.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/retrievers)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -499,7 +499,7 @@ Return results based on the minimum similarity percentage
 - 内部名称：`similarityThresholdRetriever`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/retrievers/SimilarityThresholdRetriever/SimilarityThresholdRetriever.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/retrievers/SimilarityThresholdRetriever/SimilarityThresholdRetriever.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/retrievers)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -538,7 +538,7 @@ Store vector store as retriever to be later queried by MultiRetrievalQAChain
 - 内部名称：`vectorStoreRetriever`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/retrievers/VectorStoreRetriever/VectorStoreRetriever.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/retrievers/VectorStoreRetriever/VectorStoreRetriever.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/retrievers)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -576,7 +576,7 @@ Voyage AI Rerank indexes the documents from most to least semantically relevant 
 - 内部名称：`voyageAIRerankRetriever`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/retrievers/VoyageAIRetriever/VoyageAIRerankRetriever.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/retrievers/VoyageAIRetriever/VoyageAIRerankRetriever.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/retrievers)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`

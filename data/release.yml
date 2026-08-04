@@ -5,47 +5,47 @@ fact_baseline:
   product: FlowAgentic
   upstream_product: Flowise
   product_version: 3.1.3
-  release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+  release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   verified_at: "2026-08-04"
 screenshot_baseline:
   product_version: null
   release_sha: null
   deployed_at: null
   status: blocked
-  reason: 已固定中文源码候选提交，但尚缺同版本隔离培训环境的部署回执、PC 端逐页验收和正式截图脱敏回执
+  reason: 同版本隔离培训环境的基础运行回执已通过；仍缺生产部署、PC 端逐页中文验收和正式截图脱敏回执
 versioning:
   mike_alias: latest
   version_format: flowagentic-<version>-<short-sha>
 external_gates:
   github_repository:
     status: passed
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
-    verified_at: "2026-08-04T08:47:43Z"
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
+    verified_at: "2026-08-04T10:43:49Z"
     receipt:
       receipt_id: RCT-GITHUB-REPOSITORY-20260804
       evidence_type: repository
-      release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+      release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
       product_version: 3.1.3
       public_safe: true
       reviewer: zjgulai / single-maintainer review
-      verified_at: "2026-08-04T08:47:43Z"
-      artifact_sha256: 60b2cfd9df96577ce0dd910fdd4b25ee8476d5abc6312759d468b3f8afab0ee0
+      verified_at: "2026-08-04T10:43:49Z"
+      artifact_sha256: d7b660347bbc8b97039fe9e76ef3fa659fca1560bce6e9a22d5ba9ff51850e3b
       evidence_items:
         - id: EVD-GITHUB-REPOSITORY
           status: passed
           count: 1
           artifact: data/evidence/github_repository/repository.json
-          sha256: 976420fdd15206617c45f183e91ebeb1d66cdabf2619c0974a849cce8df08562
+          sha256: 07feb16d011da2a652d9c168f8ebf036c2d9a7c797fe69201826de3ddb532dcc
         - id: EVD-GITHUB-PAGES-WRITE
           status: passed
           count: 1
           artifact: data/evidence/github_repository/pages-write.json
-          sha256: 9d06a2edb7e7f38030595e164f6524efe5842fc9456776ef9cf2b36208cc0f4b
+          sha256: 08065efa4f426d9c2e67cbfed224288a1d16f67467cdba67fbf59cbb03ec1358
         - id: EVD-GITHUB-MAIN-PROTECTION
           status: passed
           count: 1
           artifact: data/evidence/github_repository/main-protection.json
-          sha256: 3beba4ebf8f4920d84ae09f91bbd9fda93381eeed76634516487a0dbb53082e1
+          sha256: 387381f4196d8da85115a1d05d8bb97c82129df08e64e3a78f3938209cf7a4e0
     required_evidence:
       - EVD-GITHUB-REPOSITORY
       - EVD-GITHUB-PAGES-WRITE
@@ -63,10 +63,39 @@ external_gates:
       - EVD-CHINESE-BROWSER-ROUTES
       - EVD-CHINESE-BASELINE-DIFF
   isolated_training_environment:
-    status: blocked
-    release_sha: null
-    verified_at: null
-    receipt: null
+    status: passed
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
+    verified_at: "2026-08-04T12:09:26Z"
+    receipt:
+      receipt_id: RCT-TRAINING-ENVIRONMENT-20260804
+      evidence_type: environment
+      release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
+      product_version: 3.1.3
+      public_safe: true
+      reviewer: zjgulai / single-maintainer review
+      verified_at: "2026-08-04T12:09:26Z"
+      artifact_sha256: 5a1971e3ef073b7edcd598840b95c50ab00cc289980377e0176dfc6fa2f7d929
+      evidence_items:
+        - id: EVD-TRAINING-IMAGE
+          status: passed
+          count: 1
+          artifact: data/evidence/isolated_training_environment/image.json
+          sha256: 0a72f0fa7c8ff671fde11d6ce5f96b3446658a1d8a6106848322aaa6f168a97c
+        - id: EVD-TRAINING-MIGRATIONS
+          status: passed
+          count: 1
+          artifact: data/evidence/isolated_training_environment/migrations.json
+          sha256: f238537029fe6fcc284c5cee9d198abe94de305defe541321be2ffb924e32dd8
+        - id: EVD-TRAINING-FEATURE-FLAGS
+          status: passed
+          count: 1
+          artifact: data/evidence/isolated_training_environment/feature-flags.json
+          sha256: e5e66ef167a8153b8e990489c0c42a2fc3ccfe415ecf80ae91c5353146329c6f
+        - id: EVD-TRAINING-ACCESS
+          status: passed
+          count: 1
+          artifact: data/evidence/isolated_training_environment/access.json
+          sha256: 8c0a3f94d3e58a859d6ca4ac8a2f4c7faad5c5fa25c1915cecce7ebbd526c843
     required_evidence:
       - EVD-TRAINING-IMAGE
       - EVD-TRAINING-MIGRATIONS

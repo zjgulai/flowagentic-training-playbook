@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-BASELINE_SHA = "6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64"
+BASELINE_SHA = "96f6ae464f7f4757883a5ba6bec26ca951b4da4d"
 
 
 def catalog() -> dict:

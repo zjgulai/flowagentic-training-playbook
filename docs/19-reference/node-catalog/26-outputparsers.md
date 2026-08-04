@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ Parse the output of an LLM call into a given structure by providing a Zod schema
 - 内部名称：`advancedStructuredOutputParser`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/outputparsers/StructuredOutputParserAdvanced/StructuredOutputParserAdvanced.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/outputparsers/StructuredOutputParserAdvanced/StructuredOutputParserAdvanced.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/output-parsers)
 - 风险：外部调用：否；可能计费：否；可能写入：否
   - 外部调用：`no`
@@ -63,7 +63,7 @@ Parse the output of an LLM call as a comma-separated list of values
 - 内部名称：`csvOutputParser`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/outputparsers/CSVListOutputParser/CSVListOutputParser.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/outputparsers/CSVListOutputParser/CSVListOutputParser.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/output-parsers)
 - 风险：外部调用：否；可能计费：否；可能写入：否
   - 外部调用：`no`
@@ -97,7 +97,7 @@ Parse the output of an LLM call as a list of values.
 - 内部名称：`customListOutputParser`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/outputparsers/CustomListOutputParser/CustomListOutputParser.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/outputparsers/CustomListOutputParser/CustomListOutputParser.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/output-parsers)
 - 风险：外部调用：否；可能计费：否；可能写入：否
   - 外部调用：`no`
@@ -133,7 +133,7 @@ Parse the output of an LLM call into a given (JSON) structure.
 - 内部名称：`structuredOutputParser`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/outputparsers/StructuredOutputParser/StructuredOutputParser.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/outputparsers/StructuredOutputParser/StructuredOutputParser.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/output-parsers)
 - 风险：外部调用：否；可能计费：否；可能写入：否
   - 外部调用：`no`

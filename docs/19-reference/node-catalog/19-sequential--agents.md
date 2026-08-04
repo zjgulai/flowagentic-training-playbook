@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ Agent that can execute tools
 - 内部名称：`seqAgent`
 - 版本：`4.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/sequentialagents/Agent/Agent.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/sequentialagents/Agent/Agent.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv1/sequential-agents)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -78,7 +78,7 @@ Conditional function to determine which route to take next
 - 内部名称：`seqCondition`
 - 版本：`2.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/sequentialagents/Condition/Condition.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/sequentialagents/Condition/Condition.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv1/sequential-agents)
 - 风险：Sequential Agent Condition 只进行条件分支，节点本身不调用外部服务或写入
   - 外部调用：`no`
@@ -112,7 +112,7 @@ Uses an agent to determine which route to take next
 - 内部名称：`seqConditionAgent`
 - 版本：`3.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/sequentialagents/ConditionAgent/ConditionAgent.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/sequentialagents/ConditionAgent/ConditionAgent.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv1/sequential-agents)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -154,7 +154,7 @@ Execute custom javascript function
 - 内部名称：`seqCustomFunction`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/sequentialagents/CustomFunction/CustomFunction.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/sequentialagents/CustomFunction/CustomFunction.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv1/sequential-agents)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -194,7 +194,7 @@ End conversation
 - 内部名称：`seqEnd`
 - 版本：`2.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/sequentialagents/End/End.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/sequentialagents/End/End.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv1/sequential-agents)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -230,7 +230,7 @@ Execute chatflow/agentflow and return final response
 - 内部名称：`seqExecuteFlow`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/sequentialagents/ExecuteFlow/ExecuteFlow.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/sequentialagents/ExecuteFlow/ExecuteFlow.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv1/sequential-agents)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -274,7 +274,7 @@ Run Chat Model and return the output
 - 内部名称：`seqLLMNode`
 - 版本：`4.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/sequentialagents/LLMNode/LLMNode.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/sequentialagents/LLMNode/LLMNode.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv1/sequential-agents)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -319,7 +319,7 @@ Loop back to the specific sequential node
 - 内部名称：`seqLoop`
 - 版本：`2.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/sequentialagents/Loop/Loop.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/sequentialagents/Loop/Loop.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv1/sequential-agents)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -356,7 +356,7 @@ Starting point of the conversation
 - 内部名称：`seqStart`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/sequentialagents/Start/Start.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/sequentialagents/Start/Start.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv1/sequential-agents)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -395,7 +395,7 @@ A centralized state object, updated by nodes in the graph, passing from one node
 - 内部名称：`seqState`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/sequentialagents/State/State.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/sequentialagents/State/State.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv1/sequential-agents)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -430,7 +430,7 @@ Execute tool and return tool's output
 - 内部名称：`seqToolNode`
 - 版本：`2.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/sequentialagents/ToolNode/ToolNode.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/sequentialagents/ToolNode/ToolNode.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv1/sequential-agents)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`

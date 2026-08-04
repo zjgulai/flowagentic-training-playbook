@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ Dynamically choose and utilize tools during runtime, enabling multi-step reasoni
 - 内部名称：`agentAgentflow`
 - 版本：`3.2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agentflow/Agent/Agent.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agentflow/Agent/Agent.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv2)
 - 风险：Agent 会调用所选模型，模型可能计费；是否经工具写入取决于运行配置
   - 外部调用：`yes`
@@ -79,7 +79,7 @@ Split flows based on If Else conditions
 - 内部名称：`conditionAgentflow`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agentflow/Condition/Condition.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agentflow/Condition/Condition.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv2)
 - 风险：Condition 只在进程内判断已配置条件，节点本身不调用外部服务或写入
   - 外部调用：`no`
@@ -111,7 +111,7 @@ Utilize an agent to split flows based on dynamic conditions
 - 内部名称：`conditionAgentAgentflow`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agentflow/ConditionAgent/ConditionAgent.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agentflow/ConditionAgent/ConditionAgent.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv2)
 - 风险：Condition Agent 会调用所选聊天模型且模型可能计费
   - 外部调用：`yes`
@@ -153,7 +153,7 @@ Execute custom function
 - 内部名称：`customFunctionAgentflow`
 - 版本：`1.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agentflow/CustomFunction/CustomFunction.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agentflow/CustomFunction/CustomFunction.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv2)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -191,7 +191,7 @@ Directly reply to the user with a message
 - 内部名称：`directReplyAgentflow`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agentflow/DirectReply/DirectReply.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agentflow/DirectReply/DirectReply.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv2)
 - 风险：Direct Reply 只形成直接回复，节点本身不调用外部服务或写入
   - 外部调用：`no`
@@ -225,7 +225,7 @@ Execute another flow
 - 内部名称：`executeFlowAgentflow`
 - 版本：`1.2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agentflow/ExecuteFlow/ExecuteFlow.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agentflow/ExecuteFlow/ExecuteFlow.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv2)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -267,7 +267,7 @@ Send a HTTP request
 - 内部名称：`httpAgentflow`
 - 版本：`1.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agentflow/HTTP/HTTP.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agentflow/HTTP/HTTP.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv2)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -311,7 +311,7 @@ Request human input, approval or rejection during execution
 - 内部名称：`humanInputAgentflow`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agentflow/HumanInput/HumanInput.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agentflow/HumanInput/HumanInput.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv2)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -349,7 +349,7 @@ Execute the nodes within the iteration block through N iterations
 - 内部名称：`iterationAgentflow`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agentflow/Iteration/Iteration.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agentflow/Iteration/Iteration.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv2)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -385,7 +385,7 @@ Large language models to analyze user-provided inputs and generate responses
 - 内部名称：`llmAgentflow`
 - 版本：`1.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agentflow/LLM/LLM.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agentflow/LLM/LLM.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv2)
 - 风险：LLM 会调用所选模型且模型可能计费；节点本身未声明持久化写入
   - 外部调用：`yes`
@@ -429,7 +429,7 @@ Loop back to a previous node
 - 内部名称：`loopAgentflow`
 - 版本：`1.2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agentflow/Loop/Loop.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agentflow/Loop/Loop.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv2)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -468,7 +468,7 @@ Retrieve information from vector database
 - 内部名称：`retrieverAgentflow`
 - 版本：`1.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agentflow/Retriever/Retriever.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agentflow/Retriever/Retriever.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv2)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -507,7 +507,7 @@ Starting point of the agentflow
 - 内部名称：`startAgentflow`
 - 版本：`1.4`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agentflow/Start/Start.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agentflow/Start/Start.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv2)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -578,7 +578,7 @@ Add notes to the agent flow
 - 内部名称：`stickyNoteAgentflow`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agentflow/StickyNote/StickyNote.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agentflow/StickyNote/StickyNote.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv2)
 - 风险：Agentflow Sticky Note 是画布注释，节点本身不执行外部调用或写入
   - 外部调用：`no`
@@ -612,7 +612,7 @@ Tools allow LLM to interact with external systems
 - 内部名称：`toolAgentflow`
 - 版本：`1.2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agentflow/Tool/Tool.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agentflow/Tool/Tool.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/agentflowv2)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
