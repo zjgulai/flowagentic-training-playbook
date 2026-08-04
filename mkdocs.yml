@@ -101,8 +101,8 @@ extra:
   generator: false
   baseline:
     product_version: "3.1.3"
-    release_sha: "6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64"
-    screenshot_gate: "等待同版本隔离培训环境与正式截图回执"
+    release_sha: "96f6ae464f7f4757883a5ba6bec26ca951b4da4d"
+    screenshot_gate: "等待生产 G1 与正式截图回执"
   version:
     # Draft/PR builds are served from the site root and have no mike
     # versions.json. Enable the switcher only inside the release workflow,

@@ -8,7 +8,7 @@ audience:
 difficulty: intermediate
 duration: 15 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -42,4 +42,4 @@ screenshot_ids: []
 
 ## 当前事实边界
 
-逻辑稿绑定 Flowise `3.1.3` 与提交 `6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`。正式截图尚未绑定，因为同版本隔离培训环境、中文 PC 验收和截图回执尚未满足外部门禁。源码存在不等于生产运行已验证；页面可见也不等于外部 Provider、邮件、SSO 或写入链路已完成。
+逻辑稿绑定 Flowise `3.1.3` 与提交 `96f6ae464f7f4757883a5ba6bec26ca951b4da4d`。同版本隔离培训环境已完成镜像、迁移、功能开关、基础认证与隔离边界验收；正式截图仍因生产部署、中文 PC 验收和截图回执未满足而保持关闭。源码存在或基础运行通过不等于生产已验证；页面可见也不等于外部 Provider、邮件、SSO 或写入链路已完成。

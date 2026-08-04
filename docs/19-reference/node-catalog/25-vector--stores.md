@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ Upsert embedded data and perform similarity or mmr search upon query using DataS
 - 内部名称：`Astra`
 - 版本：`2.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Astra/Astra.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Astra/Astra.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -71,7 +71,7 @@ Use AWS Kendra's intelligent search service for document retrieval and semantic 
 - 内部名称：`kendra`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Kendra/Kendra.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Kendra/Kendra.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -111,7 +111,7 @@ Upsert embedded data and perform similarity search upon query using Chroma, an o
 - 内部名称：`chroma`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Chroma/Chroma.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Chroma/Chroma.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -155,7 +155,7 @@ Upsert embedded data and load existing index using Couchbase, a award-winning di
 - 内部名称：`couchbase`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Couchbase/Couchbase.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Couchbase/Couchbase.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -202,7 +202,7 @@ Search and retrieve documents from Document Store
 - 内部名称：`documentStoreVS`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/DocumentStoreVS/DocStoreVector.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/DocumentStoreVS/DocStoreVector.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -236,7 +236,7 @@ Upsert embedded data and perform similarity search upon query using Elasticsearc
 - 内部名称：`elasticsearch`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Elasticsearch/Elasticsearch.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Elasticsearch/Elasticsearch.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -279,7 +279,7 @@ Upsert embedded data and perform similarity search upon query using Faiss librar
 - 内部名称：`faiss`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Faiss/Faiss.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Faiss/Faiss.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -319,7 +319,7 @@ In-memory vectorstore that stores embeddings and does an exact, linear search fo
 - 内部名称：`memoryVectorStore`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/InMemory/InMemoryVectorStore.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/InMemory/InMemoryVectorStore.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -358,7 +358,7 @@ Upsert embedded data and perform similarity search upon query using Meilisearch 
 - 内部名称：`meilisearch`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Meilisearch/Meilisearch.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Meilisearch/Meilisearch.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -399,7 +399,7 @@ Upsert embedded data and perform similarity search upon query using Milvus, worl
 - 内部名称：`milvus`
 - 版本：`2.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Milvus/Milvus.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Milvus/Milvus.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -450,7 +450,7 @@ Upsert embedded data and perform similarity or mmr search upon query using Mongo
 - 内部名称：`mongoDBAtlas`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/MongoDBAtlas/MongoDBAtlas.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/MongoDBAtlas/MongoDBAtlas.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -496,7 +496,7 @@ Upsert embedded data and perform similarity search upon query using OpenSearch, 
 - 内部名称：`openSearch`
 - 版本：`4`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/OpenSearch/OpenSearch.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/OpenSearch/OpenSearch.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -539,7 +539,7 @@ Upsert embedded data and perform similarity or mmr search using Pinecone, a lead
 - 内部名称：`pinecone`
 - 版本：`5`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Pinecone/Pinecone.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Pinecone/Pinecone.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -585,7 +585,7 @@ Upsert embedded data and perform similarity search upon query using Pinecone, a 
 - 内部名称：`pineconeLlamaIndex`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Pinecone/Pinecone_LlamaIndex.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Pinecone/Pinecone_LlamaIndex.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -626,7 +626,7 @@ Upsert embedded data and perform similarity search upon query using pgvector on 
 - 内部名称：`postgres`
 - 版本：`7.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Postgres/Postgres.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Postgres/Postgres.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -679,7 +679,7 @@ Upsert embedded data and perform similarity search upon query using Qdrant, a sc
 - 内部名称：`qdrant`
 - 版本：`5`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Qdrant/Qdrant.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Qdrant/Qdrant.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -730,7 +730,7 @@ Upsert embedded data and perform similarity search upon query using Redis, an op
 - 内部名称：`redis`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Redis/Redis.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Redis/Redis.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -775,7 +775,7 @@ Upsert embedded data to local path and perform similarity search
 - 内部名称：`simpleStoreLlamaIndex`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/SimpleStore/SimpleStore.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/SimpleStore/SimpleStore.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -813,7 +813,7 @@ Upsert embedded data and perform similarity search upon query using SingleStore,
 - 内部名称：`singlestore`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Singlestore/Singlestore.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Singlestore/Singlestore.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -859,7 +859,7 @@ Upsert embedded data and perform similarity or mmr search upon query using Supab
 - 内部名称：`supabase`
 - 版本：`4`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Supabase/Supabase.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Supabase/Supabase.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -905,7 +905,7 @@ Upsert data as embedding or string and perform similarity search with Upstash, t
 - 内部名称：`upstash`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Upstash/Upstash.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Upstash/Upstash.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：Upstash Vector 连接托管向量服务并可能写入数据；费用取决于 Upstash 套餐
   - 外部调用：`yes`
@@ -948,7 +948,7 @@ Upsert embedded data and perform similarity search upon query using Vectara, a L
 - 内部名称：`vectara`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Vectara/Vectara.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Vectara/Vectara.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -993,7 +993,7 @@ Upload files to Vectara
 - 内部名称：`vectaraUpload`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Vectara/Vectara_Upload.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Vectara/Vectara_Upload.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -1036,7 +1036,7 @@ Upsert embedded data and perform similarity or mmr search using Weaviate, a scal
 - 内部名称：`weaviate`
 - 版本：`5`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Weaviate/Weaviate.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Weaviate/Weaviate.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -1086,7 +1086,7 @@ Upsert embedded data and perform similarity or mmr search upon query using Zep, 
 - 内部名称：`zepCloud`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/ZepCloud/ZepCloud.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/ZepCloud/ZepCloud.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -1127,7 +1127,7 @@ Upsert embedded data and perform similarity or mmr search upon query using Zep, 
 - 内部名称：`zep`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/vectorstores/Zep/Zep.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/vectorstores/Zep/Zep.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/vector-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`

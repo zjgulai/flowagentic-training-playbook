@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ Load data from Airtable table
 - 内部名称：`airtable`
 - 版本：`3.02`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Airtable/Airtable.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Airtable/Airtable.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -75,7 +75,7 @@ Load data from an API
 - 内部名称：`apiLoader`
 - 版本：`2.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/API/APILoader.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/API/APILoader.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -119,7 +119,7 @@ Load data from Apify Website Content Crawler
 - 内部名称：`apifyWebsiteContentCrawler`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/ApifyWebsiteContentCrawler/ApifyWebsiteContentCrawler.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/ApifyWebsiteContentCrawler/ApifyWebsiteContentCrawler.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -164,7 +164,7 @@ Load and process data from BraveSearch results
 - 内部名称：`braveSearchApiLoader`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/BraveSearchAPI/BraveSearchAPI.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/BraveSearchAPI/BraveSearchAPI.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -205,7 +205,7 @@ Load data from webpages
 - 内部名称：`cheerioWebScraper`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Cheerio/Cheerio.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Cheerio/Cheerio.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -248,7 +248,7 @@ Load data from a Confluence Document
 - 内部名称：`confluence`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Confluence/Confluence.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Confluence/Confluence.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -291,7 +291,7 @@ Load data from CSV files
 - 内部名称：`csvFile`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Csv/Csv.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Csv/Csv.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -332,7 +332,7 @@ Custom function for loading documents
 - 内部名称：`customDocumentLoader`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/CustomDocumentLoader/CustomDocumentLoader.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/CustomDocumentLoader/CustomDocumentLoader.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -370,7 +370,7 @@ Load data from pre-configured document stores
 - 内部名称：`documentStore`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/DocumentStore/DocStoreLoader.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/DocumentStore/DocStoreLoader.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`review-required`
@@ -407,7 +407,7 @@ Load data from DOCX files
 - 内部名称：`docxFile`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Docx/Docx.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Docx/Docx.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -447,7 +447,7 @@ Load data from EPUB files
 - 内部名称：`epubFile`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Epub/Epub.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Epub/Epub.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -488,7 +488,7 @@ Load data from a Figma file
 - 内部名称：`figma`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Figma/Figma.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Figma/Figma.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -531,7 +531,7 @@ A generic file loader that can load different file types
 - 内部名称：`fileLoader`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/File/File.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/File/File.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -574,7 +574,7 @@ Load data from URL using FireCrawl
 - 内部名称：`fireCrawl`
 - 版本：`4`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/FireCrawl/FireCrawl.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/FireCrawl/FireCrawl.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -627,7 +627,7 @@ Load data from folder with multiple files
 - 内部名称：`folderFiles`
 - 版本：`4`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Folder/Folder.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Folder/Folder.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -670,7 +670,7 @@ Load data from GitBook
 - 内部名称：`gitbook`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Gitbook/Gitbook.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Gitbook/Gitbook.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -711,7 +711,7 @@ Load data from a GitHub repository
 - 内部名称：`github`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Github/Github.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Github/Github.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -759,7 +759,7 @@ Load documents from Google Drive files
 - 内部名称：`googleDrive`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/GoogleDrive/GoogleDrive.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/GoogleDrive/GoogleDrive.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -804,7 +804,7 @@ Load data from Google Sheets as documents
 - 内部名称：`googleSheets`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/GoogleSheets/GoogleSheets.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/GoogleSheets/GoogleSheets.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -849,7 +849,7 @@ Load issues from Jira
 - 内部名称：`jira`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Jira/Jira.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Jira/Jira.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -893,7 +893,7 @@ Load data from JSON files
 - 内部名称：`jsonFile`
 - 版本：`3.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Json/Json.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Json/Json.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -935,7 +935,7 @@ Load data from JSON Lines files
 - 内部名称：`jsonlinesFile`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Jsonlines/Jsonlines.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Jsonlines/Jsonlines.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -976,7 +976,7 @@ Load data from Microsoft Excel files
 - 内部名称：`microsoftExcel`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/MicrosoftExcel/MicrosoftExcel.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/MicrosoftExcel/MicrosoftExcel.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -1016,7 +1016,7 @@ Load data from Microsoft PowerPoint files
 - 内部名称：`microsoftPowerpoint`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/MicrosoftPowerpoint/MicrosoftPowerpoint.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/MicrosoftPowerpoint/MicrosoftPowerpoint.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -1056,7 +1056,7 @@ Load data from Microsoft Word files
 - 内部名称：`microsoftWord`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/MicrosoftWord/MicrosoftWord.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/MicrosoftWord/MicrosoftWord.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -1096,7 +1096,7 @@ Load data from Notion Database (each row is a separate document with all propert
 - 内部名称：`notionDB`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Notion/NotionDB.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Notion/NotionDB.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1137,7 +1137,7 @@ Load data from the exported and unzipped Notion folder
 - 内部名称：`notionFolder`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Notion/NotionFolder.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Notion/NotionFolder.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -1177,7 +1177,7 @@ Load data from Notion Page (including child pages all as separate documents)
 - 内部名称：`notionPage`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Notion/NotionPage.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Notion/NotionPage.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1218,7 +1218,7 @@ Extract data from URLs using Oxylabs
 - 内部名称：`oxylabs`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Oxylabs/Oxylabs.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Oxylabs/Oxylabs.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1262,7 +1262,7 @@ Load data from PDF files
 - 内部名称：`pdfFile`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Pdf/Pdf.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Pdf/Pdf.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -1304,7 +1304,7 @@ Load data from plain text
 - 内部名称：`plainText`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/PlainText/PlainText.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/PlainText/PlainText.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -1344,7 +1344,7 @@ Load data from webpages
 - 内部名称：`playwrightWebScraper`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Playwright/Playwright.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Playwright/Playwright.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1389,7 +1389,7 @@ Load data from webpages
 - 内部名称：`puppeteerWebScraper`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Puppeteer/Puppeteer.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Puppeteer/Puppeteer.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1434,7 +1434,7 @@ Load Data from S3 Buckets
 - 内部名称：`S3`
 - 版本：`5`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/S3File/S3File.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/S3File/S3File.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1496,7 +1496,7 @@ Load Data from S3 Buckets
 - 内部名称：`s3Directory`
 - 版本：`4`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/S3Directory/S3Directory.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/S3Directory/S3Directory.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1541,7 +1541,7 @@ Load data from real-time search results
 - 内部名称：`searchApi`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/SearchApi/SearchAPI.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/SearchApi/SearchAPI.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1582,7 +1582,7 @@ Load and process data from web search results
 - 内部名称：`serpApi`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/SerpApi/SerpAPI.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/SerpApi/SerpAPI.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1623,7 +1623,7 @@ Scrape & Crawl the web with Spider
 - 内部名称：`spiderDocumentLoaders`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Spider/Spider.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Spider/Spider.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1667,7 +1667,7 @@ Load data from text files
 - 内部名称：`textFile`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Text/Text.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Text/Text.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -1707,7 +1707,7 @@ Use Unstructured.io to load data from a file path
 - 内部名称：`unstructuredFileLoader`
 - 版本：`4`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/Unstructured/UnstructuredFile.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/Unstructured/UnstructuredFile.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1763,7 +1763,7 @@ Search documents with scores from vector store
 - 内部名称：`vectorStoreToDocument`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/documentloaders/VectorStoreToDocument/VectorStoreToDocument.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/documentloaders/VectorStoreToDocument/VectorStoreToDocument.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/document-loaders)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`

@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: "30 分钟"
 release_version: "3.1.3"
-release_sha: "6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64"
+release_sha: "96f6ae464f7f4757883a5ba6bec26ca951b4da4d"
 feature_status: production-enabled
 permissions:
   - admin
@@ -33,7 +33,7 @@ screenshot_ids: []
 
 ## 适用版本与功能状态
 
-适用于 Flowise `3.1.3`、提交 `6a5bb28b…` 的变量模块；覆盖优先级必须在同版本隔离培训环境重新验证。
+适用于 Flowise `3.1.3`、提交 `96f6ae46…` 的变量模块；覆盖优先级必须在同版本隔离培训环境重新验证。
 
 ## 前置条件与风险
 

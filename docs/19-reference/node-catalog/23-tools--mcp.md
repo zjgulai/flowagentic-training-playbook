@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ MCP server that integrates the Brave Search API - a real-time API to access web 
 - 内部名称：`braveSearchMCP`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/tools/MCP/BraveSearch/BraveSearchMCP.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/tools/MCP/BraveSearch/BraveSearchMCP.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/tools)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -65,7 +65,7 @@ MCP Server for Browserless - scrape pages, take screenshots, generate PDFs, and 
 - 内部名称：`browserlessMCP`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/tools/MCP/Browserless/BrowserlessMCP.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/tools/MCP/Browserless/BrowserlessMCP.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/tools)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -102,7 +102,7 @@ Custom MCP Config
 - 内部名称：`customMCP`
 - 版本：`1.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/tools/MCP/CustomMCP/CustomMCP.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/tools/MCP/CustomMCP/CustomMCP.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/tools)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -139,7 +139,7 @@ Use tools from authorized MCP servers configured in workspace
 - 内部名称：`customMcpServerTool`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/tools/MCP/CustomMcpServerTool/CustomMcpServerTool.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/tools/MCP/CustomMcpServerTool/CustomMcpServerTool.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/tools)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -176,7 +176,7 @@ MCP Server for the GitHub API
 - 内部名称：`githubMCP`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/tools/MCP/Github/GithubMCP.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/tools/MCP/Github/GithubMCP.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/tools)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -214,7 +214,7 @@ MCP Server for Pipedream. For critical actions, ensure "Require Human Input" is 
 - 内部名称：`pipedreamMCP`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/tools/MCP/Pipedream/PipedreamMCP.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/tools/MCP/Pipedream/PipedreamMCP.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/tools)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -255,7 +255,7 @@ MCP server that provides read-only access to PostgreSQL databases
 - 内部名称：`postgreSQLMCP`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/tools/MCP/PostgreSQL/PostgreSQLMCP.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/tools/MCP/PostgreSQL/PostgreSQLMCP.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/tools)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -292,7 +292,7 @@ MCP server that provides a tool for dynamic and reflective problem-solving throu
 - 内部名称：`sequentialThinkingMCP`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/tools/MCP/SequentialThinking/SequentialThinkingMCP.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/tools/MCP/SequentialThinking/SequentialThinkingMCP.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/tools)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -328,7 +328,7 @@ MCP Server for the Slack API
 - 内部名称：`slackMCP`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/tools/MCP/Slack/SlackMCP.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/tools/MCP/Slack/SlackMCP.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/tools)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -365,7 +365,7 @@ Runs MCP stdio-based servers over SSE (Server-Sent Events) or WebSockets (WS)
 - 内部名称：`supergatewayMCP`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/tools/MCP/Supergateway/SupergatewayMCP.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/tools/MCP/Supergateway/SupergatewayMCP.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/tools)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -402,7 +402,7 @@ MCP Server for Teradata (remote HTTP streamable)
 - 内部名称：`teradataMCP`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/tools/MCP/Teradata/TeradataMCP.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/tools/MCP/Teradata/TeradataMCP.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/tools)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`

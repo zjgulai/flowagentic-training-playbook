@@ -8,7 +8,7 @@ audience:
 difficulty: intermediate
 duration: 18 分钟
 release_version: "3.1.3"
-release_sha: "6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64"
+release_sha: "96f6ae464f7f4757883a5ba6bec26ca951b4da4d"
 feature_status: production-enabled
 permissions:
   - public
@@ -27,7 +27,7 @@ screenshot_ids: []
 
 # 研究与验证方法
 
-这份 Playbook 不把“官方文档写了”“源码里有这个类”或“某位开发者遇到过”直接等同于目标系统事实。所有对外结论先进入来源库，再进入 Claim—Evidence 矩阵，最后按目标提交和隔离培训环境完成复现。当前研究基线为 Flowise `3.1.3` 与提交 `6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`；正式截图和发布版本必须在这一精确提交的同版本隔离培训环境完成复现后绑定。
+这份 Playbook 不把“官方文档写了”“源码里有这个类”或“某位开发者遇到过”直接等同于目标系统事实。所有对外结论先进入来源库，再进入 Claim—Evidence 矩阵，最后按目标提交和隔离培训环境完成复现。当前研究基线为 Flowise `3.1.3` 与提交 `96f6ae464f7f4757883a5ba6bec26ca951b4da4d`；正式截图和发布版本必须在这一精确提交的同版本隔离培训环境完成复现后绑定。
 
 ## 八阶段流程
 
@@ -69,7 +69,7 @@ screenshot_ids: []
 - 对抗性评审检查单一来源、版本漂移、秘密泄露和过度结论；
 - 实施工程师检查建议是否有 fixture、检查点、清理动作和失败出口。
 
-当前已固定并复核中文源码候选 SHA，但同版本隔离培训环境、该候选的部署／PC 验收回执和 Provider 安全凭据尚未提供。因此最终截图、真实 DeepSeek/Kimi 调用和发布证明均保持关闭，不使用模拟成功替代。
+当前已固定并复核中文源码候选 SHA，同版本隔离培训环境也已完成基础运行验收；该候选的生产部署／PC 验收回执、功能专项复现和 Provider 安全凭据仍未提供。因此最终截图、真实 DeepSeek/Kimi 调用和发布证明均保持关闭，不使用模拟成功替代。
 
 ### 8. PACKAGE：发布可审计产物
 

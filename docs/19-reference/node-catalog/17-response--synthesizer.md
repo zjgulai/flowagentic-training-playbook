@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ CompactRefine is a slight variation of Refine that first compacts the text chunk
 - 内部名称：`compactrefineLlamaIndex`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/responsesynthesizer/CompactRefine/CompactRefine.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/responsesynthesizer/CompactRefine/CompactRefine.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：未提供分类级官方链接，请以源码锚点和版本界面为准
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -64,7 +64,7 @@ Create and refine an answer by sequentially going through each retrieved text ch
 - 内部名称：`refineLlamaIndex`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/responsesynthesizer/Refine/Refine.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/responsesynthesizer/Refine/Refine.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：未提供分类级官方链接，请以源码锚点和版本界面为准
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -100,7 +100,7 @@ Apply a query to a collection of text chunks, gathering the responses in an arra
 - 内部名称：`simpleResponseBuilderLlamaIndex`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/responsesynthesizer/SimpleResponseBuilder/SimpleResponseBuilder.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/responsesynthesizer/SimpleResponseBuilder/SimpleResponseBuilder.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：未提供分类级官方链接，请以源码锚点和版本界面为准
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -135,7 +135,7 @@ Given a set of text chunks and the query, recursively construct a tree and retur
 - 内部名称：`treeSummarizeLlamaIndex`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/responsesynthesizer/TreeSummarize/TreeSummarize.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/responsesynthesizer/TreeSummarize/TreeSummarize.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：未提供分类级官方链接，请以源码锚点和版本界面为准
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`

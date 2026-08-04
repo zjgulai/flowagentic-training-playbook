@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ Connect with Neo4j graph database
 - 内部名称：`Neo4j`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/graphs/Neo4j/Neo4j.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/graphs/Neo4j/Neo4j.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：未提供分类级官方链接，请以源码锚点和版本界面为准
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`

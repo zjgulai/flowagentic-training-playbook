@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ Cache LLM response in memory, will be cleared once app restarted
 - 内部名称：`inMemoryCache`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/cache/InMemoryCache/InMemoryCache.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/cache/InMemoryCache/InMemoryCache.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/cache)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -63,7 +63,7 @@ Cache generated Embeddings in memory to avoid needing to recompute them.
 - 内部名称：`inMemoryEmbeddingCache`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/cache/InMemoryCache/InMemoryEmbeddingCache.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/cache/InMemoryCache/InMemoryEmbeddingCache.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/cache)
 - 风险：外部调用：是；可能计费：是；可能写入：是
   - 外部调用：`yes`
@@ -100,7 +100,7 @@ Cache LLM response using Momento, a distributed, serverless cache
 - 内部名称：`momentoCache`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/cache/MomentoCache/MomentoCache.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/cache/MomentoCache/MomentoCache.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/cache)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -136,7 +136,7 @@ Cache LLM response in Redis, useful for sharing cache across multiple processes 
 - 内部名称：`redisCache`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/cache/RedisCache/RedisCache.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/cache/RedisCache/RedisCache.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/cache)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -172,7 +172,7 @@ Cache generated Embeddings in Redis to avoid needing to recompute them.
 - 内部名称：`redisEmbeddingsCache`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/cache/RedisCache/RedisEmbeddingsCache.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/cache/RedisCache/RedisEmbeddingsCache.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/cache)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -211,7 +211,7 @@ Cache LLM response in Upstash Redis, serverless data for Redis and Kafka
 - 内部名称：`upstashRedisCache`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/cache/UpstashRedisCache/UpstashRedisCache.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/cache/UpstashRedisCache/UpstashRedisCache.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/cache)
 - 风险：Upstash Redis Cache 连接托管 Redis 并写入缓存；费用取决于 Upstash 套餐
   - 外部调用：`yes`

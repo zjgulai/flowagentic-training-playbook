@@ -6,7 +6,7 @@ audience:
 difficulty: beginner
 duration: "30 分钟"
 release_version: "3.1.3"
-release_sha: "6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64"
+release_sha: "96f6ae464f7f4757883a5ba6bec26ca951b4da4d"
 feature_status: production-enabled
 permissions:
   - admin
@@ -97,4 +97,4 @@ screenshot_ids: []
 
 ## 截图证据状态
 
-本页正式截图尚未采集。截图 manifest 只有在 G1 通过、隔离培训环境就绪并完成脱敏检查后才会加入 `screenshot_ids`；本页不会展示占位图。
+本页正式截图尚未采集。同版本隔离培训环境的基础运行回执已通过；截图 manifest 只有在生产 G1 通过并完成脱敏检查后才会加入 `screenshot_ids`，本页不会展示占位图。

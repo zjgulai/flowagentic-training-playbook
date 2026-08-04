@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Any
 
 
-DEFAULT_REF = "6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64"
+DEFAULT_REF = "96f6ae464f7f4757883a5ba6bec26ca951b4da4d"
 NODES_ROOT = "packages/components/nodes"
 PARSER_VERSION = "static-ts-metadata-v2"
 

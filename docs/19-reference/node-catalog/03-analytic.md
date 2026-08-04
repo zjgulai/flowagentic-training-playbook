@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ screenshot_ids: []
 - 内部名称：`arize`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/analytic/Arize/Arize.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/analytic/Arize/Arize.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：未提供分类级官方链接，请以源码锚点和版本界面为准
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -64,7 +64,7 @@ screenshot_ids: []
 - 内部名称：`langFuse`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/analytic/LangFuse/LangFuse.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/analytic/LangFuse/LangFuse.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：未提供分类级官方链接，请以源码锚点和版本界面为准
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -100,7 +100,7 @@ screenshot_ids: []
 - 内部名称：`langSmith`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/analytic/LangSmith/LangSmith.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/analytic/LangSmith/LangSmith.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：未提供分类级官方链接，请以源码锚点和版本界面为准
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -136,7 +136,7 @@ screenshot_ids: []
 - 内部名称：`LangWatch`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/analytic/LangWatch/LangWatch.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/analytic/LangWatch/LangWatch.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：未提供分类级官方链接，请以源码锚点和版本界面为准
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -172,7 +172,7 @@ screenshot_ids: []
 - 内部名称：`lunary`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/analytic/Lunary/Lunary.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/analytic/Lunary/Lunary.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：未提供分类级官方链接，请以源码锚点和版本界面为准
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -208,7 +208,7 @@ screenshot_ids: []
 - 内部名称：`opik`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/analytic/Opik/Opik.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/analytic/Opik/Opik.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：未提供分类级官方链接，请以源码锚点和版本界面为准
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -244,7 +244,7 @@ screenshot_ids: []
 - 内部名称：`phoenix`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/analytic/Phoenix/Phoenix.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/analytic/Phoenix/Phoenix.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：未提供分类级官方链接，请以源码锚点和版本界面为准
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`

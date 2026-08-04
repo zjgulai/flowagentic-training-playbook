@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ Schema to represent a chat prompt
 - 内部名称：`chatPromptTemplate`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/prompts/ChatPromptTemplate/ChatPromptTemplate.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/prompts/ChatPromptTemplate/ChatPromptTemplate.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/prompts)
 - 风险：外部调用：否；可能计费：否；可能写入：否
   - 外部调用：`no`
@@ -65,7 +65,7 @@ Prompt template you can build with examples
 - 内部名称：`fewShotPromptTemplate`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/prompts/FewShotPromptTemplate/FewShotPromptTemplate.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/prompts/FewShotPromptTemplate/FewShotPromptTemplate.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/prompts)
 - 风险：外部调用：否；可能计费：否；可能写入：否
   - 外部调用：`no`
@@ -104,7 +104,7 @@ Fetch schema from LangFuse to represent a prompt for an LLM
 - 内部名称：`promptLangFuse`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/prompts/PromptLangfuse/PromptLangfuse.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/prompts/PromptLangfuse/PromptLangfuse.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/prompts)
 - 风险：外部调用：否；可能计费：否；可能写入：否
   - 外部调用：`no`
@@ -140,7 +140,7 @@ Schema to represent a basic prompt for an LLM
 - 内部名称：`promptTemplate`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/prompts/PromptTemplate/PromptTemplate.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/prompts/PromptTemplate/PromptTemplate.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/prompts)
 - 风险：外部调用：否；可能计费：否；可能写入：否
   - 外部调用：`no`

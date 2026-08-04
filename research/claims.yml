@@ -1,17 +1,17 @@
 ---
 schema_version: 1
-target_release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+target_release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 last_reviewed: '2026-08-04'
 claims:
 - claim_id: CLM-001
-  statement: Playbook 当前事实基线是 Flowise 3.1.3 与目标提交 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64。
+  statement: Playbook 当前事实基线是 Flowise 3.1.3 与目标提交 96f6ae464f7f4757883a5ba6bec26ca951b4da4d。
   source_ids:
   - SRC-001
   - SRC-036
   credibility: 98
   local_verification:
     status: passed
-    method: 已用 git cat-file、git show、package.json、精确提交复核和远端分支回执交叉确认；运行部署与正式截图仍是独立门禁。
+    method: 已用 git cat-file、git show、package.json、合并提交父树、远端 main、主分支 CI 与人工离线制品 readiness 交叉确认；生产部署与正式截图仍是独立门禁。
     evidence:
     - 固定提交只读检查已完成
     - 来源记录已登记并可追溯
@@ -19,7 +19,7 @@ claims:
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: system-fact
@@ -40,7 +40,7 @@ claims:
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: system-fact
@@ -57,12 +57,12 @@ claims:
     method: 目标源码已确认门禁表达式；尚未在隔离环境逐角色复现许可证与功能开关组合。
     evidence:
     - 固定提交或官方语义已核对
-    - 缺少同版本隔离培训环境或外部门禁输入
+    - 隔离环境基础运行已通过，但缺少该功能专项复现或其他外部门禁输入
   evidence_status: partial
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: system-fact
@@ -73,7 +73,7 @@ claims:
   credibility: 98
   local_verification:
     status: passed
-    method: 固定提交路由源码直接确认；正式截图等待该精确提交进入同版本隔离培训环境。
+    method: 固定提交路由源码直接确认；正式路由截图仍等待该精确提交完成生产 G1 验收。
     evidence:
     - 固定提交只读检查已完成
     - 来源记录已登记并可追溯
@@ -81,7 +81,7 @@ claims:
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: system-fact
@@ -98,12 +98,12 @@ claims:
     method: README 的节点表和状态声明已核对；13 个节点的最终参数与截图需按新 SHA 复验。
     evidence:
     - 固定提交或官方语义已核对
-    - 缺少同版本隔离培训环境或外部门禁输入
+    - 隔离环境基础运行已通过，但缺少该功能专项复现或其他外部门禁输入
   evidence_status: partial
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: system-fact
@@ -118,12 +118,12 @@ claims:
     method: 目标源码存在变量选择和状态编辑能力；生命周期尚未在同版本隔离环境以两个 session 对照复现。
     evidence:
     - 固定提交或官方语义已核对
-    - 缺少同版本隔离培训环境或外部门禁输入
+    - 隔离环境基础运行已通过，但缺少该功能专项复现或其他外部门禁输入
   evidence_status: partial
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: official-semantics
@@ -142,12 +142,12 @@ claims:
     method: 目标服务和状态码测试支持阶段划分；成功、失败、Stale 与恢复 fixture 尚待隔离环境执行。
     evidence:
     - 固定提交或官方语义已核对
-    - 缺少同版本隔离培训环境或外部门禁输入
+    - 隔离环境基础运行已通过，但缺少该功能专项复现或其他外部门禁输入
   evidence_status: partial
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: inference
@@ -170,7 +170,7 @@ claims:
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: inference
@@ -193,7 +193,7 @@ claims:
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: experience-advice
@@ -215,7 +215,7 @@ claims:
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: experience-advice
@@ -232,12 +232,12 @@ claims:
     method: 目标源码包含 MCP 实现目录；尚未在培训环境执行授权、发现、调用和撤销。
     evidence:
     - 固定提交或官方语义已核对
-    - 缺少同版本隔离培训环境或外部门禁输入
+    - 隔离环境基础运行已通过，但缺少该功能专项复现或其他外部门禁输入
   evidence_status: partial
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: system-fact
@@ -255,12 +255,12 @@ claims:
     method: 已确认目标目录和上游修复记录；目标 3.1.3 的具体配置与补丁回移状态尚待安全复核。
     evidence:
     - 固定提交或官方语义已核对
-    - 缺少同版本隔离培训环境或外部门禁输入
+    - 隔离环境基础运行已通过，但缺少该功能专项复现或其他外部门禁输入
   evidence_status: partial
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: system-fact
@@ -272,15 +272,15 @@ claims:
   credibility: 98
   local_verification:
     status: blocked
-    method: 节点与测试文件已核对；安全凭据和隔离环境未提供，因此真实 Provider 实验保持关闭。
+    method: 节点与测试文件已核对；同版本隔离基础环境已通过，但安全凭据未提供，因此真实 Provider 实验保持关闭。
     evidence:
     - 固定提交或官方语义已核对
-    - 缺少同版本隔离培训环境或外部门禁输入
+    - 基础环境不含 Provider 凭据或调用，功能实验门禁仍关闭
   evidence_status: blocked
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 节点源码存在，但 Provider 可用性属于部署与凭据状态。
   experience_label: system-fact
@@ -299,7 +299,7 @@ claims:
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: system-fact
@@ -323,7 +323,7 @@ claims:
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: inference
@@ -336,15 +336,15 @@ claims:
   credibility: 88
   local_verification:
     status: blocked
-    method: 维护者 PR 和目标路由已确认；最终截图将在该精确提交的同版本隔离培训环境重新采集。
+    method: 维护者 PR 和目标路由已确认；同版本隔离基础环境已就绪，最终截图仍等待生产 G1 通过后采集。
     evidence:
     - 固定提交或官方语义已核对
-    - 缺少同版本隔离培训环境或外部门禁输入
+    - 缺少生产 G1、逐页浏览器验收和正式截图回执
   evidence_status: partial
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: inference
@@ -366,7 +366,7 @@ claims:
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 上游 3.1.4 晚于目标 3.1.3；是否回移修复尚未核对。
   experience_label: system-fact
@@ -388,7 +388,7 @@ claims:
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: experience-advice
@@ -410,7 +410,7 @@ claims:
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: experience-advice
@@ -432,7 +432,7 @@ claims:
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: experience-advice
@@ -453,7 +453,7 @@ claims:
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: experience-advice
@@ -473,7 +473,7 @@ claims:
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: experience-advice
@@ -497,7 +497,7 @@ claims:
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: inference
@@ -519,27 +519,27 @@ claims:
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 滚动上游资料可能晚于目标基线；以固定提交与隔离环境复现为准。
   experience_label: system-fact
 - claim_id: CLM-025
-  statement: 目标源码候选对工作区导入导出、MCP 旧 Token 迁移与公共请求边界、Provider-backed Assistant 权限和畸形分页采用 fail-closed 合同；这些源码合同尚不等于隔离运行或生产部署已验收。
+  statement: 目标提交对工作区导入导出、MCP 旧 Token 迁移与公共请求边界、Provider-backed Assistant 权限和畸形分页采用 fail-closed 合同；这些源码合同尚不等于对应功能已完成隔离复现或生产部署验收。
   source_ids:
   - SRC-014
   - SRC-053
   credibility: 98
   local_verification:
     status: passed
-    method: 精确提交源码、聚焦测试、全量服务端测试、静态安全扫描和独立提交级复核均已通过；同名远端分支 SHA 已核对一致。
+    method: 精确提交源码、聚焦测试、全量服务端测试、静态安全扫描、独立提交级复核、主分支 CI 和离线制品 readiness 均已通过；远端 main SHA 已核对一致。
     evidence:
-    - 精确提交 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64 已完成代码门禁
-    - 运行部署、迁移演练和正式截图仍由外部门禁阻断
+    - 精确提交 96f6ae464f7f4757883a5ba6bec26ca951b4da4d 已完成代码门禁
+    - 生产部署、真实数据迁移演练、功能专项复现和正式截图仍由外部门禁阻断
   evidence_status: verified
   public_safe: true
   applies_to:
     product_version: 3.1.3
-    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
   last_verified: '2026-08-04'
   upstream_difference: 目标定制可能与上游 3.1.4 的同类修复实现不同；不能仅凭行为相似宣称包含相同上游提交。
   experience_label: system-fact

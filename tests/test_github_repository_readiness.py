@@ -12,7 +12,7 @@ from scripts.github_repository_readiness import (
 
 
 REPOSITORY = "zjgulai/flowagentic-training-playbook"
-RELEASE_SHA = "6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64"
+RELEASE_SHA = "96f6ae464f7f4757883a5ba6bec26ca951b4da4d"
 
 
 def ready_repository(*, size: int = 42) -> dict[str, Any]:

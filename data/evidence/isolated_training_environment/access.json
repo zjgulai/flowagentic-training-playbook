@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "evidence_id": "EVD-TRAINING-ACCESS",
+  "status": "passed",
+  "scope": "isolated-training-candidate",
+  "observed_at": "2026-08-04T12:09:26Z",
+  "release_sha": "96f6ae464f7f4757883a5ba6bec26ca951b4da4d",
+  "product_version": "3.1.3",
+  "checks": {
+    "https_loopback_only": true,
+    "ping": "passed",
+    "version": "passed",
+    "settings": "passed",
+    "auth_resolve": "passed",
+    "synthetic_owner_login": "passed",
+    "authenticated_user_check": "passed",
+    "secure_cookie_check": "passed",
+    "registration_closed": "passed",
+    "application_and_database_internal_only": true,
+    "application_port_published": false,
+    "database_port_published": false,
+    "proxy_access_network_dedicated": true,
+    "provider_credentials_present": false,
+    "provider_calls": 0,
+    "production_fingerprint_unchanged": true,
+    "production_release_unchanged": true
+  },
+  "public_safe": true,
+  "evidence_boundary": "仅证明基础 HTTPS、认证和隔离边界；不包含培训账号、内部地址、资源标识或生产拓扑，也不证明十个主页面的浏览器验收。"
+}

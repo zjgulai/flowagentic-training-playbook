@@ -7,7 +7,7 @@ audience:
 difficulty: intermediate
 duration: "90 分钟"
 release_version: "3.1.3"
-release_sha: "6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64"
+release_sha: "96f6ae464f7f4757883a5ba6bec26ca951b4da4d"
 feature_status: production-enabled
 permissions:
   - admin
@@ -107,7 +107,7 @@ screenshot_ids: []
 
 ## 适用版本与功能状态
 
-本 SOP 绑定 Flowise `3.1.3` 与提交 `6a5bb28b…`，Chatflow 为 `production-enabled`。最终界面、截图和运行结果等待该精确提交的同版本隔离环境复验。
+本 SOP 绑定 Flowise `3.1.3` 与提交 `96f6ae46…`，Chatflow 为 `production-enabled`。最终界面、截图和运行结果等待该精确提交的同版本隔离环境复验。
 
 ## 前置条件与风险
 

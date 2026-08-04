@@ -7,7 +7,7 @@ audience:
 difficulty: intermediate
 duration: 15 分钟
 release_version: "3.1.3"
-release_sha: "6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64"
+release_sha: "96f6ae464f7f4757883a5ba6bec26ca951b4da4d"
 feature_status: production-enabled
 permissions:
   - public
@@ -30,7 +30,7 @@ screenshot_ids: []
 
 ## 目标系统证据
 
-目标证据全部锚定提交 `6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`，主要覆盖：
+目标证据全部锚定提交 `96f6ae464f7f4757883a5ba6bec26ca951b4da4d`，主要覆盖：
 
 - 根包版本、工作区与构建入口；
 - 十个中文主模块、路由、权限和 feature gate；

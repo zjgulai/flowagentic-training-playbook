@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "evidence_id": "EVD-TRAINING-MIGRATIONS",
+  "status": "passed",
+  "scope": "isolated-training-candidate",
+  "observed_at": "2026-08-04T12:09:26Z",
+  "release_sha": "96f6ae464f7f4757883a5ba6bec26ca951b4da4d",
+  "product_version": "3.1.3",
+  "checks": {
+    "database_engine": "PostgreSQL 16",
+    "database_image_identity_matches_production": true,
+    "migration_table_present": true,
+    "applied_migration_count": 60,
+    "application_healthy_after_migration": true,
+    "production_data_reused": false
+  },
+  "public_safe": true,
+  "evidence_boundary": "迁移计数来自全新合成数据库，只证明基础 schema 初始化成功，不证明真实生产数据迁移或备份恢复。"
+}

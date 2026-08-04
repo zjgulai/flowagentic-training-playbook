@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ Agent that uses Anthropic Claude Function Calling to pick the tools and args to 
 - 内部名称：`anthropicAgentLlamaIndex`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agents/LlamaIndexAgents/AnthropicAgent/AnthropicAgent_LlamaIndex.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agents/LlamaIndexAgents/AnthropicAgent/AnthropicAgent_LlamaIndex.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/agents)
 - 风险：外部调用：需按实际配置复核；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -67,7 +67,7 @@ Conversational agent for a chat model. It will utilize chat specific prompts
 - 内部名称：`conversationalAgent`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agents/ConversationalAgent/ConversationalAgent.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agents/ConversationalAgent/ConversationalAgent.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/agents)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -108,7 +108,7 @@ Agent that calls a vector store retrieval and uses Function Calling to pick the 
 - 内部名称：`conversationalRetrievalToolAgent`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agents/ConversationalRetrievalToolAgent/ConversationalRetrievalToolAgent.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agents/ConversationalRetrievalToolAgent/ConversationalRetrievalToolAgent.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/agents)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -152,7 +152,7 @@ An agent that uses OpenAI Assistant API to pick the tool and args to call
 - 内部名称：`openAIAssistant`
 - 版本：`4`
 - 功能状态：`deprecated`
-- 源码锚点：`packages/components/nodes/agents/OpenAIAssistant/OpenAIAssistant.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agents/OpenAIAssistant/OpenAIAssistant.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/agents)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -193,7 +193,7 @@ Agent that uses OpenAI Function Calling to pick the tools and args to call using
 - 内部名称：`openAIToolAgentLlamaIndex`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agents/LlamaIndexAgents/OpenAIToolAgent/OpenAIToolAgent_LlamaIndex.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agents/LlamaIndexAgents/OpenAIToolAgent/OpenAIToolAgent_LlamaIndex.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/agents)
 - 风险：外部调用：是；可能计费：是；可能写入：是
   - 外部调用：`yes`
@@ -232,7 +232,7 @@ Agent that uses the ReAct logic to decide what action to take, optimized to be u
 - 内部名称：`reactAgentChat`
 - 版本：`4`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agents/ReActAgentChat/ReActAgentChat.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agents/ReActAgentChat/ReActAgentChat.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/agents)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -272,7 +272,7 @@ Agent that uses the ReAct logic to decide what action to take, optimized to be u
 - 内部名称：`reactAgentLLM`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agents/ReActAgentLLM/ReActAgentLLM.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agents/ReActAgentLLM/ReActAgentLLM.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/agents)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -311,7 +311,7 @@ Agent that uses Function Calling to pick the tools and args to call
 - 内部名称：`toolAgent`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agents/ToolAgent/ToolAgent.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agents/ToolAgent/ToolAgent.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/agents)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -354,7 +354,7 @@ Agent that is designed for LLMs that are good for reasoning/writing XML (e.g: An
 - 内部名称：`xmlAgent`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/agents/XMLAgent/XMLAgent.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/agents/XMLAgent/XMLAgent.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/agents)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`

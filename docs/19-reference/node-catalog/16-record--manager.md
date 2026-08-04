@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ Use MySQL to keep track of document writes into the vector databases
 - 内部名称：`MySQLRecordManager`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/recordmanager/MySQLRecordManager/MySQLrecordManager.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/recordmanager/MySQLRecordManager/MySQLrecordManager.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/document-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -72,7 +72,7 @@ Use Postgres to keep track of document writes into the vector databases
 - 内部名称：`postgresRecordManager`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/recordmanager/PostgresRecordManager/PostgresRecordManager.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/recordmanager/PostgresRecordManager/PostgresRecordManager.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/document-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`
@@ -117,7 +117,7 @@ Use SQLite to keep track of document writes into the vector databases
 - 内部名称：`SQLiteRecordManager`
 - 版本：`1.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/recordmanager/SQLiteRecordManager/SQLiteRecordManager.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/recordmanager/SQLiteRecordManager/SQLiteRecordManager.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/using-flowise/document-stores)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：是
   - 外部调用：`yes`

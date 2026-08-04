@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ Chat models specific conversational chain with memory
 - 内部名称：`conversationChain`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chains/ConversationChain/ConversationChain.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chains/ConversationChain/ConversationChain.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chains)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -69,7 +69,7 @@ Document QA - built on RetrievalQAChain to provide a chat history component
 - 内部名称：`conversationalRetrievalQAChain`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chains/ConversationalRetrievalQAChain/ConversationalRetrievalQAChain.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chains/ConversationalRetrievalQAChain/ConversationalRetrievalQAChain.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chains)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -113,7 +113,7 @@ Chain to run queries against GET API
 - 内部名称：`getApiChain`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chains/ApiChain/GETApiChain.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chains/ApiChain/GETApiChain.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chains)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -153,7 +153,7 @@ Advanced chain for question-answering against a Neo4j graph by generating Cypher
 - 内部名称：`graphCypherQAChain`
 - 版本：`1.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chains/GraphCypherQAChain/GraphCypherQAChain.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chains/GraphCypherQAChain/GraphCypherQAChain.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chains)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -197,7 +197,7 @@ Chain to run queries against LLMs
 - 内部名称：`llmChain`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chains/LLMChain/LLMChain.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chains/LLMChain/LLMChain.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chains)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -238,7 +238,7 @@ Chain automatically picks an appropriate prompt from multiple prompt templates
 - 内部名称：`multiPromptChain`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chains/MultiPromptChain/MultiPromptChain.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chains/MultiPromptChain/MultiPromptChain.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chains)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -276,7 +276,7 @@ QA Chain that automatically picks an appropriate vector store from multiple retr
 - 内部名称：`multiRetrievalQAChain`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chains/MultiRetrievalQAChain/MultiRetrievalQAChain.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chains/MultiRetrievalQAChain/MultiRetrievalQAChain.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chains)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -315,7 +315,7 @@ Chain that automatically select and call APIs based only on an OpenAPI spec
 - 内部名称：`openApiChain`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chains/ApiChain/OpenAPIChain.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chains/ApiChain/OpenAPIChain.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chains)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -355,7 +355,7 @@ Chain to run queries against POST API
 - 内部名称：`postApiChain`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chains/ApiChain/POSTApiChain.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chains/ApiChain/POSTApiChain.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chains)
 - 风险：POST API Chain 调用所选模型并向配置的 API 发起 POST；两者可能产生费用或外部副作用
   - 外部调用：`yes`
@@ -395,7 +395,7 @@ QA chain to answer a question based on the retrieved documents
 - 内部名称：`retrievalQAChain`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chains/RetrievalQAChain/RetrievalQAChain.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chains/RetrievalQAChain/RetrievalQAChain.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chains)
 - 风险：外部调用：需按实际配置复核；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`review-required`
@@ -433,7 +433,7 @@ Answer questions over a SQL database
 - 内部名称：`sqlDatabaseChain`
 - 版本：`5`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chains/SqlDatabaseChain/SqlDatabaseChain.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chains/SqlDatabaseChain/SqlDatabaseChain.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chains)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -477,7 +477,7 @@ QA chain for Vectara
 - 内部名称：`vectaraQAChain`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chains/VectaraChain/VectaraChain.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chains/VectaraChain/VectaraChain.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chains)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -517,7 +517,7 @@ QA chain for vector databases
 - 内部名称：`vectorDBQAChain`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chains/VectorDBQAChain/VectorDBQAChain.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chains/VectorDBQAChain/VectorDBQAChain.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chains)
 - 风险：外部调用：是；可能计费：需按实际配置复核；可能写入：需按实际配置复核
   - 外部调用：`yes`

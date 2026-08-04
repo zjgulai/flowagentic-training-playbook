@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ splits only on one type of character (defaults to "\\n\\n").
 - 内部名称：`characterTextSplitter`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/textsplitters/CharacterTextSplitter/CharacterTextSplitter.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/textsplitters/CharacterTextSplitter/CharacterTextSplitter.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/text-splitters)
 - 风险：外部调用：否；可能计费：否；可能写入：否
   - 外部调用：`no`
@@ -64,7 +64,7 @@ Split documents based on language-specific syntax
 - 内部名称：`codeTextSplitter`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/textsplitters/CodeTextSplitter/CodeTextSplitter.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/textsplitters/CodeTextSplitter/CodeTextSplitter.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/text-splitters)
 - 风险：外部调用：否；可能计费：否；可能写入：否
   - 外部调用：`no`
@@ -100,7 +100,7 @@ Converts Html to Markdown and then split your content into documents based on th
 - 内部名称：`htmlToMarkdownTextSplitter`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/textsplitters/HtmlToMarkdownTextSplitter/HtmlToMarkdownTextSplitter.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/textsplitters/HtmlToMarkdownTextSplitter/HtmlToMarkdownTextSplitter.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/text-splitters)
 - 风险：外部调用：否；可能计费：否；可能写入：否
   - 外部调用：`no`
@@ -135,7 +135,7 @@ Split your content into documents based on the Markdown headers
 - 内部名称：`markdownTextSplitter`
 - 版本：`1.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/textsplitters/MarkdownTextSplitter/MarkdownTextSplitter.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/textsplitters/MarkdownTextSplitter/MarkdownTextSplitter.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/text-splitters)
 - 风险：外部调用：否；可能计费：否；可能写入：否
   - 外部调用：`no`
@@ -171,7 +171,7 @@ Split documents recursively by different characters - starting with "\\n\\n", th
 - 内部名称：`recursiveCharacterTextSplitter`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/textsplitters/RecursiveCharacterTextSplitter/RecursiveCharacterTextSplitter.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/textsplitters/RecursiveCharacterTextSplitter/RecursiveCharacterTextSplitter.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/text-splitters)
 - 风险：外部调用：否；可能计费：否；可能写入：否
   - 外部调用：`no`
@@ -207,7 +207,7 @@ Splits a raw text string by first converting the text into BPE tokens, then spli
 - 内部名称：`tokenTextSplitter`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/textsplitters/TokenTextSplitter/TokenTextSplitter.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/textsplitters/TokenTextSplitter/TokenTextSplitter.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/text-splitters)
 - 风险：外部调用：否；可能计费：否；可能写入：否
   - 外部调用：`no`

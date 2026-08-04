@@ -6,7 +6,7 @@ audience:
 difficulty: intermediate
 duration: 10 分钟
 release_version: 3.1.3
-release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+release_sha: 96f6ae464f7f4757883a5ba6bec26ca951b4da4d
 feature_status: production-enabled
 permissions: []
 cost_class: none
@@ -28,7 +28,7 @@ Wrapper around Alibaba Tongyi Chat Endpoints
 - 内部名称：`chatAlibabaTongyi`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatAlibabaTongyi/ChatAlibabaTongyi.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatAlibabaTongyi/ChatAlibabaTongyi.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -68,7 +68,7 @@ Wrapper around ChatAnthropic large language models that use the Chat endpoint
 - 内部名称：`chatAnthropic`
 - 版本：`8`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatAnthropic/ChatAnthropic.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatAnthropic/ChatAnthropic.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -116,7 +116,7 @@ Wrapper around AWS Bedrock large language models. Supports built-in, imported, f
 - 内部名称：`awsChatBedrock`
 - 版本：`6.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/AWSBedrock/AWSChatBedrock.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/AWSBedrock/AWSChatBedrock.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -163,7 +163,7 @@ Wrapper around Azure OpenAI large language models that use the Chat endpoint
 - 内部名称：`azureChatOpenAI`
 - 版本：`7.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/AzureChatOpenAI/AzureChatOpenAI.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/AzureChatOpenAI/AzureChatOpenAI.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -214,7 +214,7 @@ Wrapper around Azure OpenAI Chat LLM specific for LlamaIndex
 - 内部名称：`azureChatOpenAI_LlamaIndex`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/AzureChatOpenAI/AzureChatOpenAI_LlamaIndex.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/AzureChatOpenAI/AzureChatOpenAI_LlamaIndex.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -255,7 +255,7 @@ Wrapper around BaiduWenxin Chat Endpoints
 - 内部名称：`chatBaiduWenxin`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatBaiduWenxin/ChatBaiduWenxin.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatBaiduWenxin/ChatBaiduWenxin.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -299,7 +299,7 @@ Wrapper around Cerebras Inference API
 - 内部名称：`chatCerebras`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatCerebras/ChatCerebras.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatCerebras/ChatCerebras.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -346,7 +346,7 @@ Wrapper around ChatAnthropic LLM specific for LlamaIndex
 - 内部名称：`chatAnthropic_LlamaIndex`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatAnthropic/ChatAnthropic_LlamaIndex.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatAnthropic/ChatAnthropic_LlamaIndex.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -386,7 +386,7 @@ Wrapper around Groq LLM specific for LlamaIndex
 - 内部名称：`chatGroq_LlamaIndex`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/Groq/ChatGroq_LlamaIndex.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/Groq/ChatGroq_LlamaIndex.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -425,7 +425,7 @@ Wrapper around ChatMistral LLM specific for LlamaIndex
 - 内部名称：`chatMistral_LlamaIndex`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatMistral/ChatMistral_LlamaIndex.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatMistral/ChatMistral_LlamaIndex.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -465,7 +465,7 @@ Wrapper around ChatOllama LLM specific for LlamaIndex
 - 内部名称：`chatOllama_LlamaIndex`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatOllama/ChatOllama_LlamaIndex.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatOllama/ChatOllama_LlamaIndex.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -515,7 +515,7 @@ Wrapper around OpenAI Chat LLM specific for LlamaIndex
 - 内部名称：`chatOpenAI_LlamaIndex`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatOpenAI/ChatOpenAI_LlamaIndex.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatOpenAI/ChatOpenAI_LlamaIndex.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -557,7 +557,7 @@ Wrapper around ChatTogetherAI LLM specific for LlamaIndex
 - 内部名称：`chatTogetherAI_LlamaIndex`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatTogetherAI/ChatTogether_LlamaIndex.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatTogetherAI/ChatTogether_LlamaIndex.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -595,7 +595,7 @@ Wrapper around Cloudflare Workers AI chat models
 - 内部名称：`chatCloudflareWorkersAI`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatCloudflareWorkersAI/ChatCloudflareWorkersAI.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatCloudflareWorkersAI/ChatCloudflareWorkersAI.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -633,7 +633,7 @@ Wrapper around Cohere Chat Endpoints
 - 内部名称：`chatCohere`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatCohere/ChatCohere.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatCohere/ChatCohere.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -673,7 +673,7 @@ Wrapper around CometAPI large language models that use the Chat endpoint
 - 内部名称：`chatCometAPI`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatCometAPI/ChatCometAPI.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatCometAPI/ChatCometAPI.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -718,7 +718,7 @@ Wrapper around Deepseek large language models that use the Chat endpoint
 - 内部名称：`chatDeepseek`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/Deepseek/Deepseek.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/Deepseek/Deepseek.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -766,7 +766,7 @@ Wrapper around Fireworks Chat Endpoints
 - 内部名称：`chatFireworks`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatFireworks/ChatFireworks.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatFireworks/ChatFireworks.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -806,7 +806,7 @@ Wrapper around Google Gemini large language models that use the Chat endpoint
 - 内部名称：`chatGoogleGenerativeAI`
 - 版本：`3.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatGoogleGenerativeAI/ChatGoogleGenerativeAI.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatGoogleGenerativeAI/ChatGoogleGenerativeAI.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -855,7 +855,7 @@ Wrapper around VertexAI large language models that use the Chat endpoint
 - 内部名称：`chatGoogleVertexAI`
 - 版本：`5.3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatGoogleVertexAI/ChatGoogleVertexAI.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatGoogleVertexAI/ChatGoogleVertexAI.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -904,7 +904,7 @@ Wrapper around Groq API with LPU Inference Engine
 - 内部名称：`groqChat`
 - 版本：`4`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/Groq/Groq.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/Groq/Groq.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -945,7 +945,7 @@ Wrapper around HuggingFace large language models
 - 内部名称：`chatHuggingFace`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatHuggingFace/ChatHuggingFace.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatHuggingFace/ChatHuggingFace.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -990,7 +990,7 @@ Wrapper around IBM watsonx.ai foundation models
 - 内部名称：`chatIBMWatsonx`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatIBMWatsonx/ChatIBMWatsonx.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatIBMWatsonx/ChatIBMWatsonx.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1036,7 +1036,7 @@ Kimi (Moonshot AI) 大语言模型，支持 OpenAI 兼容 API
 - 内部名称：`chatKimi`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatKimi/ChatKimi.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatKimi/ChatKimi.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1083,7 +1083,7 @@ Connect to a Litellm server using OpenAI-compatible API
 - 内部名称：`chatLitellm`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatLitellm/ChatLitellm.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatLitellm/ChatLitellm.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1128,7 +1128,7 @@ Use local LLMs like llama.cpp, gpt4all using LocalAI
 - 内部名称：`chatLocalAI`
 - 版本：`3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatLocalAI/ChatLocalAI.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatLocalAI/ChatLocalAI.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1172,7 +1172,7 @@ Wrapper around Mistral large language models that use the Chat endpoint
 - 内部名称：`chatMistralAI`
 - 版本：`4`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatMistral/ChatMistral.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatMistral/ChatMistral.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1217,7 +1217,7 @@ Access models through the Nemo Guardrails API
 - 内部名称：`chatNemoGuardrails`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatNemoGuardrails/ChatNemoGuardrails.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatNemoGuardrails/ChatNemoGuardrails.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1254,7 +1254,7 @@ Wrapper around NVIDIA NIM Inference API
 - 内部名称：`chatNvidiaNIM`
 - 版本：`1.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatNvdiaNIM/ChatNvdiaNIM.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatNvdiaNIM/ChatNvdiaNIM.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1301,7 +1301,7 @@ Chat completion using open-source LLM on Ollama
 - 内部名称：`chatOllama`
 - 版本：`5`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatOllama/ChatOllama.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatOllama/ChatOllama.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1358,7 +1358,7 @@ Wrapper around OpenAI large language models that use the Chat endpoint
 - 内部名称：`chatOpenAI`
 - 版本：`8.3`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatOpenAI/ChatOpenAI.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatOpenAI/ChatOpenAI.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1411,7 +1411,7 @@ Custom/FineTuned model using OpenAI Chat compatible API
 - 内部名称：`chatOpenAICustom`
 - 版本：`4`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatOpenAICustom/ChatOpenAICustom.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatOpenAICustom/ChatOpenAICustom.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1458,7 +1458,7 @@ Wrapper around Open Router Inference API
 - 内部名称：`chatOpenRouter`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatOpenRouter/ChatOpenRouter.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatOpenRouter/ChatOpenRouter.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1506,7 +1506,7 @@ Wrapper around Perplexity large language models that use the Chat endpoint
 - 内部名称：`chatPerplexity`
 - 版本：`0.1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatPerplexity/ChatPerplexity.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatPerplexity/ChatPerplexity.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1557,7 +1557,7 @@ Wrapper around Sambanova Chat Endpoints
 - 内部名称：`chatSambanova`
 - 版本：`1`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatSambanova/ChatSambanova.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatSambanova/ChatSambanova.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1599,7 +1599,7 @@ Wrapper around TogetherAI large language models
 - 内部名称：`chatTogetherAI`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatTogetherAI/ChatTogetherAI.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatTogetherAI/ChatTogetherAI.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
@@ -1639,7 +1639,7 @@ Wrapper around Grok from XAI
 - 内部名称：`chatXAI`
 - 版本：`2`
 - 功能状态：`production-enabled`
-- 源码锚点：`packages/components/nodes/chatmodels/ChatXAI/ChatXAI.ts@6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64`
+- 源码锚点：`packages/components/nodes/chatmodels/ChatXAI/ChatXAI.ts@96f6ae464f7f4757883a5ba6bec26ca951b4da4d`
 - 官方文档：[分类级官方文档](https://docs.flowiseai.com/integrations/langchain/chat-models)
 - 风险：外部调用：是；可能计费：是；可能写入：需按实际配置复核
   - 外部调用：`yes`
