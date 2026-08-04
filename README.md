@@ -64,6 +64,28 @@ Linux CI 会安装 `fonts-noto-cjk`。本地生成发布级 PDF 前，也必须�
 
 在得到新的空仓库 URL 前，本仓库保持无远端状态；在得到同版本隔离培训环境和安全提供的 Provider 凭据前，不执行正式截图、Provider 实验或公开发布。
 
+### 独立 GitHub 仓库接入门禁
+
+收到用户指定的空仓库 URL 后，先运行纯 GET 的接入检查。`intake` 阶段要求仓库公开、独立、空白、处于启用状态，且当前操作者具有管理员权限：
+
+```bash
+uv run python scripts/github_repository_readiness.py \
+  --repository OWNER/REPO \
+  --phase intake \
+  --output tmp/github-repository-intake.json
+```
+
+完成独立历史的首次推送、`gh-pages` 引导、Pages 来源、`github-pages` 环境人工审批，以及 `main` 的 PR 审核和必需状态检查配置后，再运行发布阶段审计：
+
+```bash
+uv run python scripts/github_repository_readiness.py \
+  --repository OWNER/REPO \
+  --phase release \
+  --output tmp/github-repository-release.json
+```
+
+该工具只调用 GitHub GET API，不会创建仓库、添加 remote、推送分支、修改保护规则、部署 Pages 或更新 `data/release.yml`。检查通过只代表“可交给独立复核人生成门禁回执”，不能代替人工回执，也不能单独证明 GitHub Pages 已发布。
+
 ## 独立性与隐私
 
 ```bash
