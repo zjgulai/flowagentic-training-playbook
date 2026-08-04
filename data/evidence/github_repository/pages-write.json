@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "evidence_id": "EVD-GITHUB-PAGES-WRITE",
+  "evidence_type": "repository",
+  "observed_at": "2026-08-04T08:47:43Z",
+  "result": "passed",
+  "public_safe": true,
+  "repository": "zjgulai/flowagentic-training-playbook",
+  "product_release_sha": "6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64",
+  "checks": {
+    "actions_enabled": true,
+    "default_workflow_permissions": "read",
+    "pages_build_type": "workflow",
+    "pages_source_branch": "gh-pages",
+    "pages_source_path": "/",
+    "gh_pages_bootstrap_sha": "234a0c333ceabac660f45beee973815e317f7102",
+    "gh_pages_bootstrap_entries": [
+      ".pages-source-bootstrap"
+    ],
+    "environment_required_reviewers": 1,
+    "environment_admin_bypass": false,
+    "environment_allowed_branch": "main",
+    "deployment_count": 0,
+    "public_url_http_status": 404,
+    "pages_deployed": false
+  },
+  "claim_boundary": "The protected workflow can deploy a future verified artifact; no Pages deployment or public Playbook exists yet."
+}

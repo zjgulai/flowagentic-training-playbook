@@ -63,7 +63,7 @@ Linux CI 会安装 `fonts-noto-cjk`。本地生成发布级 PDF 前，也必须�
 - 发布工作流只使用 GitHub 自动签发的 `GITHUB_TOKEN` 与短期 OIDC 身份；不得配置或复用产品源码仓库的部署密钥。
 - 仓库采用单维护者治理：`main` 启用管理员同样受约束的分支保护，所有变更必须经过 PR 和必需状态检查；由于 GitHub 禁止作者批准自己的 PR，批准数固定为 0。`github-pages` 环境仍必须经过人工审批。
 
-独立公开仓库已经接入 [zjgulai/flowagentic-training-playbook](https://github.com/zjgulai/flowagentic-training-playbook)。`main` 必须经过 PR 和“站点、PDF 与内容门禁”检查；单维护者模式不把管理员身份或自动检查伪装成独立人工批准。`github-pages` 环境必须经过人工审批。当前远端只保存独立源码历史和 CI 预览制品，尚未初始化 `gh-pages` 正式发布分支，也没有公开发布工作草案。
+独立公开仓库已经接入 [zjgulai/flowagentic-training-playbook](https://github.com/zjgulai/flowagentic-training-playbook)。`main` 必须经过 PR 和“站点、PDF 与内容门禁”检查；单维护者模式不把管理员身份或自动检查伪装成独立人工批准。`github-pages` 环境必须经过人工审批。`gh-pages` 已完成不含入口页的基础设施引导，Pages 保持 `workflow` 模式且部署记录仍为 0；该分支当前不是正式站点，公开 URL 返回 404。
 
 在得到同版本隔离培训环境和安全提供的 Provider 凭据前，不执行正式截图、Provider 实验或公开发布。
 

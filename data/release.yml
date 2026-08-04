@@ -18,10 +18,34 @@ versioning:
   version_format: flowagentic-<version>-<short-sha>
 external_gates:
   github_repository:
-    status: blocked
-    release_sha: null
-    verified_at: null
-    receipt: null
+    status: passed
+    release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+    verified_at: "2026-08-04T08:47:43Z"
+    receipt:
+      receipt_id: RCT-GITHUB-REPOSITORY-20260804
+      evidence_type: repository
+      release_sha: 6a5bb28b4590da42c7f1a42c515a8d2d5ba8cd64
+      product_version: 3.1.3
+      public_safe: true
+      reviewer: zjgulai / single-maintainer review
+      verified_at: "2026-08-04T08:47:43Z"
+      artifact_sha256: 60b2cfd9df96577ce0dd910fdd4b25ee8476d5abc6312759d468b3f8afab0ee0
+      evidence_items:
+        - id: EVD-GITHUB-REPOSITORY
+          status: passed
+          count: 1
+          artifact: data/evidence/github_repository/repository.json
+          sha256: 976420fdd15206617c45f183e91ebeb1d66cdabf2619c0974a849cce8df08562
+        - id: EVD-GITHUB-PAGES-WRITE
+          status: passed
+          count: 1
+          artifact: data/evidence/github_repository/pages-write.json
+          sha256: 9d06a2edb7e7f38030595e164f6524efe5842fc9456776ef9cf2b36208cc0f4b
+        - id: EVD-GITHUB-MAIN-PROTECTION
+          status: passed
+          count: 1
+          artifact: data/evidence/github_repository/main-protection.json
+          sha256: 3beba4ebf8f4920d84ae09f91bbd9fda93381eeed76634516487a0dbb53082e1
     required_evidence:
       - EVD-GITHUB-REPOSITORY
       - EVD-GITHUB-PAGES-WRITE
