@@ -48,7 +48,7 @@ def classic_ready_api(endpoint: str) -> Any:
         },
         f"/repos/{REPOSITORY}/pages": {
             "html_url": "https://zjgulai.github.io/flowagentic-training-playbook/",
-            "build_type": "legacy",
+            "build_type": "workflow",
             "source": {"branch": "gh-pages", "path": "/"},
         },
         f"/repos/{REPOSITORY}/environments/github-pages": {
@@ -152,6 +152,33 @@ def test_release_accepts_solo_maintainer_pull_request_protection() -> None:
     assert protection["checks"][1]["name"] == (
         "pull_request_required_solo_maintainer"
     )
+
+
+def test_release_rejects_legacy_pages_build_type() -> None:
+    def api(endpoint: str) -> Any:
+        if endpoint == f"/repos/{REPOSITORY}/pages":
+            return {
+                "html_url": (
+                    "https://zjgulai.github.io/flowagentic-training-playbook/"
+                ),
+                "build_type": "legacy",
+                "source": {"branch": "gh-pages", "path": "/"},
+            }
+        return classic_ready_api(endpoint)
+
+    report = build_report(
+        REPOSITORY,
+        release_sha=RELEASE_SHA,
+        product_version="3.1.3",
+        phase="release",
+        api_get=api,
+    )
+
+    pages = report["evidence"][1]
+    assert pages["status"] == "blocked"
+    assert pages["checks"][2]["name"] == "pages_workflow_build_type"
+    assert pages["checks"][2]["passed"] is False
+    assert report["decision"]["status"] == "blocked"
 
 
 def test_solo_maintainer_mode_rejects_an_impossible_approval_requirement() -> None:

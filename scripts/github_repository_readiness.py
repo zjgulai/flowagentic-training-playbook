@@ -379,9 +379,16 @@ def build_report(
                 "workflow token policy must be readable",
             ),
             _bool_check(
+                "pages_workflow_build_type",
+                isinstance(pages, dict) and pages.get("build_type") == "workflow",
+                "Pages must deploy the verified artifact with the custom workflow",
+            ),
+            _bool_check(
                 "pages_gh_pages_source",
-                isinstance(pages, dict) and source.get("branch") == "gh-pages",
-                "Pages must publish from the independent gh-pages branch",
+                isinstance(pages, dict)
+                and source.get("branch") == "gh-pages"
+                and source.get("path") == "/",
+                "Pages must bind the independent gh-pages release branch at root",
             ),
             _bool_check(
                 "pages_environment_approval",

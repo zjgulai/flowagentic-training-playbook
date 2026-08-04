@@ -61,6 +61,29 @@ def test_browser_smoke_wrapper_rejects_cli_soft_errors() -> None:
     assert "browser workflow did not produce an explicit pass" in wrapper
 
 
+def test_pages_publish_workflow_archives_and_deploys_verified_tree() -> None:
+    workflow = (ROOT / ".github/workflows/publish.yml").read_text(
+        encoding="utf-8"
+    )
+
+    assert (
+        "uses: actions/upload-pages-artifact@"
+        "fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0"
+    ) in workflow
+    assert "path: ${{ runner.temp }}/published-site" in workflow
+    assert "include-hidden-files: true" in workflow
+    assert "pages: write" in workflow
+    assert "id-token: write" in workflow
+    assert (
+        "uses: actions/deploy-pages@"
+        "cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0"
+    ) in workflow
+    assert workflow.index("git push origin HEAD:gh-pages") < workflow.index(
+        "uses: actions/deploy-pages@"
+    )
+    assert "url: ${{ steps.deployment.outputs.page_url }}" in workflow
+
+
 def _run_release_gate(release_sha: str) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
         [
