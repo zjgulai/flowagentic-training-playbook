@@ -60,9 +60,9 @@ Linux CI 会安装 `fonts-noto-cjk`。本地生成发布级 PDF 前，也必须�
 - 工作流输入还必须与 `data/release.yml`、截图基线、截图计划和截图 manifest 相互一致；只修改手动输入无法绕过仓库内证据绑定。
 - 九道外部门禁使用代码固定的证据 ID；每个回执都必须绑定 `data/evidence/` 中的公开安全制品并由 CI 重算摘要。Provider 成功还必须通过信任清单中的外部 Ed25519 隔离执行器验签，本仓库不保存签名私钥。
 - 发布工作流只使用 GitHub 自动签发的 `GITHUB_TOKEN`；不得配置或复用产品源码仓库的部署密钥。
-- 仓库接入后，还需在 GitHub 设置中启用 `main` 分支保护、PR 审核和 `github-pages` 环境人工审批。
+- 仓库采用单维护者治理：`main` 启用管理员同样受约束的分支保护，所有变更必须经过 PR 和必需状态检查；由于 GitHub 禁止作者批准自己的 PR，批准数固定为 0。`github-pages` 环境仍必须经过人工审批。
 
-独立公开仓库已经接入 [zjgulai/flowagentic-training-playbook](https://github.com/zjgulai/flowagentic-training-playbook)。`main` 必须经过 PR 审核和“站点、PDF 与内容门禁”检查，`github-pages` 环境必须经过人工审批。当前远端只保存独立源码历史和 CI 预览制品，尚未初始化 `gh-pages` 正式发布分支，也没有公开发布工作草案。
+独立公开仓库已经接入 [zjgulai/flowagentic-training-playbook](https://github.com/zjgulai/flowagentic-training-playbook)。`main` 必须经过 PR 和“站点、PDF 与内容门禁”检查；单维护者模式不把管理员身份或自动检查伪装成独立人工批准。`github-pages` 环境必须经过人工审批。当前远端只保存独立源码历史和 CI 预览制品，尚未初始化 `gh-pages` 正式发布分支，也没有公开发布工作草案。
 
 在得到同版本隔离培训环境和安全提供的 Provider 凭据前，不执行正式截图、Provider 实验或公开发布。
 
@@ -77,16 +77,17 @@ uv run python scripts/github_repository_readiness.py \
   --output tmp/github-repository-intake.json
 ```
 
-完成独立历史的首次推送、`gh-pages` 引导、Pages 来源、`github-pages` 环境人工审批，以及 `main` 的 PR 审核和必需状态检查配置后，再运行发布阶段审计：
+完成独立历史的首次推送、`gh-pages` 引导、Pages 来源、`github-pages` 环境人工审批，以及 `main` 的单维护者 PR 和必需状态检查配置后，再运行发布阶段审计：
 
 ```bash
 uv run python scripts/github_repository_readiness.py \
   --repository OWNER/REPO \
   --phase release \
+  --governance-mode solo-maintainer \
   --output tmp/github-repository-release.json
 ```
 
-该工具只调用 GitHub GET API，不会创建仓库、添加 remote、推送分支、修改保护规则、部署 Pages 或更新 `data/release.yml`。检查通过只代表“可交给独立复核人生成门禁回执”，不能代替人工回执，也不能单独证明 GitHub Pages 已发布。
+该工具只调用 GitHub GET API，不会创建仓库、添加 remote、推送分支、修改保护规则、部署 Pages 或更新 `data/release.yml`。检查通过只代表“可生成待人工复核的门禁材料”，不能代替人工回执，也不能单独证明 GitHub Pages 已发布。
 
 ## 独立性与隐私
 

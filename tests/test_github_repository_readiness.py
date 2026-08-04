@@ -61,13 +61,15 @@ def classic_ready_api(endpoint: str) -> Any:
         },
         f"/repos/{REPOSITORY}/branches/main/protection": {
             "required_pull_request_reviews": {
-                "required_approving_review_count": 1
+                "required_approving_review_count": 1,
+                "require_last_push_approval": True,
             },
             "required_status_checks": {
                 "checks": [{"context": "站点、PDF 与内容门禁", "app_id": 15368}]
             },
             "enforce_admins": {"enabled": True},
         },
+        f"/repos/{REPOSITORY}/rulesets?includes_parents=true": [],
     }
     if endpoint not in responses:
         raise AssertionError(f"unexpected endpoint: {endpoint}")
@@ -115,6 +117,56 @@ def test_release_accepts_classic_protection_pages_and_human_approval() -> None:
     assert all(item["status"] == "passed" for item in report["evidence"])
     assert report["public_safe"] is True
     assert report["evidence_boundary"]["human_review_still_required"] is True
+
+
+def test_release_accepts_solo_maintainer_pull_request_protection() -> None:
+    def api(endpoint: str) -> Any:
+        if endpoint == f"/repos/{REPOSITORY}/branches/main/protection":
+            return {
+                "required_pull_request_reviews": {
+                    "required_approving_review_count": 0,
+                    "require_last_push_approval": False,
+                },
+                "required_status_checks": {
+                    "checks": [
+                        {"context": "站点、PDF 与内容门禁", "app_id": 15368}
+                    ]
+                },
+                "enforce_admins": {"enabled": True},
+            }
+        return classic_ready_api(endpoint)
+
+    report = build_report(
+        REPOSITORY,
+        release_sha=RELEASE_SHA,
+        product_version="3.1.3",
+        phase="release",
+        governance_mode="solo-maintainer",
+        api_get=api,
+    )
+
+    assert report["governance_mode"] == "solo-maintainer"
+    assert report["decision"]["status"] == "ready-for-receipt-review"
+    protection = report["evidence"][2]
+    assert protection["status"] == "passed"
+    assert protection["checks"][1]["name"] == (
+        "pull_request_required_solo_maintainer"
+    )
+
+
+def test_solo_maintainer_mode_rejects_an_impossible_approval_requirement() -> None:
+    report = build_report(
+        REPOSITORY,
+        release_sha=RELEASE_SHA,
+        product_version="3.1.3",
+        phase="release",
+        governance_mode="solo-maintainer",
+        api_get=classic_ready_api,
+    )
+
+    protection = report["evidence"][2]
+    assert protection["status"] == "blocked"
+    assert report["decision"]["status"] == "blocked"
 
 
 def test_release_accepts_an_active_ruleset_for_main() -> None:
