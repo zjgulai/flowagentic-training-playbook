@@ -23,7 +23,18 @@ evidence_ids:
   - CLM-020
   - CLM-021
   - CLM-022
-screenshot_ids: []
+screenshot_ids:
+  - ERR-001
+  - ERR-002
+  - ERR-003
+  - ERR-004
+  - ERR-005
+  - ERR-006
+  - ERR-007
+  - ERR-008
+  - ERR-009
+  - ERR-010
+
 ---
 
 # 故障排查

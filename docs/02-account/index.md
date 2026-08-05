@@ -17,7 +17,24 @@ last_verified: "2026-08-04"
 evidence_ids:
   - CLM-004
   - CLM-015
-screenshot_ids: []
+screenshot_ids:
+  - AUTH-001
+  - AUTH-002
+  - AUTH-003
+  - AUTH-004
+  - AUTH-005
+  - AUTH-006
+  - AUTH-007
+  - AUTH-008
+  - AUTH-009
+  - AUTH-010
+  - NAV-001
+  - NAV-002
+  - NAV-003
+  - NAV-004
+  - NAV-005
+  - NAV-006
+
 ---
 
 # 登录、导航与账户

@@ -19,7 +19,18 @@ evidence_ids:
   - CLM-009
   - CLM-010
   - CLM-020
-screenshot_ids: []
+screenshot_ids:
+  - API-001
+  - API-002
+  - API-003
+  - API-004
+  - API-005
+  - API-006
+  - API-007
+  - API-008
+  - API-009
+  - API-010
+
 ---
 
 # API、Embed 与 SDK

@@ -18,7 +18,14 @@ evidence_ids:
   - CLM-008
   - CLM-015
   - CLM-023
-screenshot_ids: []
+screenshot_ids:
+  - VAR-001
+  - VAR-002
+  - VAR-003
+  - VAR-004
+  - VAR-005
+  - VAR-006
+
 ---
 
 # 变量完整 SOP

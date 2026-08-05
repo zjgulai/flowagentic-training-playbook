@@ -24,7 +24,20 @@ evidence_ids:
   - CLM-018
   - CLM-023
   - CLM-024
-screenshot_ids: []
+screenshot_ids:
+  - LAB-001
+  - LAB-002
+  - LAB-003
+  - LAB-004
+  - LAB-005
+  - LAB-006
+  - LAB-007
+  - LAB-008
+  - LAB-009
+  - LAB-010
+  - LAB-011
+  - LAB-012
+
 ---
 
 # 企业知识与工单贯穿实战

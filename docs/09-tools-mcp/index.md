@@ -21,7 +21,30 @@ evidence_ids:
   - CLM-012
   - CLM-023
   - CLM-025
-screenshot_ids: []
+screenshot_ids:
+  - TOOL-001
+  - TOOL-002
+  - TOOL-003
+  - TOOL-004
+  - TOOL-005
+  - TOOL-006
+  - TOOL-007
+  - TOOL-008
+  - TOOL-009
+  - TOOL-010
+  - TOOL-011
+  - TOOL-012
+  - MCP-001
+  - MCP-002
+  - MCP-003
+  - MCP-004
+  - MCP-005
+  - MCP-006
+  - MCP-007
+  - MCP-008
+  - MCP-009
+  - MCP-010
+
 ---
 
 # Tools 与 MCP

@@ -19,7 +19,20 @@ evidence_ids:
   - CLM-003
   - CLM-005
   - CLM-011
-screenshot_ids: []
+screenshot_ids:
+  - EXT-001
+  - EXT-002
+  - EXT-003
+  - EXT-004
+  - EXT-005
+  - EXT-006
+  - EXT-007
+  - EXT-008
+  - EXT-009
+  - EXT-010
+  - EXT-011
+  - EXT-012
+
 ---
 
 # 受限与实验能力附录

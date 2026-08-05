@@ -22,7 +22,38 @@ evidence_ids:
   - CLM-007
   - CLM-019
   - CLM-023
-screenshot_ids: []
+screenshot_ids:
+  - DS-001
+  - DS-002
+  - DS-003
+  - DS-004
+  - DS-005
+  - DS-006
+  - DS-007
+  - DS-008
+  - DS-009
+  - DS-010
+  - DS-011
+  - DS-012
+  - DS-013
+  - DS-014
+  - DS-015
+  - DS-016
+  - DS-017
+  - DS-018
+  - DS-019
+  - DS-020
+  - DS-021
+  - DS-022
+  - DS-023
+  - DS-024
+  - DS-025
+  - DS-026
+  - DS-027
+  - DS-028
+  - DS-029
+  - DS-030
+
 ---
 
 # 文档库与 RAG

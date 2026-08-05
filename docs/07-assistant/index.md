@@ -19,7 +19,21 @@ evidence_ids:
   - CLM-007
   - CLM-019
   - CLM-023
-screenshot_ids: []
+screenshot_ids:
+  - AS-001
+  - AS-002
+  - AS-003
+  - AS-004
+  - AS-005
+  - AS-006
+  - AS-007
+  - AS-008
+  - AS-009
+  - AS-010
+  - AS-011
+  - AS-012
+  - AS-013
+
 ---
 
 # 自定义助手

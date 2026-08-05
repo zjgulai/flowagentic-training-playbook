@@ -20,7 +20,14 @@ evidence_ids:
   - CLM-008
   - CLM-015
   - CLM-023
-screenshot_ids: []
+screenshot_ids:
+  - KEY-001
+  - KEY-002
+  - KEY-003
+  - KEY-004
+  - KEY-005
+  - KEY-006
+
 ---
 
 # API 密钥完整 SOP

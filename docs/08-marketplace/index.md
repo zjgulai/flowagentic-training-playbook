@@ -18,7 +18,16 @@ last_verified: "2026-08-04"
 evidence_ids:
   - CLM-016
   - CLM-023
-screenshot_ids: []
+screenshot_ids:
+  - MP-001
+  - MP-002
+  - MP-003
+  - MP-004
+  - MP-005
+  - MP-006
+  - MP-007
+  - MP-008
+
 ---
 
 # 模板市场

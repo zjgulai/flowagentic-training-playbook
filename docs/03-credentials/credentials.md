@@ -20,7 +20,16 @@ evidence_ids:
   - CLM-015
   - CLM-023
   - CLM-025
-screenshot_ids: []
+screenshot_ids:
+  - CR-001
+  - CR-002
+  - CR-003
+  - CR-004
+  - CR-005
+  - CR-006
+  - CR-007
+  - CR-008
+
 ---
 
 # 凭据完整 SOP
