@@ -151,17 +151,9 @@ mem_0-output-bufferMemory-BufferMemory|BaseChatMemory|BaseMemory
 ```
 
 **获取正确 anchor ID 的方法**：
-```bash
-docker exec flowise-chinese node -e "
-const {NodesPool} = require('...');
-pool.initialize().then(() => {
-  const n = pool.componentNodes['chatDeepseek'];
-  const inst = new (require(n.filePath)).nodeClass();
-  const base = inst.baseClasses.join('|');
-  console.log('nodeId-output-' + inst.name + '-' + base);
-});
-"
-```
+锚点格式：`{nodeId}-output-{nodeName}-{baseClasses用|连接}`
+
+例：`ds_0-output-chatDeepseek-chatDeepseek|BaseChatModel|BaseLanguageModel|Runnable`
 
 ### Bug 6：API Key 权限（403 Forbidden）
 
@@ -226,24 +218,4 @@ GET https://api.tikhub.io/api/v1/instagram/v1/fetch_user_info_by_username?userna
 FlowAgentic 使用 **JWT Cookie（HttpOnly）** 认证，通过编程创建 API Key 的完整流程：
 
 1. 在容器内生成正确格式的 API Key（使用 scryptSync）：
-```bash
-docker exec flowise-chinese node -e "
-const {randomBytes, scryptSync} = require('crypto');
-const key = randomBytes(32).toString('base64url');
-const salt = randomBytes(8).toString('hex');
-const buf = scryptSync(key, salt, 64);
-const hash = buf.toString('hex') + '.' + salt;
-console.log('生成完成，key='+key.substring(0,8)+'...');
-"
-```
-
-2. 插入数据库（将生成的 key 和 hash 填入）：
-```sql
-INSERT INTO apikey (id, "apiKey", "apiSecret", "keyName", "updatedDate", "workspaceId", permissions)
-VALUES (uuid_generate_v4(), '[生成的key]', '[生成的hash]', 'my-key', NOW(), '[工作区ID]', '[...]'::jsonb);
-```
-
-3. 使用：
-```bash
-curl -H "Authorization: Bearer [your-generated-key]" https://flowise.example.com/api/v1/chatflows
-```
+使用 Node.js `randomBytes` + `scryptSync` 生成 key 和 hash，再通过 SQL 插入 `apikey` 表，最后用 `Authorization: Bearer {key}` 调用 API。详细步骤见调试附录。
