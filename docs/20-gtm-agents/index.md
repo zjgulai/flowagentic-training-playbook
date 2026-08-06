@@ -227,7 +227,6 @@ FlowAgentic 使用 **JWT Cookie（HttpOnly）** 认证，通过编程创建 API 
 
 1. 在容器内生成正确格式的 API Key（使用 scryptSync）：
 ```bash
-# 在 Flowise 容器内生成 API Key
 docker exec flowise-chinese node -e "
 const {randomBytes, scryptSync} = require('crypto');
 const key = randomBytes(32).toString('base64url');
