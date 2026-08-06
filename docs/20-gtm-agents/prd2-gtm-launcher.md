@@ -23,7 +23,7 @@ screenshot_ids: []
 
 # PRD-2：新品上市 GTM Launcher
 
-**生产地址**：`https://flowise.lute-tlz-dddd.top/chatbot/edf2357f-6f7e-469d-803c-e642d80b3bb3`
+**生产地址**：`https://flowise.example.com/chatbot/{chatbot-id}`
 
 ## 适用场景
 
@@ -56,7 +56,7 @@ screenshot_ids: []
 ## 操作 SOP
 
 ### Step 1：进入 Chatbot
-打开 `https://flowise.lute-tlz-dddd.top/chatbot/edf2357f-...`，显示对话输入框。
+打开 `https://flowise.example.com/chatbot/edf2357f-...`，显示对话输入框。
 
 ### Step 2：输入产品信息
 

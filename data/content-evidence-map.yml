@@ -61,3 +61,5 @@ rules:
     claim_ids: [CLM-001, CLM-003, CLM-014, CLM-017, CLM-024, CLM-025]
   - path_prefix: docs/19-reference/
     claim_ids: [CLM-001, CLM-003, CLM-014, CLM-017, CLM-024]
+  - path_prefix: docs/20-gtm-agents/
+    claim_ids: [CLM-005, CLM-006, CLM-009, CLM-011, CLM-014, CLM-016, CLM-018, CLM-023]

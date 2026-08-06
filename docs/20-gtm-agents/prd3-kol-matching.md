@@ -23,7 +23,7 @@ screenshot_ids: []
 
 # PRD-3：KOL 智能匹配系统
 
-**生产地址**：`https://flowise.lute-tlz-dddd.top/chatbot/a70a9e99-097f-4896-877e-6da9dab5c564`
+**生产地址**：`https://flowise.example.com/chatbot/{chatbot-id}`
 
 ## 适用场景
 

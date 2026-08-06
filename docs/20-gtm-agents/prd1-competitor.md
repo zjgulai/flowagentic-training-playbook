@@ -23,7 +23,7 @@ screenshot_ids: []
 
 # PRD-1：竞品情报雷达
 
-**生产地址**：`https://flowise.lute-tlz-dddd.top/chatbot/59cf963a-f0de-4134-96af-81ee6c20b572`
+**生产地址**：`https://flowise.example.com/chatbot/{chatbot-id}`
 
 ## 适用场景
 
