@@ -211,3 +211,8 @@ nav:
           - Utilities: 19-reference/node-catalog/24-utilities.md
           - Vector Stores: 19-reference/node-catalog/25-vector--stores.md
           - Output Parsers: 19-reference/node-catalog/26-outputparsers.md
+  - GTM Agent 实战:
+      - 方法论与踩坑汇总: 20-gtm-agents/index.md
+      - PRD-1 竞品情报雷达: 20-gtm-agents/prd1-competitor.md
+      - PRD-2 新品上市 Launcher: 20-gtm-agents/prd2-gtm-launcher.md
+      - PRD-3 KOL 智能匹配: 20-gtm-agents/prd3-kol-matching.md
