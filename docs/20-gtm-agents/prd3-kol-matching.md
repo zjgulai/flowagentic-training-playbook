@@ -17,7 +17,7 @@ side_effects:
   - creates-and-updates-flow
   - may-call-provider
 last_verified: "2026-08-06"
-evidence_ids: []
+evidence_ids: [CLM-005, CLM-006, CLM-009, CLM-011, CLM-014, CLM-016, CLM-018, CLM-023]
 screenshot_ids: []
 ---
 
@@ -62,13 +62,13 @@ screenshot_ids: []
 **已验证的有效 Endpoints**：
 
 ```
-# 按关键词搜索博主（⭐ 包含实时粉丝数，最推荐）
+## 按关键词搜索博主（⭐ 包含实时粉丝数，最推荐）
 GET https://api.tikhub.io/api/v1/tiktok/web/fetch_search_user?keyword={关键词}&count=10
 
-# 查询特定博主（需要精确 uniqueId）
+## 查询特定博主（需要精确 uniqueId）
 GET https://api.tikhub.io/api/v1/tiktok/web/fetch_user_profile?uniqueId={handle}
 
-# Instagram 博主信息
+## Instagram 博主信息
 GET https://api.tikhub.io/api/v1/instagram/v1/fetch_user_info_by_username?username={handle}
 ```
 

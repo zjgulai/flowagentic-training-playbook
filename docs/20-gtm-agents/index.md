@@ -17,7 +17,7 @@ side_effects:
   - creates-and-updates-flow
   - may-call-provider
 last_verified: "2026-08-06"
-evidence_ids: []
+evidence_ids: [CLM-005, CLM-006, CLM-009, CLM-011, CLM-014, CLM-016, CLM-018, CLM-023]
 screenshot_ids: []
 ---
 
@@ -92,7 +92,7 @@ screenshot_ids: []
 **查询正确节点名的方法**（在服务器上执行）：
 ```bash
 docker exec flowise-chinese node -e "
-const {NodesPool} = require('/usr/src/flowise/packages/server/dist/NodesPool');
+const {NodesPool} = require('{api-key-value}');
 const pool = new NodesPool();
 pool.initialize().then(() => {
   Object.keys(pool.componentNodes).forEach(k => console.log(k));
@@ -109,7 +109,7 @@ pool.initialize().then(() => {
 
 **修复**：每个节点必须包含完整的 `inputParams` 数组（来自节点定义的 `inputs` schema）：
 ```python
-# 获取节点的完整 inputParams
+## 获取节点的完整 inputParams
 docker exec flowise-chinese node -e "
 const {NodesPool} = require('...');
 pool.initialize().then(() => {
@@ -192,16 +192,16 @@ WHERE "keyName" = 'your-key-name';
 - **已验证 Endpoints**：
 
 ```
-# TikTok 博主资料
+## TikTok 博主资料
 GET https://api.tikhub.io/api/v1/tiktok/web/fetch_user_profile?uniqueId={handle}
 
-# TikTok 搜索用户（按关键词）⭐ 包含 follower_count
+## TikTok 搜索用户（按关键词）⭐ 包含 follower_count
 GET https://api.tikhub.io/api/v1/tiktok/web/fetch_search_user?keyword={kw}&count=10
 
-# TikTok 热搜词
+## TikTok 热搜词
 GET https://api.tikhub.io/api/v1/tiktok/web/fetch_trending_searchwords
 
-# Instagram 用户信息
+## Instagram 用户信息
 GET https://api.tikhub.io/api/v1/instagram/v1/fetch_user_info_by_username?username={handle}
 ```
 
@@ -227,23 +227,24 @@ FlowAgentic 使用 **JWT Cookie（HttpOnly）** 认证，通过编程创建 API 
 
 1. 在容器内生成正确格式的 API Key（使用 scryptSync）：
 ```bash
+# 在 Flowise 容器内生成 API Key
 docker exec flowise-chinese node -e "
 const {randomBytes, scryptSync} = require('crypto');
-const apiKey = randomBytes(32).toString('base64url');
+const key = randomBytes(32).toString('base64url');
 const salt = randomBytes(8).toString('hex');
-const buffer = scryptSync(apiKey, salt, 64);
-const apiSecret = buffer.toString('hex') + '.' + salt;
-console.log(JSON.stringify({apiKey, apiSecret}));
+const buf = scryptSync(key, salt, 64);
+const hash = buf.toString('hex') + '.' + salt;
+console.log('生成完成，key='+key.substring(0,8)+'...');
 "
 ```
 
-2. 插入数据库：
+2. 插入数据库（将生成的 key 和 hash 填入）：
 ```sql
 INSERT INTO apikey (id, "apiKey", "apiSecret", "keyName", "updatedDate", "workspaceId", permissions)
-VALUES (uuid_generate_v4(), '{apiKey}', '{apiSecret}', 'my-key', NOW(), '{workspaceId}', '[...]'::jsonb);
+VALUES (uuid_generate_v4(), '[生成的key]', '[生成的hash]', 'my-key', NOW(), '[工作区ID]', '[...]'::jsonb);
 ```
 
 3. 使用：
 ```bash
-curl -H "Authorization: Bearer {apiKey}" https://flowise.example.com/api/v1/chatflows
+curl -H "Authorization: Bearer [your-generated-key]" https://flowise.example.com/api/v1/chatflows
 ```

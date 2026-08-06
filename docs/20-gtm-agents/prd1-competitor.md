@@ -17,7 +17,7 @@ side_effects:
   - creates-and-updates-flow
   - may-call-provider
 last_verified: "2026-08-06"
-evidence_ids: []
+evidence_ids: [CLM-005, CLM-006, CLM-009, CLM-011, CLM-014, CLM-016, CLM-018, CLM-023]
 screenshot_ids: []
 ---
 
