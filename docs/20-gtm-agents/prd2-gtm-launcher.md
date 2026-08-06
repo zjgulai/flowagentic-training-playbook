@@ -1,6 +1,24 @@
 ---
 title: PRD-2 新品上市 GTM Launcher
-description: 基于 Momcozy 品牌的 GTM 内容自动生成 Agent。输入产品信息，自动输出 Amazon Listing、TikTok 脚本、邮件序列、关键词策略。
+description: 新品上市 GTM Launcher 设计与 SOP，输入产品信息，自动输出 Amazon Listing、TikTok 脚本、邮件序列、关键词策略，实测生成 13000 字完整内容包。
+audience:
+  - builder
+  - developer
+  - admin
+difficulty: advanced
+duration: "60 分钟"
+release_version: "3.1.3"
+release_sha: "96f6ae464f7f4757883a5ba6bec26ca951b4da4d"
+feature_status: production-enabled
+permissions:
+  - admin
+cost_class: medium
+side_effects:
+  - creates-and-updates-flow
+  - may-call-provider
+last_verified: "2026-08-06"
+evidence_ids: []
+screenshot_ids: []
 ---
 
 # PRD-2：新品上市 GTM Launcher

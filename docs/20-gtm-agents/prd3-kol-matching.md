@@ -1,6 +1,24 @@
 ---
 title: PRD-3 KOL 智能匹配系统
-description: 结合 TikHub API 实时数据，自动搜索和筛选适合 Momcozy 的 TikTok/Instagram 母婴博主，评分并生成个性化外联 DM 模板。
+description: KOL 智能匹配系统设计与 SOP，结合 TikHub API 实时数据搜索筛选适合 Momcozy 的母婴博主，生成外联 DM 模板，包含 TikHub API 端点验证结果。
+audience:
+  - builder
+  - developer
+  - admin
+difficulty: advanced
+duration: "60 分钟"
+release_version: "3.1.3"
+release_sha: "96f6ae464f7f4757883a5ba6bec26ca951b4da4d"
+feature_status: production-enabled
+permissions:
+  - admin
+cost_class: medium
+side_effects:
+  - creates-and-updates-flow
+  - may-call-provider
+last_verified: "2026-08-06"
+evidence_ids: []
+screenshot_ids: []
 ---
 
 # PRD-3：KOL 智能匹配系统

@@ -1,6 +1,24 @@
 ---
 title: GTM Agent 设计与实战
-description: 跨境电商品牌的 GTM Agent 完整方法论——从 PRD 设计到 FlowAgentic 实现，以 Momcozy 为案例，涵盖竞品情报、新品上市、KOL 匹配三类 Agent 的设计、踩坑和 SOP。
+description: 跨境电商品牌 GTM Agent 完整方法论，以 Momcozy 为案例，涵盖竞品情报、新品上市、KOL 匹配三类 Agent 的设计、踩坑和 SOP。构建 GTM Agent 前必读。
+audience:
+  - builder
+  - developer
+  - admin
+difficulty: advanced
+duration: "60 分钟"
+release_version: "3.1.3"
+release_sha: "96f6ae464f7f4757883a5ba6bec26ca951b4da4d"
+feature_status: production-enabled
+permissions:
+  - admin
+cost_class: medium
+side_effects:
+  - creates-and-updates-flow
+  - may-call-provider
+last_verified: "2026-08-06"
+evidence_ids: []
+screenshot_ids: []
 ---
 
 # GTM Agent 设计与实战

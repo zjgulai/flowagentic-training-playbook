@@ -1,6 +1,24 @@
 ---
 title: PRD-1 竞品情报雷达
-description: 实时监控 Medela/Spectra/Lansinoh 等竞品在 Amazon、Reddit 的用户评价、定价动态和内容策略，输出 Momcozy 的差异化机会和反制行动。
+description: 竞品情报雷达 Agent 设计与 SOP，监控 Medela、Spectra 等竞品定价、评价、内容动态，输出 Momcozy 差异化机会和反制行动。
+audience:
+  - builder
+  - developer
+  - admin
+difficulty: advanced
+duration: "60 分钟"
+release_version: "3.1.3"
+release_sha: "96f6ae464f7f4757883a5ba6bec26ca951b4da4d"
+feature_status: production-enabled
+permissions:
+  - admin
+cost_class: medium
+side_effects:
+  - creates-and-updates-flow
+  - may-call-provider
+last_verified: "2026-08-06"
+evidence_ids: []
+screenshot_ids: []
 ---
 
 # PRD-1：竞品情报雷达
